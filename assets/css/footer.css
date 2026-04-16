@@ -1,0 +1,244 @@
+/* === Sticky footer setup === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #4DA68B;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* === Footer styles === */
+.site-footer {
+  background-color: #2C3E50;
+  color: #fff; /* texte blanc global */
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px; /* réduit pour éviter débordement */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-map {
+  flex: 0 0 38%;
+  color: #fff;
+}
+
+.footer-contact {
+  flex: 0 0 24%;
+  color: #fff;
+}
+
+.footer-links {
+  flex: 0 0 33%;
+  color: #fff;
+}
+
+.footer-map h4,
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff; /* bordure blanche */
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 6px;
+}
+
+.footer-contact address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.footer-contact a,
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #ff7f50;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+.footer-info p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #ff7f50;
+}
+
+/* Responsive pour très petits écrans */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-map,
+  .footer-contact,
+  .footer-links {
+    flex: 1 1 auto;
+    margin-bottom: 30px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+@media (max-width: 767px) {
+  .asw-menu-btn {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   AJOUTS page d'accueil — footer-site.html
+   Ne pas modifier le code ci-dessus.
+   ============================================================ */
+
+/* Logo blanc dans le footer */
+.hp-footer-logo img {
+  max-width: 160px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Grille 4 colonnes */
+.footer-container--4col {
+  display: grid;
+  grid-template-columns: 35% 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Carte Google Maps */
+.footer-col--map .map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Barre de bas de page */
+.hp-footer-bar {
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hp-footer-bar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.hp-footer-bar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.hp-footer-bar nav ul li a:hover,
+.hp-footer-bar nav ul li a:focus-visible {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Responsive — mobile */
+@media (max-width: 767px) {
+  .footer-container--4col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .hp-footer-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hp-footer-bar nav ul {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}

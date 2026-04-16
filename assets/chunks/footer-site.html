@@ -1,0 +1,88 @@
+<!-- Chunk MODx : footerSite
+     À coller dans : Éléments → Chunks → "footerSite"
+     Appelé depuis le template via [[$footerSite]]
+     NB : différent de footer.html qui est un template email.
+-->
+
+<footer class="site-footer" role="contentinfo" aria-label="Pied de page">
+
+  <div class="footer-container footer-container--4col">
+
+    <!-- Colonne 1 : Logo + carte -->
+    <div class="footer-col footer-col--map">
+      <a href="[[~1]]" aria-label="Accueil HandiPro31" class="hp-footer-logo">
+        <img
+          src="[[++assets_url]]images/LogoHandipro31.png"
+          alt="Logo HandiPro31"
+          width="160"
+          height="60"
+          loading="lazy"
+        />
+      </a>
+      <div class="map-container" aria-label="Localisation HandiPro31 sur la carte">
+        <iframe
+          src="https://maps.google.com/maps?q=8+rue+Paul+Mespl%C3%A9+31100+Toulouse&output=embed&z=16"
+          title="Carte Google Maps — HandiPro31, 8 rue Paul Mespié, Toulouse"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Colonne 2 : Navigation -->
+    <nav class="footer-col footer-links" aria-label="Navigation pied de page">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="[[~qui-sommes-nous]]">Qui sommes-nous ?</a></li>
+        <li><a href="[[~capemploi]]">Cap Emploi</a></li>
+        <li><a href="[[~crehi]]">CREHI</a></li>
+        <li><a href="[[~handiproconseil]]">HandiPro Conseil</a></li>
+        <li><a href="[[~cheops]]">CHEOPS</a></li>
+        <li><a href="[[~contact]]">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Colonne 3 : Informations légales -->
+    <nav class="footer-col footer-links" aria-label="Informations légales">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="/[[~29]]#mentions-legales">Mentions légales</a></li>
+        <li><a href="/[[~29]]#politique-confidentialite">Politique de confidentialité</a></li>
+        <li><a href="/[[~29]]#accessibilite">Accessibilité</a></li>
+        <li><a href="/[[~29]]#plan-du-site">Plan du site</a></li>
+      </ul>
+    </nav>
+
+    <!-- Colonne 4 : Contact -->
+    <address class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p>8 rue Paul Mespié<br />31100 Toulouse</p>
+      <p>
+        <a href="tel:+33534409191" aria-label="Appeler le 05 34 40 91 91">
+          05 34 40 91 91
+        </a>
+      </p>
+      <p>Accès : métro Ligne B — Arrêt Compans-Caffarelli<br />Bus : lignes 14, 22, 27</p>
+    </address>
+
+  </div><!-- /.footer-container -->
+
+  <!-- Copyright + SIRET -->
+  <div class="footer-info">
+    <p>© 2026 HandiPro31 — Association loi 1901 — SIRET 403 872 640 000 24</p>
+  </div>
+
+  <!-- Barre de bas de page -->
+  <div class="hp-footer-bar">
+    <span>© HandiPro31 — Tous droits réservés</span>
+    <nav aria-label="Navigation bas de page">
+      <ul>
+        <li><a href="/[[~29]]#aides">Aides</a></li>
+        <li><a href="/[[~29]]#plan-du-site">Plan du site</a></li>
+        <li><a href="/[[~29]]#accessibilite">Informations accessibilité</a></li>
+        <li><a href="[[~contact]]">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</footer>
