@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>HandiPro31 | Header corrigé – centrage & responsive</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
+      background: #fafcfb;
+      scroll-behavior: smooth;
+    }
+
+    /* ============================================================
+       HEADER V2 — HandiPro31 (CORRECTIONS ALIGNEMENT + RESPONSIVE)
+       ============================================================ */
+
+    /* Header principal */
+    .hp-header {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+
+    /* ✅ SOLUTION GRID : centrage PARFAIT du menu principal (logo | nav centrée | actions) */
+    .hp-header__inner {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 2rem;
+      height: 80px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* logo : pas de changement */
+    .hp-header__logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    /* navigation principale : centrée DANS sa colonne (1fr) */
+    .hp-header__nav {
+      justify-self: center;      /* centre le bloc nav dans la colonne */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hp-header__nav ul {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;   /* centrage interne au ul */
+    }
+
+    .hp-header__nav a {
+      text-decoration: none;
+      color: #2D2D2D;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .hp-header__nav a:hover {
+      color: #4BA78C;
+    }
+
+    /* actions (contact + burger) : aligné à droite */
+    .hp-header__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-self: end;
+    }
+
+    .hp-header__contact {
+      background: #E8893A;
+      color: #fff;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .hp-header__contact:hover {
+      background: #d0762e;
+    }
+
+    /* Burger (caché par défaut sur desktop) */
+    .hp-header__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hp-header__burger span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #2C3E50;
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .hp-header__burger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hp-header__burger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    .hp-header__burger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Nav secondaire (pilule) : toujours centrée */
+    .hp-header__secondary {
+      background: #fff;
+      padding: 0.5rem 2rem 0.75rem;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #f0f0f0;
+      position: sticky;
+      top: 80px;
+      z-index: 199;
+    }
+
+    .hp-header__pill {
+      background: #4BA78C;
+      border-radius: 50px;
+      padding: 0.55rem 2.5rem;
+    }
+
+    .hp-header__pill ul {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+
+    .hp-header__pill a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .hp-header__pill a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    /* Menu mobile overlay */
+    .hp-mobile-menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      z-index: 199;
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      border-top: 2px solid #4BA78C;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .hp-mobile-menu.is-open {
+      transform: translateX(0);
+    }
+
+    .hp-mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hp-mobile-menu li a {
+      display: block;
+      padding: 1rem 0;
+      color: #2D2D2D;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .hp-mobile-menu li a:hover {
+      color: #4BA78C;
+    }
+
+    .hp-mobile-menu__sep {
+      height: 2px;
+      background: #E8F7F3;
+      margin: 0.75rem 0;
+    }
+
+    .hp-mobile-menu li a.hp-mobile-menu__contact {
+      display: inline-block;
+      margin-top: 1.25rem;
+      background: #E8893A;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 0.375rem;
+      border-bottom: none;
+      text-align: center;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: 0.5rem 1rem;
+      background: #4BA78C;
+      color: #fff;
+      border-radius: 4px;
+      z-index: 9999;
+    }
+
+    /* Bouton retour haut */
+    #btn-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #4BA78C;
+      color: #fff;
+      border: none;
+      border-radius: 2rem;
+      height: 2.75rem;
+      padding: 0 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    #btn-top.visible {
+      display: flex;
+    }
+
+    .btn-top__label {
+      font-size: 0.85rem;
+    }
+
+    /* ============================================================
+       RESPONSIVE : conservation du design + correction bugs
+       ============================================================ */
+
+    /* Tablette / petits écrans (max 1023px) */
+    @media (max-width: 1023px) {
+      /* repasser en flex pour gestion fluide et centrage */
+      .hp-header__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        padding: 0.75rem 1.5rem;
+        gap: 0.5rem;
+      }
+
+      /* logo et actions restent sur la même ligne */
+      .hp-header__logo, .hp-header__actions {
+        flex: 0 0 auto;
+      }
+
+      /* afficher le burger */
+      .hp-header__burger {
+        display: flex;
+      }
+
+      /* navigation principale : prend toute la largeur et centrée */
+      .hp-header__nav {
+        order: 3;
+        width: 100%;
+        padding: 0.5rem 0 0.25rem;
+        justify-self: unset;
+        justify-content: center;
+      }
+
+      .hp-header__nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        justify-content: center;
+      }
+
+      .hp-header__nav a {
+        font-size: 0.85rem;
+        white-space: normal;
+      }
+
+      .hp-header__contact {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+      }
+
+      /* secondaire : toujours centré mais plus compact */
+      .hp-header__secondary {
+        padding: 0.4rem 1rem 0.6rem;
+      }
+
+      .hp-header__pill {
+        padding: 0.45rem 1.25rem;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hp-header__pill ul {
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+        min-width: max-content;
+      }
+
+      .hp-header__pill a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+    }
+
+    /* Mobile étroit (max 599px) : optimisation extrême */
+    @media (max-width: 599px) {
+      .hp-header__inner {
+        padding: 0.75rem 1rem;
+      }
+
+      .hp-header__nav ul {
+        gap: 0.5rem 1rem;
+      }
+
+      .hp-header__nav a {
+        font-size: 0.8rem;
+      }
+
+      .hp-header__contact {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.8rem;
+      }
+
+      .hp-header__secondary {
+        padding: 0;
+      }
+
+      .hp-header__pill {
+        width: 100%;
+        border-radius: 0;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        overflow-x: auto;
+      }
+
+      .hp-header__pill ul {
+        justify-content: space-around;
+        gap: 0.5rem;
+      }
+
+      .hp-header__pill a {
+        font-size: 0.72rem;
+      }
+
+      #btn-top {
+        height: 2rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .btn-top__label {
+        font-size: 0.7rem;
+      }
+    }
+
+    /* petite correction pour très grands écrans : garder l'alignement */
+    @media (min-width: 1280px) {
+      .hp-header__inner {
+        padding: 0;
+      }
+    }
+
+    /* Suppression bouton inutile (ASW) si présent dans l'environnement */
+    .asw-menu-btn {
+      display: none !important;
+    }
+
+    /* ============================================================
+       CONTENU DEMO (pour tester le défilement, sticky, etc.)
+       ============================================================ */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .demo-content {
+      background: #fff;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #eef2f0;
+    }
+
+    .demo-content h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1e2e2a;
+    }
+
+    .demo-content p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      color: #2c3e2f;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: #f9fefb;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      flex: 1 1 200px;
+      border: 1px solid #e0f0e8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #e0e8e4;
+      color: #4b6b5f;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- HEADER PRINCIPAL (version corrigée) -->
+  <header role="banner" class="hp-header">
+    <div class="hp-header__inner">
+      <a href="#" class="hp-header__logo" aria-label="Accueil HandiPro31">
+        <!-- Logo simulé pour la maquette (texte + fond neutre) -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%234BA78C' rx='8'/%3E%3Ctext x='20' y='38' font-family='Arial' font-size='20' fill='white' font-weight='bold'%3EHandiPro31%3C/text%3E%3C/svg%3E" alt="HandiPro31" style="height: 50px; width: auto;" />
+      </a>
+      <nav class="hp-header__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#">Cap Emploi - Haute Garonne</a></li>
+          <li><a href="#">Le CREHI</a></li>
+          <li><a href="#">HandiPro Conseil</a></li>
+        </ul>
+      </nav>
+      <div class="hp-header__actions">
+        <a href="#" class="hp-header__contact">Contact</a>
+        <button class="hp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="hp-mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HEADER 2 — nav pilule (centrée parfaite) -->
+  <nav class="hp-header__secondary" aria-label="Navigation secondaire">
+    <div class="hp-header__pill">
+      <ul>
+        <li><a href="#">Qui sommes-nous ?</a></li>
+        <li><a href="#">Actualités &amp; Informations</a></li>
+        <li><a href="#">Nous rejoindre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MENU MOBILE OVERLAY -->
+  <div class="hp-mobile-menu" id="hp-mobile-menu" aria-label="Menu mobile" role="dialog">
+    <ul>
+      <li><a href="#">Cap Emploi</a></li>
+      <li><a href="#">Le CREHI</a></li>
+      <li><a href="#">HandiPro Conseil</a></li>
+      <li><a href="#">Cheops Occitanie</a></li>
+      <li class="hp-mobile-menu__sep" role="separator"></li>
+      <li><a href="#">Qui sommes-nous ?</a></li>
+      <li><a href="#">Actualités &amp; Informations</a></li>
+      <li><a href="#">Nous rejoindre</a></li>
+      <li><a href="#" class="hp-mobile-menu__contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenu principal pour tester le scroll et l'alignement -->
+  <main id="main-content" tabindex="-1">
+    <div class="demo-content">
+      <h1>Header corrigé – alignement & responsive</h1>
+      <p>✔️ <strong>Menu principal (premier niveau)</strong> parfaitement centré sur desktop (grille CSS) et centré sur tablette/mobile.<br>
+      ✔️ <strong>Menu secondaire (pilule)</strong> toujours centré horizontalement, avec scroll fluide sur petits écrans.<br>
+      ✔️ Design conservé à l'identique (couleurs, espacements, sticky).<br>
+      ✔️ Bug du désalignement corrigé : les deux menus partagent le même axe de symétrie visuel.<br>
+      ✔️ Burger mobile fonctionnel + menu latéral accessible.</p>
+      
+      <div class="card-grid">
+        <div class="card"><strong>Accessibilité</strong><br>Skip link, contrôles ARIA, focus visible.</div>
+        <div class="card"><strong>Sticky Header</strong><br>Les deux barres restent visibles lors du scroll.</div>
+        <div class="card"><strong>Responsive sans rupture</strong><br>De 320px à 1920px, tout s'ajuste proprement.</div>
+      </div>
+      
+      <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Fringilla urna suspendisse curabitur malesuada lectus congue laoreet. Magna semper bibendum mollis quis felis torquent elementum. Curabitur ex torquent venenatis senectus erat quisque hac. Libero odio aliquam ligula ante habitant interdum torquent. Nisl etiam suspendisse volutpat faucibus convallis quisque vitae varius. Gravida porta elementum vitae sit dui luctus nam sociosqu.</p>
+      <p>Potenti himenaeos facilisi turpis vivamus habitant, erat vitae. Sodales elit faucibus lobortis aptent suspendisse varius faucibus fames. Adipiscing metus platea tempus curae sed suspendisse platea. Aptent quisque vulputate euismod natoque suspendisse id sodales. Nulla aliquam rhoncus tristique tempus scelerisque pellentesque parturient. Platea tincidunt habitant lacinia hac maecenas blandit nulla. Dis nisl porta quisque fringilla non cras sociosqu phasellus quis. Sociosqu iaculis fusce integer ex fames penatibus quisque. Vel convallis potenti diam ornare potenti lacus egestas.</p>
+      <p>Duis posuere sollicitudin penatibus dictumst hendrerit iaculis fusce. Magna suspendisse adipiscing molestie parturient at convallis nisl. Vestibulum purus cursus pellentesque id blandit lacinia class gravida. Himenaeos curabitur sapien ac luctus ullamcorper consequat lobortis ultrices. Inceptos tempus adipiscing blandit faucibus ornare augue convallis vestibulum. Nisl augue nisl turpis egestas non curabitur. Faucibus natoque interdum suscipit scelerisque blandit aenean lectus. Convallis adipiscing ante cras tellus id turpis habitant.</p>
+      <p><strong>Testez le comportement :</strong> redimensionnez la fenêtre, ouvrez le menu burger, faites défiler. Les menus restent bien centrés, aucun débordement ni cassure d'alignement.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>HandiPro31 – Header centré, design préservé | Maquette de test</p>
+  </footer>
+
+  <button id="btn-top" aria-label="Retour en haut">
+    <span class="btn-top__label">▲ Haut</span>
+  </button>
+
+  <script>
+    (function() {
+      // 1. TOGGLE MENU MOBILE (burger)
+      const burger = document.querySelector('.hp-header__burger');
+      const mobileMenu = document.getElementById('hp-mobile-menu');
+      if (burger && mobileMenu) {
+        const toggleMenu = () => {
+          const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('is-open');
+          // gérer le scroll du body pour éviter le défilement arrière (optionnel)
+          if (!isExpanded) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        };
+        burger.addEventListener('click', toggleMenu);
+        
+        // Fermer le menu si on clique sur un lien (optionnel mais bonne pratique)
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('is-open')) {
+              burger.setAttribute('aria-expanded', 'false');
+              mobileMenu.classList.remove('is-open');
+              document.body.style.overflow = '';
+            }
+          });
+        });
+        
+        // Fermer menu si resize au delà de 1023px (éviter les états bloqués)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 1023 && mobileMenu.classList.contains('is-open')) {
+            mobileMenu.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+
+      // 2. BOUTON RETOUR HAUT (scroll & visibilité)
+      const btnTop = document.getElementById('btn-top');
+      if (btnTop) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btnTop.classList.add('visible');
+          } else {
+            btnTop.classList.remove('visible');
+          }
+        });
+        btnTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 3. Gestion du focus et fermeture du menu avec Echap
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')) {
+          burger.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.remove('is-open');
+          document.body.style.overflow = '';
+          burger.focus();
+        }
+      });
+      
+      // 4. Correction supplémentaire : éviter que le menu secondaire déborde visuellement sur tablette très étroite
+      // (déjà géré en CSS, mais on ajoute un petit watch pour forcer le repositionnement si besoin)
+      const pillUl = document.querySelector('.hp-header__pill ul');
+      if (pillUl && window.innerWidth <= 1023) {
+        // s'assurer que le contenu est bien scrollable horizontalement sans casser le centrage
+        const parentPill = document.querySelector('.hp-header__pill');
+        if (parentPill) {
+          parentPill.style.overflowX = 'auto';
+        }
+      }
+      
+      // 5. Petite vérification : éviter que le sticky header cache du contenu lors de l'ancre
+      const mainContent = document.getElementById('main-content');
+      if (mainContent && window.location.hash === '#main-content') {
+        const headerHeight = document.querySelector('.hp-header')?.offsetHeight || 80;
+        const secondaryHeight = document.querySelector('.hp-header__secondary')?.offsetHeight || 50;
+        window.scrollTo(0, mainContent.offsetTop - (headerHeight + secondaryHeight + 10));
+      }
+    })();
+  </script>
+</body>
+</html>

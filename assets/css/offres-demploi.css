@@ -1,0 +1,215 @@
+/* === Mobile First - Layout général === */
+.main-content {
+  padding: 1rem;
+}
+
+/* === Titre principal === */
+.offres-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* === Bloc d'une offre === */
+.offre {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.offre-header {
+  margin-bottom: 1rem;
+}
+
+.offre-ref {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.offre-titre {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #2C3E50;
+}
+
+.offre-meta {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.offre-resume {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.offre-separateur {
+  margin: 1.2rem 0;
+  border: none;
+  border-top: 1px solid #2C3E50;
+  ;
+}
+
+.offre-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.offre-contrat {
+  font-weight: bold;
+  color: #333;
+}
+
+.offre-lien {
+  display: inline-block;
+  background: #2C3E50;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.offre-lien:hover {
+  background: #fff;
+  border: 1px solid #2C3E50;
+  color: #2C3E50;
+}
+
+.offres-p {
+  color: #fff;
+}
+
+.btn-candidature-spontanee {
+  display: block;
+  width: 100%;
+  margin: 1.5rem auto;
+  background: #2C3E50;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn-candidature-spontanee:hover {
+  background: #fff;
+  color: #2C3E50;
+  border: 1px solid #2C3E50;
+}
+
+/* === Pagination === */
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0.4rem 0.7rem;
+  background: #eee;
+  color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.pagination a:hover {
+  background: #ccc;
+}
+
+.pagination .active {
+  background: #2C3E50;
+  color: white;
+  font-weight: bold;
+}
+
+/* === Bouton retour accueil === */
+.btn-retour-accueil {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  background: #2C3E50;
+  color: white;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-retour-accueil:hover {
+  background: #222;
+}
+
+/* === Tablet (>= 768px) === */
+@media (min-width: 768px) {
+  .main-content {
+    padding: 2rem;
+    background: none;
+  }
+
+  .offre-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-retour-accueil {
+    width: auto;
+    display: inline-block;
+  }
+
+  .btn-candidature-spontanee {
+    width: auto;
+    display: inline-block;
+  }
+}
+
+/* === Desktop (>= 1024px) === */
+@media (min-width: 1024px) {
+  .main-content {
+    margin: 0 auto;
+    background: none;
+  }
+
+  .offres-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .offre {
+    width: calc(33.333% - 1rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .offres-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .offre-titre {
+    font-size: 1.5rem;
+  }
+
+  .pagination a {
+    font-size: 1rem;
+  }
+}

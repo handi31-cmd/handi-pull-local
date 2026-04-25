@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteBase /
+
+# 1. Autoriser le dossier .well-known (pour SSL Let's Encrypt)
+RewriteRule "^\.well-known/" - [L]
+
+# 2. Bloquer l'accès aux fichiers et dossiers cachés (dotfiles) sauf .well-known
+RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+# 3. Bloquer certains types de fichiers sensibles
+<FilesMatch "\.(sql|tpl|md|ini|log|sh|bak|zip|tar|gz|tgz|yml|yaml)$">
+    Require all denied
+</FilesMatch>
+
+# 4. Autoriser uniquement les dossiers nécessaires au site
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteCond %{REQUEST_URI} !^/manager/
+RewriteCond %{REQUEST_URI} !^/connectors/
+RewriteCond %{REQUEST_URI} !^/recrutement/
+RewriteCond %{REQUEST_URI} !^/infos-actus/
+RewriteCond %{REQUEST_URI} !^/candidature-spontanee/
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^([^/]+)/ - [F,L]
+
+# 5. Si la requête n'est pas un fichier ou dossier existant,
+# rediriger vers index.php (Friendly URLs de MODX)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+
+# 6. Désactiver l'indexation des répertoires (sécurité globale)
+Options -Indexes

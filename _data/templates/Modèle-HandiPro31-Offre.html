@@ -1,0 +1,46 @@
+id: 17
+source: 1
+templatename: 'Modèle HandiPro31 - Offre'
+description: 'Modèle qui affichera le détail d''une offre d''emploi'
+category: Recrutement
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+
+  <! -- CSS de base -->
+    <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/headerV2.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/footerSite.css" />
+
+    <! -- chunk CSS -->
+    <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- CSS générique pour les offres d'emploi -->
+    <link rel="stylesheet" href="[[++assets_url]]css/offres-detail.css" /> <!--css pour la page des offres d'emploi-->
+</head>
+
+
+<body>
+  [[$headerV2]]
+  <main>
+    [[$offreDetailTpl]]
+  </main>
+  [[$footerSite]]
+
+
+  <script src="[[++assets_url]]js/dropdown.js"></script>
+  <script src="[[++assets_url]]js/boutonTop.js"></script>
+</body>
+
+</html>

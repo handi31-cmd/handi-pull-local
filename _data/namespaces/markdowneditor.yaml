@@ -1,0 +1,3 @@
+name: markdowneditor
+path: '{core_path}components/markdowneditor/'
+assets_path: '{assets_path}components/markdowneditor/'

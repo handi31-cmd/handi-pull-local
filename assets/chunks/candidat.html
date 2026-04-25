@@ -1,0 +1,91 @@
+<article class="offre-detail">
+    <div class="left-container">
+        <section class="offre-detail-retour">
+            <a href="[[~24? &scheme=`full`]]" class="btn-retour">← Retour aux offres</a>
+        </section>
+    </div>
+    <div class="right-container">
+        <div class="offre-detail-header">
+            <p class="offre-detail-ref"><strong>Réf. :</strong> [[*numero_offre]]</p>
+            <h2 class="offre-detail-title">[[*pagetitle]]</h2>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> [[*lieu]]</p>
+            <p><i class="fa fa-calendar-o" aria-hidden="true"></i> publié le [[*publishedon:date=`%d/%m/%Y`]]</p>
+            <p><strong>Type de contrat :</strong> [[*type_contrat]]</p>
+        </div>
+
+        [[*contexte_professionnel:notempty=`
+        <section class="offre-detail-section">
+            <h3>Contexte professionnel</h3>
+            <p>[[*contexte_professionnel]]</p>
+        </section>
+        `]]
+
+        [[*mission_principale:notempty=`
+        <section class="offre-detail-section">
+            <h3>Mission principale</h3>
+            <p>[[*mission_principale]]</p>
+        </section>
+        `]]
+        [[*EnDirectionDesEmployeurs:notempty=`
+        <section class="offre-detail-section">
+            <h3>En direction des employeurs</h3>
+            <ul>
+                [[*EnDirectionDesEmployeurs:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+        [[*EnDirectionDeLaPersonne:notempty=`
+        <section class="offre-detail-section">
+            <h3>En direction de la personne</h3>
+            <ul>
+                [[*EnDirectionDeLaPersonne:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+
+        [[*activites:notempty=`
+        <section class="offre-detail-section">
+            <h3>Activités</h3>
+            <ul>
+                [[*activites:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+
+        [[*activites_specifique:notempty=`
+        <section class="offre-detail-section">
+            <h3>Activités spécifique</h3>
+            <ul>
+                [[*activites_specifique:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+
+        [[*savoirs_faire:notempty=`
+        <section class="offre-detail-section">
+            <h3>Savoirs faire</h3>
+            <ul>
+                [[*savoirs_faire:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+
+        [[*savoirs_etre:notempty=`
+        <section class="offre-detail-section">
+            <h3>Savoirs être</h3>
+            <ul>
+                [[*savoirs_etre:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+
+        [[*profil_souhaite:notempty=`
+        <section class="offre-detail-section">
+            <h3>Profil souhaité</h3>
+            <ul>
+                [[*profil_souhaite:replace=`==<li>`:replace=`\n==</li>`]]
+            </ul>
+        </section>
+        `]]
+    </div>
+</article>

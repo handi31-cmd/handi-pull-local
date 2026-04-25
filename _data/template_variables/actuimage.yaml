@@ -1,0 +1,13 @@
+id: 2
+source: 1
+type: image
+name: actuimage
+caption: actuimage
+category: 'Actualités  Informations'
+elements: null
+display: text
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:10:"allowBlank";s:4:"true";}'
+output_properties: 'a:5:{s:7:"alttext";s:0:"";s:2:"id";s:0:"";s:5:"class";s:0:"";s:5:"style";s:0:"";s:10:"attributes";s:0:"";}'
+content: ''

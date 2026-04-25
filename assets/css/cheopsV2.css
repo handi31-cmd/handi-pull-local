@@ -1,0 +1,99 @@
+/* === CHEOPS — styles spécifiques === */
+/* Layout et sidebar : réutilise les classes .ce-* de capemploiV2.css */
+
+/* Grille 2 colonnes missions + public */
+.chp-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Listes à puces personnalisées */
+.chp-liste {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.chp-liste li {
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--hp-text);
+}
+
+.chp-liste li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+}
+
+/* Blocs public (personnes / employeurs) */
+.chp-public-bloc {
+  margin-bottom: 1.25rem;
+}
+
+.chp-public-bloc:last-child { margin-bottom: 0; }
+
+.chp-public-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hp-primary-dark);
+  margin: 0 0 0.4rem;
+}
+
+/* Grille chiffres réseau */
+.chp-reseau-grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.chp-reseau-carte {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.chp-reseau-nombre {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--hp-primary);
+  line-height: 1;
+}
+
+.chp-reseau-label {
+  font-size: 0.8rem;
+  color: var(--hp-text);
+  line-height: 1.4;
+}
+
+/* === Responsive === */
+@media (max-width: 1023px) {
+  .chp-reseau-grille { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .chp-duo { grid-template-columns: 1fr; }
+  .chp-reseau-grille { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .chp-reseau-grille { grid-template-columns: 1fr 1fr; }
+}

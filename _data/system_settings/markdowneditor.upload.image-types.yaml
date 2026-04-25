@@ -1,0 +1,4 @@
+key: markdowneditor.upload.image_types
+value: 'jpg,jpeg,png,gif,bmp'
+namespace: markdowneditor
+area: markdowneditor.area.upload

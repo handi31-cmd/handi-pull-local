@@ -1,0 +1,4 @@
+key: markdowneditor.lp.parse_modx_tags
+xtype: combo-boolean
+namespace: markdowneditor
+area: markdowneditor.area.lp

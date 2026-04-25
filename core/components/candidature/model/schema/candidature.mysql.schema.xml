@@ -1,0 +1,14 @@
+<model package="candidature" baseClass="xPDOObject" table="candidatures" version="1.0">
+  <object class="Candidature" table="candidatures" extends="xPDOObject" vehicle="xPDOObjectVehicle" >
+    <field key="id" dbtype="int" precision="10" phptype="integer" null="false" index="pk" generated="native" />
+    <field key="prenom" dbtype="varchar" precision="100" phptype="string" null="false" />
+    <field key="nom" dbtype="varchar" precision="100" phptype="string" null="false" />
+    <field key="email" dbtype="varchar" precision="255" phptype="string" null="false" />
+    <field key="tel" dbtype="varchar" precision="20" phptype="string" null="true" />
+    <field key="poste" dbtype="varchar" precision="255" phptype="string" null="false" />
+    <field key="cv" dbtype="varchar" precision="255" phptype="string" null="true" />
+    <field key="lettre_Motiv" dbtype="varchar" precision="255" phptype="string" null="true" />
+    <field key="message" dbtype="text" phptype="string" null="true" />
+    <field key="optin_rgpd" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0" />
+  </object>
+</model>

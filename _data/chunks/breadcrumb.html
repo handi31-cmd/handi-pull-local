@@ -1,0 +1,21 @@
+id: 18
+source: 1
+name: breadcrumb
+description: 'fil d''ariane pour le site internet'
+category: Site
+properties: 'a:0:{}'
+
+-----
+
+<nav class="breadcrumb" aria-label="Fil d'ariane">
+[[!Breadcrumbs?
+  &showHome=`1`
+  &homeCrumbTitle=`Accueil`
+  &hideContainer=`1`
+  &showCurrent=`1`
+  &currentAsLink=`0`
+  &crumbSeparator=` &gt; `
+  &tplCrumb=`@INLINE [[+id:is=`24`:then=``:else=`<a href="[[~[[+id]]]]">[[+menutitle]]</a>`]]`
+  &tplCurrentCrumb=`@INLINE <span class="current">[[+menutitle]]</span>`
+]]
+</nav>

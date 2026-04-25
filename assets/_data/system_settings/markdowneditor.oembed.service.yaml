@@ -1,0 +1,4 @@
+key: markdowneditor.oembed.service
+value: 'Essence,EmbedlyCards'
+namespace: markdowneditor
+area: markdowneditor.area.oembed

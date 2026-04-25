@@ -1,0 +1,5 @@
+key: markdowneditor.upload.enable_file_upload
+value: '1'
+xtype: combo-boolean
+namespace: markdowneditor
+area: markdowneditor.area.upload

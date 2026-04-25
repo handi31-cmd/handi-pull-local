@@ -3,275 +3,489 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Prévisualisation locale — Page d'accueil HandiPro31" />
-  <title>Accueil — HandiPro31 [PREVIEW]</title>
+  <title>Accueil — HandiPro31 [PREVIEW LOCAL]</title>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/header.css" />
   <link rel="stylesheet" href="assets/css/accueil.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
 
-  <!-- Polices -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* Bandeau preview uniquement */
+    /* Base */
+    html, body {
+      display: block;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: 'Nunito', Arial, sans-serif;
+      color: #2D3E35;
+    }
+    main, section {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Styles footer */
+    .site-footer {
+      background-color: #2C3E50;
+      color: #fff;
+      padding: 2rem 2rem 1rem;
+      font-size: 14px;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    /* Ligne 1 : logo + réseaux */
+    .footer-row-top {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    /* Ligne 2 : carte + colonnes */
+    .footer-row-bottom {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      align-items: start;
+      margin-bottom: 1.5rem;
+      gap: 7rem;
+    }
+    .footer-col--map .map-container iframe {
+      width: 100%; height: 180px; border: none; border-radius: 0.5rem; margin-top: 0.75rem;
+    }
+    .hp-footer-logo img { max-width: 160px; display: block; margin-bottom: 0.75rem; }
+    .footer-social { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1rem; }
+    .footer-social__link { display: flex; align-items: center; opacity: 0.85; transition: opacity 0.2s; }
+    .footer-social__link:hover { opacity: 1; }
+
+    /* Groupe des 3 colonnes */
+    .footer-cols-group {
+      display: flex;
+      gap: 8rem;
+      align-items: flex-start;
+    }
+    .footer-col {
+      display: block;
+      margin: 0;
+      padding: 0;
+      font-style: normal;
+      text-align: left;
+      min-width: 0;
+    }
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #4BA78C;
+      margin: 0 0 10px 0;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #4BA78C;
+      display: inline-block;
+      line-height: 1.3;
+    }
+    .footer-col ul {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .footer-col ul li { margin-bottom: 7px; }
+    .footer-col a { color: #fff; text-decoration: none; font-size: 13px; }
+    .footer-col a:hover { text-decoration: underline; }
+    .footer-col p { color: #fff; font-size: 13px; line-height: 1.6; margin: 0 0 6px 0; }
+
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 0.75rem 0;
+      margin-top: 0.5rem;
+      font-size: 12px;
+      color: #fff;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-bar nav { display: flex; gap: 1.5rem; flex-wrap: wrap; padding-right: 3.5rem; }
+    .footer-bar nav a { color: #fff; text-decoration: none; font-size: 12px; }
+    .footer-bar nav a:hover { text-decoration: underline; }
+    .footer-copyright {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      padding: 0.5rem 0 0.25rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 0.25rem;
+    }
+    .footer-info {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 10px;
+      text-align: center;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    @media (max-width: 1023px) {
+      .footer-row-bottom { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-cols-group { gap: 2rem; }
+    }
+    @media (max-width: 599px) {
+      .footer-row-top { flex-wrap: wrap; gap: 1rem; }
+      .footer-row-bottom { grid-template-columns: 1fr; gap: 1.5rem; }
+      .footer-cols-group { flex-direction: row; gap: 1.5rem; flex-wrap: nowrap; }
+      .footer-col { min-width: 0; flex: 1; }
+      .footer-col h4 { font-size: 0.65rem; }
+      .footer-col a, .footer-col p { font-size: 0.55rem; }
+    }
     .preview-banner {
       background: #2C3E50;
       color: #fff;
       text-align: center;
-      padding: 0.4rem;
-      font-size: 0.8rem;
+      padding: 0.35rem 1rem;
+      font-size: 0.75rem;
       font-family: monospace;
-      letter-spacing: 0.05em;
     }
-    /* Header simplifié local */
-    .site-header .container {
+    /* ── HEADER ── */
+    .hp-header {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .hp-header__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1.5rem;
+      padding: 0 2rem;
+      height: 80px;
+      max-width: 1280px;
+      margin: 0 auto;
     }
-    .logo img { width: 180px; }
-    .nav-preview { display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0; }
-    .nav-preview a { text-decoration: none; color: #2C3E50; font-size: 0.9rem; font-weight: 600; }
-    .nav-preview a:hover { color: #4BA78C; }
-    /* Bouton retour haut */
+    .hp-header__logo img { height: 50px; width: auto; display: block; }
+    .hp-header__nav ul {
+      display: flex; gap: 2.5rem; list-style: none; padding: 0; margin: 0;
+    }
+    .hp-header__nav a {
+      text-decoration: none; color: #2C3E50; font-size: 0.9rem; font-weight: 600;
+      transition: color 0.2s;
+    }
+    .hp-header__nav a:hover { color: #4BA78C; }
+    .hp-header__actions { display: flex; align-items: center; gap: 1rem; }
+    .hp-header__contact {
+      background: #E8893A; color: #fff; padding: 0.5rem 1.5rem;
+      border-radius: 0.375rem; font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; transition: background 0.2s; white-space: nowrap;
+    }
+    .hp-header__contact:hover { background: #d0762e; }
+
+    /* Burger */
+    .hp-header__burger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 0.5rem;
+    }
+    .hp-header__burger span {
+      display: block; width: 25px; height: 2px; background: #2C3E50;
+      border-radius: 2px; transition: transform 0.3s, opacity 0.3s;
+    }
+    .hp-header__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hp-header__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hp-header__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Nav secondaire pilule */
+    .hp-header__secondary {
+      background: #fff;
+      padding: 0.5rem 2rem 0.75rem;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .hp-header__pill {
+      background: #4BA78C; border-radius: 50px; padding: 0.55rem 2.5rem;
+    }
+    .hp-header__pill ul { display: flex; gap: 3rem; list-style: none; padding: 0; margin: 0; }
+    .hp-header__pill a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .hp-header__pill a:hover { opacity: 0.8; text-decoration: underline; }
+
+    /* Menu mobile overlay */
+    .hp-mobile-menu {
+      position: fixed; top: 80px; left: 0; right: 0; bottom: 0;
+      background: #fff; z-index: 199; padding: 1.5rem 2rem;
+      overflow-y: auto; border-top: 2px solid #4BA78C;
+      transform: translateX(-100%); transition: transform 0.3s ease;
+    }
+    .hp-mobile-menu.is-open { transform: translateX(0); }
+    .hp-mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+    .hp-mobile-menu li a {
+      display: block; padding: 1rem 0; color: #2C3E50;
+      font-size: 1rem; font-weight: 600; text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .hp-mobile-menu li a:hover { color: #4BA78C; }
+    .hp-mobile-menu__sep { height: 2px; background: #E8F7F3; margin: 0.75rem 0; }
+    .hp-mobile-menu li a.hp-mobile-menu__contact {
+      display: inline-block; margin-top: 1.25rem;
+      background: #E8893A; color: #fff; padding: 0.75rem 2rem;
+      border-radius: 0.375rem; border-bottom: none; text-align: center;
+    }
+
+    /* Responsive header — tablet/mobile */
+    @media (max-width: 1023px) {
+      .hp-header__burger { display: flex; }
+      .hp-header__inner {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.75rem 1.5rem;
+        gap: 0.5rem;
+      }
+      .hp-header__nav {
+        order: 3;
+        width: 100%;
+        padding: 0.5rem 0 0.25rem;
+      }
+      .hp-header__nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        justify-content: center;
+      }
+      .hp-header__nav a { font-size: 0.85rem; }
+      .hp-header__contact { font-size: 0.85rem; padding: 0.4rem 1rem; }
+      .hp-header__secondary { padding: 0.4rem 1rem 0.6rem; }
+      .hp-header__pill { padding: 0.45rem 1.25rem; overflow-x: auto; }
+      .hp-header__pill ul { gap: 1.5rem; flex-wrap: nowrap; }
+      .hp-header__pill a { font-size: 0.8rem; white-space: nowrap; }
+    }
+
+    @media (max-width: 599px) {
+      .hp-header__inner { padding: 0.75rem 1rem; }
+      .hp-header__nav ul { gap: 0.5rem 1rem; }
+      .hp-header__nav a { font-size: 0.8rem; }
+      .hp-header__contact { padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+      .hp-header__secondary { padding: 0; }
+      .hp-header__pill {
+        width: 100%;
+        border-radius: 0;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+      }
+      .hp-header__pill ul { justify-content: space-around; gap: 0.5rem; }
+      .hp-header__pill a { font-size: 0.72rem; }
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-link:focus {
+      position: fixed; left: 1rem; top: 1rem; width: auto; height: auto;
+      padding: 0.5rem 1rem; background: #4BA78C; color: #fff; border-radius: 4px; z-index: 9999;
+    }
     #btn-top {
       position: fixed; bottom: 1.5rem; right: 1.5rem;
-      background: #4BA78C; color: #fff;
-      border: none; border-radius: 50%; width: 2.75rem; height: 2.75rem;
-      font-size: 1.25rem; cursor: pointer; display: none;
-      align-items: center; justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 100;
+      background: #4BA78C; color: #fff; border: none; border-radius: 2rem;
+      height: 2.75rem; padding: 0 1.25rem; font-size: 1rem; font-weight: 600;
+      cursor: pointer; display: none; align-items: center; justify-content: center;
+      gap: 0.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 100;
+      white-space: nowrap;
     }
     #btn-top.visible { display: flex; }
+    .btn-top__label { font-size: 0.85rem; }
+    @media (max-width: 599px) {
+      #btn-top { height: 2rem; padding: 0 0.75rem; font-size: 0.75rem; bottom: 1rem; right: 1rem; }
+      .btn-top__label { font-size: 0.7rem; }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Bandeau debug -->
-  <div class="preview-banner" role="banner" aria-label="Bandeau de prévisualisation">
-    ⚠️ PREVIEW LOCAL — Les liens MODx sont remplacés par # — Images manquantes = normal
-  </div>
+  <div class="preview-banner">PREVIEW LOCAL — liens remplacés par # — images placeholder si absentes</div>
+  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
-  <a href="#contenu-principal" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
-    Aller au contenu principal
-  </a>
-
-  <!-- HEADER -->
-  <header role="banner" class="site-header">
-    <div class="container">
-      <a href="#" class="logo" aria-label="Accueil HandiPro31">
-        <img src="assets/images/LogoHandipro31.png" alt="Logo HandiPro31" />
+  <!-- HEADER 1 -->
+  <header role="banner" class="hp-header">
+    <div class="hp-header__inner">
+      <a href="#" class="hp-header__logo" aria-label="Accueil HandiPro31">
+        <img src="assets/images/LogoHandipro31.png" alt="HandiPro31" />
       </a>
-      <nav role="navigation" aria-label="Menu Principal">
-        <ul class="nav-preview">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Cap Emploi</a></li>
-          <li><a href="#">CREHI</a></li>
-          <li><a href="#">HandiPro Conseil</a></li>
-          <li><a href="#">Contact</a></li>
+      <nav class="hp-header__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="_data/content/web/capemploi-31.html">Cap Emploi - Haute Garonne</a></li>
+          <li><a href="_data/content/web/crehi.html">Le CREHI</a></li>
+          <li><a href="_data/content/web/handipro-conseil.html">HandiPro Conseil</a></li>
         </ul>
       </nav>
+      <div class="hp-header__actions">
+        <a href="_data/content/web/contact.html" class="hp-header__contact">Contact</a>
+        <button class="hp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="hp-mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
+  <!-- HEADER 2 — nav pilule (desktop uniquement) -->
+  <nav class="hp-header__secondary" aria-label="Navigation secondaire">
+    <div class="hp-header__pill">
+      <ul>
+        <li><a href="#">Qui sommes-nous ?</a></li>
+        <li><a href="#">Actualités &amp; Informations</a></li>
+        <li><a href="#">Nous rejoindre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MENU MOBILE -->
+  <div class="hp-mobile-menu" id="hp-mobile-menu" aria-label="Menu mobile" role="dialog">
+    <ul>
+      <li><a href="_data/content/web/capemploi-31.html">Cap Emploi - Haute Garonne</a></li>
+      <li><a href="_data/content/web/crehi.html">Le CREHI</a></li>
+      <li><a href="_data/content/web/handipro-conseil.html">HandiPro Conseil</a></li>
+      <li class="hp-mobile-menu__sep" role="separator"></li>
+      <li><a href="#">Qui sommes-nous ?</a></li>
+      <li><a href="#">Actualités &amp; Informations</a></li>
+      <li><a href="#">Nous rejoindre</a></li>
+      <li><a href="_data/content/web/contact.html" class="hp-mobile-menu__contact">Contact</a></li>
+    </ul>
+  </div>
+
   <main id="contenu-principal" role="main">
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+    <!-- HERO IMAGE -->
     <section class="hp-hero" aria-label="Bannière d'accueil">
-
-      <img
-        class="hp-hero__img"
-        src="assets/images/entree.png"
-        alt="L'équipe HandiPro31 réunie"
-        width="1440"
-        height="520"
-        loading="eager"
-        onerror="this.style.background='#E8F7F3';this.style.minHeight='300px';this.removeAttribute('src')"
-      />
-
-      <div class="hp-hero__card">
-        <h1>Accompagner l'emploi des personnes handicapées</h1>
-        <p class="hp-hero__subtitle">Un réseau de services au service de votre projet professionnel</p>
-        <p>
-          HandiPro31 réunit des structures spécialisées pour vous accompagner,
-          que vous soyez en situation de handicap, employeur ou partenaire institutionnel.
-        </p>
-        <div class="hp-btn-row">
-          <a href="#" class="hp-btn hp-btn--primary">Contactez-nous</a>
-          <a href="#nos-services" class="hp-btn hp-btn--outline">Découvrir nos services</a>
-        </div>
+      <div class="hp-hero__image-wrapper">
+        <img
+          class="hp-hero__img"
+          src="assets/images/Equipe-HandiPro.png"
+          alt="L'équipe HandiPro31 réunie"
+          width="1440" height="400"
+          loading="eager"
+        />
+        <p class="hp-hero__overlay-title">Bienvenu chez HandiPro 31</p>
       </div>
-
-      <div class="hp-stats" aria-label="Chiffres clés">
-        <div class="hp-stat">
-          <span class="hp-stat__number">+1 200</span>
-          <span class="hp-stat__label">personnes accompagnées / an</span>
-        </div>
-        <div class="hp-stat">
-          <span class="hp-stat__number">3</span>
-          <span class="hp-stat__label">services spécialisés</span>
-        </div>
-        <div class="hp-stat">
-          <span class="hp-stat__number">30 ans</span>
-          <span class="hp-stat__label">d'expertise en Haute-Garonne</span>
-        </div>
-      </div>
-
     </section>
 
-    <!-- =====================================================
-         NOS SERVICES
-         ===================================================== -->
+    <!-- HERO CARD -->
+    <section class="hp-hero-engagement" aria-label="Notre engagement">
+      <div class="hp-hero__card">
+        <h1>Votre emploi, notre engagement</h1>
+        <p>
+          Depuis plus de 30 ans, nous œuvrons pour l'inclusion professionnelle des
+          personnes en situation de handicap. Notre mission :
+          vous accompagner vers l'emploi qui vous ressemble.
+        </p>
+        <div class="hp-btn-row">
+          <a href="_data/content/web/contact.html" class="hp-btn hp-btn--contact">Contactez-nous</a>
+          <a href="#nos-services" class="hp-btn hp-btn--primary">Découvrir nos services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="hp-stats-section" aria-label="Chiffres clés">
+      <div class="hp-stats__outer">
+      <div class="hp-stats__inner">
+        <div class="hp-stat-box">
+          <span class="hp-stat-box__main">+ 30 ans</span>
+          <span class="hp-stat-box__label">d'expériences</span>
+        </div>
+        <div class="hp-stat-box">
+          <span class="hp-stat-box__main">1 expertise</span>
+          <span class="hp-stat-box__label">Handicap &amp; Emploi</span>
+        </div>
+        <div class="hp-stat-box">
+          <span class="hp-stat-box__main">Labélisé</span>
+          <span class="hp-stat-box__label">Cap Emploi</span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- NOS SERVICES -->
     <section id="nos-services" class="hp-services" aria-labelledby="titre-services">
       <h2 class="hp-section-title" id="titre-services">Nos services</h2>
       <div class="hp-services__grid">
 
-        <a href="#" class="hp-service-card" aria-label="CREHI">
-          <img src="assets/images/logoCREHI.png" alt="Logo CREHI" />
-          <h3>CREHI</h3>
-          <p>Centre de Ressources pour l'Emploi et le Handicap — conseil et accompagnement individuel.</p>
+        <a href="#" class="hp-service-card" aria-label="Cap Emploi Haute-Garonne">
+          <div class="hp-service-card__logo">
+            <img src="assets/images/LogoCapEmploi.png" alt="Logo Cap Emploi Haute-Garonne" />
+          </div>
+          <div class="hp-service-card__body">
+            <p>Notre équipe vous propose un accompagnement personnalisé pour faciliter vos démarches, sécuriser votre parcours professionnel et mobiliser les aides adaptées à votre situation.</p>
+          </div>
         </a>
 
-        <a href="#" class="hp-service-card" aria-label="Cap Emploi">
-          <img src="assets/images/LogoCapEmploi.png" alt="Logo Cap Emploi" />
-          <h3>Cap Emploi</h3>
-          <p>Opérateur de placement spécialisé dans l'insertion professionnelle des personnes handicapées.</p>
+        <a href="#" class="hp-service-card" aria-label="Le CREHI">
+          <div class="hp-service-card__logo">
+            <img src="assets/images/logoCREHI.png" alt="Logo CREHI" />
+          </div>
+          <div class="hp-service-card__body">
+            <p>le CREHI favorise l'insertion professionnelle des personnes en situation de handicap grâce à des actions innovantes, en fédérant tous les acteurs locaux de l'emploi et du handicap.</p>
+          </div>
         </a>
 
         <a href="#" class="hp-service-card" aria-label="HandiPro Conseil">
-          <img src="assets/images/LogoHandiproConseil.jpg" alt="Logo HandiPro Conseil" />
-          <h3>HandiPro Conseil</h3>
-          <p>Accompagnement des employeurs dans leur politique handicap et le maintien dans l'emploi.</p>
+          <div class="hp-service-card__logo">
+            <img src="assets/images/LogoHandiproConseil.jpg" alt="Logo HandiPro Conseil" />
+          </div>
+          <div class="hp-service-card__body">
+            <p>Notre équipe vous accompagne dans votre stratégie RH Handicap pour vous aider à mettre en place une politique RH - TH coordonnée et efficace, tout en favorisant l'adhésion de vos collaborateurs.</p>
+          </div>
         </a>
 
       </div>
     </section>
 
-    <!-- =====================================================
-         À QUI S'ADRESSE
-         ===================================================== -->
+    <!-- À QUI S'ADRESSE -->
     <section class="hp-audiences" aria-labelledby="titre-audiences">
-      <h2 class="hp-section-title" id="titre-audiences">À qui s'adresse HandiPro31 ?</h2>
+      <h2 class="hp-section-title" id="titre-audiences">À qui s'adresse HandiPro 31 ?</h2>
       <div class="hp-audiences__grid">
 
         <div class="hp-audience-card">
-          <span class="hp-audience-card__icon" aria-hidden="true">🙋</span>
-          <h3>Vous êtes en situation de handicap</h3>
-          <p>Trouver un emploi, évoluer professionnellement ou vous maintenir dans votre poste — nous vous accompagnons.</p>
+          <h3>Personne en situation de handicap</h3>
+          <p>Trouver un emploi, maintenir votre poste, évoluer professionnellement</p>
           <a href="#">Découvrir →</a>
         </div>
 
         <div class="hp-audience-card">
-          <span class="hp-audience-card__icon" aria-hidden="true">🏢</span>
-          <h3>Vous êtes employeur</h3>
-          <p>Recruter, former et fidéliser vos collaborateurs en situation de handicap — bénéficiez de nos expertises.</p>
+          <h3>Employeur</h3>
+          <p>Recruter, maintenir en emploi, remplir votre obligation légale OETH</p>
           <a href="#">Découvrir →</a>
         </div>
 
         <div class="hp-audience-card">
-          <span class="hp-audience-card__icon" aria-hidden="true">🤝</span>
-          <h3>Vous êtes partenaire</h3>
-          <p>Travailleurs sociaux, prescripteurs, institutions — travaillons ensemble pour l'emploi inclusif.</p>
+          <h3>Partenaire</h3>
+          <p>Travailler ensemble pour une société plus inclusive en Haute-Garonne</p>
           <a href="#">Découvrir →</a>
         </div>
 
       </div>
     </section>
 
-    <!-- =====================================================
-         ACTUALITÉS — slider
-         ===================================================== -->
+    <!-- ACTUALITÉS -->
     <section class="hp-actualites" aria-labelledby="titre-actu">
       <h2 class="hp-section-title" id="titre-actu">Actualités</h2>
-
-      <div
-        class="hp-actu-slider"
-        role="region"
-        aria-label="Slider actualités"
-        aria-roledescription="carrousel"
-        tabindex="0"
-      >
+      <div class="hp-actu-slider" role="region" aria-label="Slider actualités" aria-roledescription="carrousel" tabindex="0">
         <div class="hp-actu-track">
 
-          <!-- Article 1 -->
           <article class="hp-actu-card">
-            <img
-              src="assets/images/entree2.png"
-              alt="Illustration article HAERO 2026"
-              width="800" height="220"
-              loading="lazy"
-              onerror="this.style.background='#E8F7F3';this.style.height='220px';this.removeAttribute('src')"
-            />
+            <img src="assets/images/entree2.png" alt="Les Rencontres de l'Haéro 9ième édition" width="800" height="280" loading="lazy" />
             <div class="hp-actu-card__body">
-              <span class="hp-actu-card__date">Avril 2026</span>
-              <h3>Journée HAERO 2026 — Handicap et Emploi en Occitanie</h3>
-              <p>Une journée de rencontres et d'échanges autour de l'emploi des personnes en situation de handicap dans notre région.</p>
-              <a href="#" class="hp-btn hp-btn--primary">Voir l'article</a>
+              <h3>Les Rencontres de l'Haéro<br />9ième édition</h3>
+              <p>Pour la 9ième année, Handipro Conseil organise ce forum emploi majeur dans le secteur de l'industrie aéronautique et spatial. Dédié uniquement à un public bénéficiaire de l'obligation d'emploi préparé pour l'occasion, il offre à des employeurs engagés de recruter leurs nouveaux talents.</p>
+              <a href="#" class="hp-btn hp-btn--contact">Voir l'article</a>
             </div>
           </article>
 
-          <!-- Article 2 -->
-          <article class="hp-actu-card">
-            <img
-              src="assets/images/entree3.png"
-              alt="Illustration article 2"
-              width="800" height="220"
-              loading="lazy"
-              onerror="this.style.background='#E8F7F3';this.style.height='220px';this.removeAttribute('src')"
-            />
-            <div class="hp-actu-card__body">
-              <span class="hp-actu-card__date">Mars 2026</span>
-              <h3>Semaine pour l'emploi des personnes handicapées 2026</h3>
-              <p>HandiPro31 mobilisé tout au long de la SEEPH pour des actions de sensibilisation auprès des employeurs.</p>
-              <a href="#" class="hp-btn hp-btn--primary">Voir l'article</a>
-            </div>
-          </article>
-
-          <!-- Article 3 -->
-          <article class="hp-actu-card">
-            <img
-              src="assets/images/frise2.png"
-              alt="Illustration article 3"
-              width="800" height="220"
-              loading="lazy"
-              onerror="this.style.background='#E8F7F3';this.style.height='220px';this.removeAttribute('src')"
-            />
-            <div class="hp-actu-card__body">
-              <span class="hp-actu-card__date">Février 2026</span>
-              <h3>Nouveau partenariat avec France Travail</h3>
-              <p>HandiPro31 et France Travail renforcent leur collaboration pour le suivi des demandeurs d'emploi en situation de handicap.</p>
-              <a href="#" class="hp-btn hp-btn--primary">Voir l'article</a>
-            </div>
-          </article>
-
-        </div><!-- /.hp-actu-track -->
-
+        </div>
         <div class="hp-actu-controls">
           <button class="hp-actu-btn" data-actu-prev aria-label="Article précédent" type="button">&#8249;</button>
           <ul class="hp-actu-dots" data-actu-dots role="list" aria-label="Navigation slides"></ul>
           <button class="hp-actu-btn" data-actu-next aria-label="Article suivant" type="button">&#8250;</button>
         </div>
       </div>
-
     </section>
 
-    <!-- =====================================================
-         PARTENAIRES — défilement infini
-         ===================================================== -->
+    <!-- NOS PARTENAIRES -->
     <section class="hp-partenaires" aria-labelledby="titre-partenaires">
       <h2 class="hp-section-title" id="titre-partenaires">Nos partenaires</h2>
-
       <div class="hp-partenaires__track-wrapper" aria-hidden="true">
         <div class="hp-partenaires__track">
           <div class="hp-partner-logo"><img src="assets/images/LogoAGEFIPH.jpg"       alt="" /></div>
@@ -279,40 +493,46 @@
           <div class="hp-partner-logo"><img src="assets/images/LogoMissionLocales.png" alt="" /></div>
           <div class="hp-partner-logo"><img src="assets/images/LogoAutonomia.jpg"      alt="" /></div>
           <div class="hp-partner-logo"><img src="assets/images/LogoFranceTravail.png"  alt="" /></div>
-          <div class="hp-partner-logo"><img src="assets/images/LogoMalakoff.jpg"       alt="" /></div>
-          <!-- Doublons boucle -->
           <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoAGEFIPH.jpg"       alt="" /></div>
           <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoFIPHFP.jpg"         alt="" /></div>
           <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoMissionLocales.png" alt="" /></div>
           <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoAutonomia.jpg"      alt="" /></div>
           <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoFranceTravail.png"  alt="" /></div>
-          <div class="hp-partner-logo" aria-hidden="true"><img src="assets/images/LogoMalakoff.jpg"       alt="" /></div>
         </div>
       </div>
-
       <ul class="hp-partenaires__grid-static" aria-label="Liste des partenaires">
-        <li class="hp-partner-logo"><img src="assets/images/LogoAGEFIPH.jpg"       alt="AGEFIPH" /></li>
-        <li class="hp-partner-logo"><img src="assets/images/LogoFIPHFP.jpg"         alt="FIPHFP" /></li>
-        <li class="hp-partner-logo"><img src="assets/images/LogoMissionLocales.png" alt="Mission Locales" /></li>
-        <li class="hp-partner-logo"><img src="assets/images/LogoAutonomia.jpg"      alt="Autonomia" /></li>
-        <li class="hp-partner-logo"><img src="assets/images/LogoFranceTravail.png"  alt="France Travail" /></li>
-        <li class="hp-partner-logo"><img src="assets/images/LogoMalakoff.jpg"       alt="Malakoff Humanis" /></li>
+        <li class="hp-partner-logo"><img src="assets/images/LogoAGEFIPH.jpg" alt="AGEFIPH" /></li>
+        <li class="hp-partner-logo"><img src="assets/images/LogoFIPHFP.jpg" alt="FIPHFP" /></li>
+        <li class="hp-partner-logo"><img src="assets/images/LogoMissionLocales.png" alt="Les Missions Locales" /></li>
+        <li class="hp-partner-logo"><img src="assets/images/LogoAutonomia.jpg" alt="Fondation Autonomia" /></li>
+        <li class="hp-partner-logo"><img src="assets/images/LogoFranceTravail.png" alt="France Travail" /></li>
       </ul>
-
     </section>
 
-  </main><!-- /#contenu-principal -->
-
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo" aria-label="Pied de page">
 
-    <div class="footer-container footer-container--4col">
-
-      <div class="footer-col footer-col--map">
-        <a href="#" aria-label="Accueil HandiPro31" class="hp-footer-logo">
-          <img src="assets/images/LogoHandipro31.png" alt="Logo HandiPro31" width="160" height="60" loading="lazy" />
+    <!-- Ligne 1 : Logo + réseaux sociaux -->
+    <div class="footer-row-top">
+      <a href="#" aria-label="Accueil HandiPro31" class="hp-footer-logo">
+        <img src="assets/images/LogoHandipro31.png" alt="HandiPro31" width="160" height="60" loading="lazy" />
+      </a>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook HandiPro31" class="footer-social__link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
+        <a href="#" aria-label="LinkedIn HandiPro31" class="footer-social__link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Ligne 2 : Carte + colonnes nav/info/contact -->
+    <div class="footer-row-bottom">
+
+      <div class="footer-col--map">
         <div class="map-container" aria-label="Localisation HandiPro31">
           <iframe
             src="https://maps.google.com/maps?q=8+rue+Paul+Mespl%C3%A9+31100+Toulouse&output=embed&z=16"
@@ -323,69 +543,85 @@
         </div>
       </div>
 
-      <nav class="footer-col footer-links" aria-label="Navigation pied de page">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#">Qui sommes-nous ?</a></li>
-          <li><a href="#">Cap Emploi</a></li>
-          <li><a href="#">CREHI</a></li>
-          <li><a href="#">HandiPro Conseil</a></li>
-          <li><a href="#">CHEOPS</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+      <div class="footer-cols-group">
+
+        <nav class="footer-col footer-links" aria-label="Navigation pied de page">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Qui sommes-nous</a></li>
+            <li><a href="#">Cap emploi 31</a></li>
+            <li><a href="#">Le CREHI</a></li>
+            <li><a href="#">HandiPro Conseil</a></li>
+            <li><a href="#">Cheops Occitanie</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col footer-links" aria-label="Informations légales">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">CGU</a></li>
+            <li><a href="#">Politique cookies</a></li>
+            <li><a href="#">Protection des données</a></li>
+            <li><a href="#">Accessibilité WCAG 2.1</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Immeuble Anthyllis<br />8 rue Paul Mespié<br />31100 Toulouse</p>
+          <p><a href="tel:+33534409191">05.34.40.91.91</a></p>
+          <p>🚶 5 min à pied de la station<br />Basso Cambo<br />🚌 Arrêt bus : Mesplé</p>
+        </address>
+
+      </div>
+
+    </div><!-- /.footer-row-bottom -->
+
+    <div class="footer-bar">
+      <nav aria-label="Liens de bas de page">
+        <a href="#">Aides</a>
+        <a href="#">Plan du site</a>
+        <a href="#">Informations accessibilité</a>
+        <a href="#">Contact</a>
       </nav>
-
-      <nav class="footer-col footer-links" aria-label="Informations légales">
-        <h4>Informations</h4>
-        <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-          <li><a href="#">Accessibilité</a></li>
-          <li><a href="#">Plan du site</a></li>
-        </ul>
-      </nav>
-
-      <address class="footer-col footer-contact">
-        <h4>Contact</h4>
-        <p>8 rue Paul Mespié<br />31100 Toulouse</p>
-        <p><a href="tel:+33534409191">05 34 40 91 91</a></p>
-        <p>Accès : métro Ligne B — Arrêt Compans-Caffarelli<br />Bus : lignes 14, 22, 27</p>
-      </address>
-
     </div>
 
-    <div class="footer-info">
-      <p>© 2026 HandiPro31 — Association loi 1901 — SIRET 403 872 640 000 24</p>
-    </div>
-
-    <div class="hp-footer-bar">
-      <span>© HandiPro31 — Tous droits réservés</span>
-      <nav aria-label="Navigation bas de page">
-        <ul>
-          <li><a href="#">Aides</a></li>
-          <li><a href="#">Plan du site</a></li>
-          <li><a href="#">Informations accessibilité</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="footer-copyright">
+      <span>© HandiPro31 - Tous droits réservés</span>
     </div>
 
   </footer>
 
-  <!-- Bouton retour haut -->
-  <button id="btn-top" aria-label="Retour en haut de page" title="Retour en haut">↑</button>
+  <button id="btn-top" aria-label="Retour en haut de page" title="Retour en haut">↑ <span class="btn-top__label">Retour en haut</span></button>
 
-  <!-- Scripts -->
   <script src="assets/js/actu-slider.js" defer></script>
   <script src="assets/js/partenaires-slider.js" defer></script>
   <script>
-    /* Bouton retour haut */
+    // Bouton retour haut
     var btnTop = document.getElementById('btn-top');
     window.addEventListener('scroll', function () {
       btnTop.classList.toggle('visible', window.scrollY > 400);
     });
     btnTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Burger menu
+    var burger = document.querySelector('.hp-header__burger');
+    var mobileMenu = document.getElementById('hp-mobile-menu');
+    burger.addEventListener('click', function () {
+      var isOpen = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!isOpen));
+      mobileMenu.classList.toggle('is-open', !isOpen);
+    });
+    // Fermer au clic sur un lien
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        burger.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('is-open');
+      });
     });
   </script>
 

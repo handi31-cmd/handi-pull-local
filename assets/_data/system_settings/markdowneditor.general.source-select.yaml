@@ -1,0 +1,4 @@
+key: markdowneditor.general.source_select
+xtype: modx-combo-boolean
+namespace: markdowneditor
+area: markdowneditor.area.general

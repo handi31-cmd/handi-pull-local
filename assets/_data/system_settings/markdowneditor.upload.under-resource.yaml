@@ -1,0 +1,5 @@
+key: markdowneditor.upload.under_resource
+value: '1'
+xtype: combo-boolean
+namespace: markdowneditor
+area: markdowneditor.area.upload

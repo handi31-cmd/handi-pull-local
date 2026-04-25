@@ -1,0 +1,26 @@
+id: 1
+pagetitle: Accueil
+alias: accueil
+published: 1
+isfolder: 1
+introtext: ''
+template: 2
+menuindex: 1
+createdby: 1
+createdon: 1752237224
+uri: accueil/
+properties: null
+tvs:
+    actuimage: ''
+    partenaires: '[{"MIGX_id":"1","image":"assets\/images\/LogoAGEFIPH.jpg","url":"https:\/\/www.agefiph.fr\/"},{"MIGX_id":"2","image":"assets\/images\/LogoFIPHFP.jpg","url":"https:\/\/www.fiphfp.fr\/"},{"MIGX_id":"3","image":"assets\/images\/LogoFranceTravail.png","url":"https:\/\/www.francetravail.fr\/accueil\/"},{"MIGX_id":"4","image":"assets\/images\/LogoMissionLocales.png","url":"https:\/\/www.unml.info\/"},{"MIGX_id":"5","image":"assets\/images\/LogoMalakoff.jpg","url":"https:\/\/fondationhandicap.malakoffhumanis.com\/"},{"MIGX_id":"6","image":"assets\/images\/LogoAutonomia.jpg","url":"https:\/\/fondationautonomia.org\/"}]'
+
+-----
+
+<!-- Actualité en grand (limite 1) -->
+<p>[[$actualitesBandeau]]</p>
+<div class="actualites">
+<div class="grande-carte">[[!pdoResources? &amp;parents=`8` &amp;limit=`1` &amp;includeTVs=`actuimage` &amp;tvPrefix=`` &tpl=`tplActualiteGrande` ]]</div>
+<!-- Actualité en petit (limite 3) -->
+<div class="petite-carte">[[!pdoResources ? &amp;parents=`8` &amp;limit=`3` &amp;offset=`1` &amp;includeTVs=`actuimage` &amp;tvPrefix=`` &tpl=`tplActualitePetite` ]]</div>
+</div>
+<p>[[!carouselpartenaires]]</p>

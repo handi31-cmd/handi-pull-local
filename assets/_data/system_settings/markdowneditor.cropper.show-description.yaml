@@ -1,0 +1,4 @@
+key: markdowneditor.cropper.show_description
+xtype: combo-boolean
+namespace: markdowneditor
+area: markdowneditor.area.cropper

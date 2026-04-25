@@ -1,0 +1,88 @@
+[[!FormIt?
+&formName=`candidatureSpontaneeForm`
+&hooks=`doubleEmailHook`
+&validate=`prenom:required,nom:required,email:required:email,email_confirm:required:email_confirm,tel:required,poste:required,cv:required,optin_rgpd:required`
+&successMessage=`Merci, formulaire envoyé !`
+]]
+
+<form action="" method="post" enctype="multipart/form-data" class="form-candidature" novalidate>
+  <h3>Espace candidat</h3>
+  <fieldset>
+    <legend>Informations personnelles</legend>
+
+    <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+    <input type="text" name="prenom" id="prenom" required autocomplete="given-name">
+
+    <label for="nom">Nom <span aria-hidden="true">*</span></label>
+    <input type="text" name="nom" id="nom" required autocomplete="family-name">
+  </fieldset>
+
+  <fieldset>
+    <legend>Coordonnées</legend>
+
+    <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+
+    <label for="email_confirm">Confirmez votre adresse e-mail <span aria-hidden="true">*</span></label>
+    <input type="email" name="email_confirm" id="email_confirm" value="[[!+fi.email_confirm]]" required
+      autocomplete="email">
+
+    <label for="tel">Téléphone <span aria-hidden="true">*</span></label>
+    <input type="tel" name="tel" id="tel" autocomplete="tel">
+  </fieldset>
+
+
+  <h3>Espace candidature</h3>
+  <fieldset>
+    <legend>Votre candidature</legend>
+
+    <label for="type_demande">Type de demande</label>
+    <input type="text" name="type_demande" id="type_demande" value="[[!+type_demande]]" readonly aria-readonly="true" />
+
+    <label for="poste">Poste souhaité <span aria-hidden="true">*</span></label>
+    <input type="text" id="poste" name="poste" required>
+
+    <label for="disponibilite">Disponibilité</label>
+    <select name="disponibilite" id="disponibilite" required>
+      <option value="">-- Séléctionnez une option --</option>
+      <option value="immédiate">immédiate</option>
+      <option value="sous 1 mois">Sous 1 mois</option>
+      <option value="sous 3 mois">Sous 3 mois</option>
+      <option value="à définir">À définir</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pièces jointes</legend>
+
+    <label for="cv">Téléchargez votre CV <span aria-hidden="true">*</span></label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required aria-describedby="cvHelp">
+    <small id="cvHelp">Formats acceptés : PDF, DOC, DOCX</small>
+
+    <label for="lettreMotiv">Lettre de motivation <span aria-hidden="true">*</span></label>
+    <input type="file" id="lettreMotiv" name="lettreMotiv" accept=".pdf,.doc,.docx" required aria-describedby="lmHelp">
+    <small id="lmHelp">Formats acceptés : PDF, DOC, DOCX</small>
+  </fieldset>
+  <fieldset>
+    <legend>Consentement</legend>
+    <div class="checkbox-inline">
+      <input type="checkbox" name="optin_rgpd" id="optin_rgpd" required value="oui" class="checkbox-rgpd">
+      <label for="optin_rgpd">
+        J'ai lu et j'accepte
+        <a href="https://www.handipro31.fr/informations/mentions-legales-commune.html" target="_blank">les mentions
+          légales</a>,
+        la <a href="https://www.handipro31.com/rgpd/politique-de-la-rgpd.html" target="_blank">politique de
+          confidentialité</a>
+        et la <a href="https://www.handipro31.com/rgpd/politique-des-cookies.html" target="_blank">politique des
+          cookies</a>.
+      </label>
+    </div>
+  </fieldset>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+<div id="form-messages">
+  <p style="color: red;">[[+fi.error.message]]</p>
+  <p style="color: green;">[[+fi.success.message]]</p>
+</div>

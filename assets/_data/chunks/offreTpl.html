@@ -1,0 +1,32 @@
+id: 38
+source: 1
+name: offreTpl
+description: ''
+category: 'Nos offres'
+properties: 'a:0:{}'
+
+-----
+
+<article class="offre">
+  <div class="offre-header">
+    <p class="offre-ref"><strong>Réf. :</strong> [[+numero_offre]]</p>
+    <h2 class="offre-titre">[[+pagetitle]]</h2>
+    <p class="offre-meta">
+      <i class="fa fa-map-marker" aria-hidden="true"></i> [[+lieu]]
+      <i class="fa fa-calendar-o" aria-hidden="true"></i> [[+publishedon:date=`%d/%m/%Y`]]
+    </p>
+  </div>
+
+  <section class="offre-resume">
+    [[+mission_principale:notempty=`[[+mission_principale:ellipsis=`100`]]`:default=`Texte par défaut`]]
+  </section>
+
+  <hr class="offre-separateur">
+
+  <footer class="offre-footer">
+    <p class="offre-contrat">
+      <strong>Type de contrat :</strong> [[+type_contrat]]
+    </p>
+    <a href="[[~[[+id]]? &scheme=`full`]]" class="offre-lien">> Détail de l'offre</a>
+  </footer>
+</article>

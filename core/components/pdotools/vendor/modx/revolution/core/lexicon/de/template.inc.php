@@ -1,0 +1,58 @@
+<?php
+/**
+ * Template English lexicon topic
+ *
+ * @language en
+ * @package modx
+ * @subpackage lexicon
+ */
+
+$_lang['access'] = 'Zugriff';
+$_lang['filter_by_category'] = 'Nach Kategorie filtern …';
+$_lang['rank'] = 'Rang';
+$_lang['template'] = 'Template';
+$_lang['template_assignedtv_tab'] = 'Zugewiesene TVs';
+$_lang['template_code'] = 'Template-Code (HTML)';
+$_lang['template_desc'] = 'Beschreibung';
+$_lang['template_desc_category'] = 'Die Kategorie, zu der dieses Template gehört.';
+$_lang['template_desc_description'] = 'Eine kurze Beschreibung dieses Templates.';
+$_lang['template_desc_name'] = 'Der Name dieses Templates.';
+$_lang['template_delete_confirm'] = 'Sind Sie sicher, dass Sie dieses Template löschen möchten?';
+$_lang['template_duplicate_confirm'] = 'Sind Sie sicher, dass Sie dieses Template duplizieren möchten?';
+$_lang['template_edit_tab'] = 'Template bearbeiten';
+$_lang['template_empty'] = '(leer)';
+$_lang['template_err_default_template'] = 'Dieses Template wurde als Standardtemplate festgelegt. Bitte wählen Sie ein anderes Standardtemplate in der MODX-Konfiguration, bevor Sie dieses Template löschen.<br />';
+$_lang['template_err_delete'] = 'Beim Versuch, das Template zu löschen, ist ein Fehler aufgetreten.';
+$_lang['template_err_duplicate'] = 'Beim Duplizieren des Templates ist ein Fehler aufgetreten.';
+$_lang['template_err_ae'] = 'Ein Template mit dem Namen "[[+name]]" existiert bereits.';
+$_lang['template_err_in_use'] = 'Dieses Template ist in Benutzung. Bitte wählen Sie für die Dokumente, die das Template verwenden, ein anderes Template. Dokumente, die dieses Template verwenden:<br />';
+$_lang['template_err_locked'] = 'Das Template ist für die Bearbeitung gesperrt.';
+$_lang['template_err_nf'] = 'Template nicht gefunden!';
+$_lang['template_err_ns'] = 'Template nicht angegeben.';
+$_lang['template_err_ns_name'] = 'Bitte geben Sie einen Namen für das Template an.';
+$_lang['template_err_remove'] = 'Beim Versuch, das Template zu löschen, ist ein Fehler aufgetreten.';
+$_lang['template_err_save'] = 'Beim Speichern des Templates ist ein Fehler aufgetreten.';
+$_lang['template_icon'] = 'Icon';
+$_lang['template_icon_description'] = 'Optional. Eine benutzerdefinierte CSS Icon Klasse für alle Ressourcen mit diesem Template. Zum Beispiel eine Font Awesome (kostenlos) Klasse, wie beispielsweise icon-home oder fa-home.';
+$_lang['template_lock'] = 'Template für die Bearbeitung sperren';
+$_lang['template_lock_msg'] = 'Benutzer müssen das Attribut edit_locked haben, um dieses Template bearbeiten zu können.';
+$_lang['template_locked_message'] = 'Das Template ist gesperrt.';
+$_lang['template_management_msg'] = 'Hier können Sie wählen, welches Template Sie bearbeiten möchten.';
+$_lang['template_msg'] = 'Hier erstellen und bearbeiten Sie Templates. Geänderte oder neue Templates sind in den gecachten Seiten Ihrer Site nicht sichtbar, wenn der Cache nicht geleert wird; Sie können allerdings die Vorschau-Funktion für eine Seite verwenden, um das Template in Aktion zu sehen.';
+$_lang['template_name'] = 'Template-Name';
+$_lang['template_new'] = 'Template erstellen';
+$_lang['template_no_tv'] = 'Diesem Template wurden bisher keine TVs zugeordnet.';
+$_lang['template_properties'] = 'Standardeigenschaften';
+$_lang['template_reset_all'] = 'Alle Seiten zurücksetzen, um das Standardtemplate zu verwenden';
+$_lang['template_reset_specific'] = 'Nur "%s"-Seiten zurücksetzen';
+$_lang['template_title'] = 'Template erstellen/bearbeiten';
+$_lang['template_tv_edit'] = 'Sortierreihenfolge der TVs bearbeiten';
+$_lang['template_tv_msg'] = 'Die diesem Template zugeordneten  <abbr title="Template-Variablen">TVs</abbr> sind unten aufgeführt.';
+$_lang['template_untitled'] = 'Unbenanntes Template';
+$_lang['templates'] = 'Templates';
+$_lang['tvt_err_nf'] = 'Die TV hat keinen Zugriff auf das angegebene Template.';
+$_lang['tvt_err_remove'] = 'Beim Versuch, die TV vom Template zu entfernen, ist ein Fehler aufgetreten.';
+$_lang['template_source'] = 'Medienquelle';
+$_lang['template_source_description'] = 'Die Medienquelle, um eine statische Datei oder Vorschau auszuwählen. Wenn "Nichts" gewählt ist, wird davon ausgegangen, dass Sie einen absoluten Pfad angeben.';
+$_lang['template_preview'] = 'Template-Vorschau';
+$_lang['template_preview_description'] = 'Ein Screenshot des Templates als Vorschau im Template Picker. Die optimale Größe beträgt 335 x 236 (B x H)';

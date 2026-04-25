@@ -1,0 +1,17 @@
+id: 34
+source: 1
+name: candidatureSpontaneeChunk
+description: ''
+category: Recrutement
+properties: 'a:0:{}'
+
+-----
+
+[[!FormIt?
+    &formName=`candidatureSpontaneeForm`
+    &hooks=`spam,doubleEmailHook,FormItSaveForm`
+    &validate=`prenom:required,nom:required,email:required:email,email_confirm:required,tel:required,poste:required,cv:required,optin_rgpd:required`
+    &successMessage=`Merci, formulaire envoyé !`
+]]
+
+[[$formulaire_candidature]]

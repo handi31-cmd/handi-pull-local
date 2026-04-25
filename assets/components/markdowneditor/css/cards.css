@@ -1,0 +1,84 @@
+.amazon .price-details p {
+  margin-bottom: 0; }
+.amazon .price-details .price {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 5px; }
+.amazon .price-details .list-price {
+  text-decoration: line-through; }
+.amazon .subhead {
+  margin-bottom: 5px;
+  color: #7f7f7f; }
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen:700,400);
+.md-card {
+  font-family: Oxygen,Arial,"Helvetica Neue",Helvetica,sans-serif; }
+  .md-card img {
+    max-width: 100%; }
+  .md-card .card-header {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    padding: 5px 0 8px;
+    vertical-align: baseline; }
+    .md-card .card-header img {
+      line-height: 0;
+      margin-right: 4px;
+      position: relative;
+      vertical-align: top; }
+    .md-card .card-header a {
+      color: inherit;
+      text-decoration: none; }
+      .md-card .card-header a:hover {
+        text-decoration: none; }
+      .md-card .card-header a.provider:hover {
+        border-bottom: 1px dotted #7f7f7f; }
+    .md-card .card-header .author {
+      margin-left: 5px;
+      color: #7f7f7f; }
+  .md-card .card {
+    border-left: 8px solid #ccc;
+    padding: 8px 8px 8px 12px;
+    -moz-box-shadow: 1px 1px 5px 0 #ccc;
+    -webkit-box-shadow: 1px 1px 5px 0 #ccc;
+    box-shadow: 1px 1px 5px 0 #ccc;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-height: 185px; }
+    .md-card .card h2 {
+      font-size: 20px;
+      padding: 0;
+      line-height: 25px;
+      border: none;
+      margin: 5px 0; }
+    .md-card .card p {
+      font-size: 13px;
+      line-height: 20px; }
+    .md-card .card .card-thumbnail.small {
+      width: 175px;
+      height: 175px;
+      float: left;
+      text-align: center; }
+      .md-card .card .card-thumbnail.small img {
+        height: 175px;
+        padding: 10px 10px 10px 0; }
+  .md-card .more {
+    display: none; }
+  .md-card .more-btn {
+    font-size: 13px;
+    cursor: pointer;
+    color: #1a95b3;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 4px 8px 8px 0; }
+
+.instagram iframe {
+  box-shadow: none !important; }
+
+.twitter iframe {
+  width: 100% !important; }

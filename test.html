@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette organigramme HandiPro31</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #eef2ef;
+            padding: 2rem;
+        }
+        .maquette {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: #2c5e2c;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #4BA78C;
+            padding-left: 1rem;
+        }
+        /* Logo au-dessus */
+        .logo-top {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .logo-handipro {
+            max-height: 70px;
+            width: auto;
+        }
+        /* Niveau 1 avec logos latéraux */
+        .n1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .logo-side {
+            max-height: 50px;
+            width: auto;
+            background: #f1f5f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+        }
+        .card-dg {
+            background: #fef5ef;
+            border-left: 5px solid #D0762E;
+            padding: 0.8rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            min-width: 220px;
+        }
+        .titre {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #D0762E;
+        }
+        .nom {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1e3a1e;
+        }
+        /* Flèche */
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 14px solid #cbd5e1;
+            margin: 0.5rem auto 1.5rem auto;
+        }
+        /* Niveau 2 : 3 pôles (sans les titres "Pôle") */
+        .n2 {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .card-pole {
+            background: white;
+            border-radius: 1rem;
+            padding: 0.8rem 1.2rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e0ece0;
+            min-width: 180px;
+        }
+        /* Plus de .titre dans card-pole, on garde seulement .nom */
+        /* Ligne des flèches sous les pôles */
+        .arrows-line {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 0.5rem 0 1rem;
+        }
+        .small-arrow {
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 10px solid #cbd5e1;
+        }
+        /* Niveau 3 : 4 responsables en ligne */
+        .n3 {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .card-resp {
+            background: #f8faf8;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            border: 1px solid #d4e4d4;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2c6e2c;
+            min-width: 160px;
+        }
+        /* Niveau 4 : conteneur avec sidebar gauche/droite et centre */
+        .n4 {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .sidebar {
+            flex: 1;
+            background: #f1f5f1;
+            border-radius: 1rem;
+            padding: 1rem;
+            border: 1px solid #c8e0c8;
+        }
+        .sidebar .titre-side {
+            font-weight: 700;
+            color: #2c6e2c;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar li {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 0.4rem;
+            border-radius: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1e4a1e;
+        }
+        .center {
+            flex: 2;
+            background: #f9fbf9;
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        .center .titre-center {
+            font-weight: 700;
+            color: #2c6e2c;
+            margin-bottom: 0.8rem;
+        }
+        .referents {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .ref-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #c8e0c8;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e4a1e;
+        }
+        @media (max-width: 900px) {
+            .n4 {
+                flex-direction: column;
+            }
+            .n1 {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="maquette">
+    <h2>📊 Organigramme simplifié – HandiPro31</h2>
+
+    <!-- Logo HandiPro31 au-dessus du Directeur Général -->
+    <div class="logo-top">
+        <img class="logo-handipro" src="[[++assets_url]]images/LogoHandipro31.png" alt="Logo HandiPro31">
+    </div>
+
+    <!-- Niveau 1 : Directeur Général avec logos latéraux -->
+    <div class="n1">
+        <img class="logo-side" src="[[++assets_url]]images/Logo-Cap-Emploi.png" alt="Cap Emploi">
+        <div class="card-dg">
+            <div class="titre">DIRECTION GÉNÉRALE</div>
+            <div class="nom">Directeur Général</div>
+        </div>
+        <img class="logo-side" src="[[++assets_url]]images/Logo-Handipro-Conseil.jpg" alt="HandiPro Conseil">
+    </div>
+    <div class="arrow-down"></div>
+
+    <!-- Niveau 2 : 3 pôles (sans les libellés "Pôle") -->
+    <div class="n2">
+        <div class="card-pole">
+            <div class="nom">Directeur Administratif et Financier</div>
+        </div>
+        <div class="card-pole">
+            <div class="nom">Directeur Opérationnel</div>
+        </div>
+        <div class="card-pole">
+            <div class="nom">Directrice du Développement</div>
+        </div>
+    </div>
+
+    <!-- Flèches vers niveau 3 -->
+    <div class="arrows-line">
+        <div class="small-arrow"></div>
+        <div class="small-arrow"></div>
+        <div class="small-arrow"></div>
+    </div>
+
+    <!-- Niveau 3 : 4 responsables -->
+    <div class="n3">
+        <div class="card-resp">Responsable Parcours Employeur</div>
+        <div class="card-resp">Responsable Parcours Personnes</div>
+        <div class="card-resp">Responsable Maintien</div>
+        <div class="card-resp">Responsable Analyse & Communication</div>
+    </div>
+
+    <div class="arrows-line">
+        <div class="small-arrow"></div>
+        <div class="small-arrow"></div>
+        <div class="small-arrow"></div>
+        <div class="small-arrow"></div>
+    </div>
+
+    <!-- Niveau 4 : sidebar gauche (Pôle Administratif) + centre (référents) + sidebar droite (CREHI) -->
+    <div class="n4">
+        <!-- Sidebar gauche : Pôle Administratif -->
+        <div class="sidebar">
+            <div class="titre-side">🏢 Pôle Administratif</div>
+            <ul>
+                <li>Gestion RH</li>
+                <li>Finances & Budget</li>
+                <li>Qualité & Processus</li>
+            </ul>
+        </div>
+
+        <!-- Centre : les 3 référents -->
+        <div class="center">
+            <div class="titre-center">👥 Référents terrain</div>
+            <div class="referents">
+                <div class="ref-card">Référent parcours Employeurs</div>
+                <div class="ref-card">Référent parcours Personnes</div>
+                <div class="ref-card">Référent Maintien</div>
+            </div>
+        </div>
+
+        <!-- Sidebar droite : CREHI -->
+        <div class="sidebar">
+            <div class="titre-side">💡 CREHI</div>
+            <ul>
+                <li>Chargé d'innovation</li>
+                <li>Référent partenariats</li>
+                <li>Actions expérimentales</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

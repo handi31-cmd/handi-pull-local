@@ -1,0 +1,61 @@
+id: 67
+source: 1
+name: contactEmailTpl
+description: ''
+category: Contact
+properties: 'a:0:{}'
+
+-----
+
+<table style="width: 100%; max-width: 600px; font-family: Arial, sans-serif; border-collapse: collapse; border: 1px solid #ddd; background-color: #f9f9f9;">
+  <thead>
+    <tr>
+      <th colspan="2" style="background-color: #0073e6; color: #ffffff; padding: 15px; font-size: 20px; text-align: left; border-bottom: 1px solid #005bb5;">
+        Nouvelle demande reçue via le formulaire de contact
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" style="padding: 15px; font-size: 16px; color: #333;">
+        <strong>Vos informations :</strong>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; width: 35%; color: #555;">Vous êtes :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+userType]]</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #555;">Nom :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+lastName]]</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #555;">Prénom :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+firstName]]</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #555;">Email :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+email]]</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #555;">Téléphone :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+phone]]</td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="padding: 15px 15px 5px; font-size: 16px; font-weight: bold; color: #333;">
+        Votre demande :
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #555;">Objet :</td>
+      <td style="padding: 8px 15px; border-top: 1px solid #ddd; color: #000;">[[+subject]]</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="padding: 15px; border-top: 1px solid #ddd; color: #000;">
+        <strong>Message :</strong><br>
+        <div style="white-space: pre-wrap;">[[+message]]</div>
+      </td>
+    </tr>
+  </tbody>
+</table>

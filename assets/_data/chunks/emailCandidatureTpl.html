@@ -1,0 +1,73 @@
+id: 36
+source: 1
+name: emailCandidatureTpl
+description: ''
+category: Recrutement
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de candidature</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#f8f8f8; font-family: Arial, sans-serif;">
+
+    <!-- Contenu principal -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+        style="max-width:600px; margin:auto; background-color:#ffffff; padding:20px;">
+        <tr>
+            <td>
+                <p style="font-size:16px; color:#333333; line-height:1.5;">
+                    Bonjour [[+prenom]] [[+nom]],<br><br>
+
+                    Nous avons bien reçu votre candidature pour le poste de <strong>[[+poste]]</strong>.<br><br>
+
+                    Merci de l'intérêt que vous portez à notre association.<br><br>
+
+                    Votre candidature est bien prise en compte et sera étudiée dans les meilleurs délais.<br><br>
+
+                    Cordialement,<br>
+                    <strong>L'équipe recrutement</strong>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <table border="0" cellpadding="5" cellspacing="0" width="100%"
+        style="max-width:600px; font-family: Arial, sans-serif; font-size:12px; color:#444; margin:auto;">
+        <tr>
+            <td colspan="2"
+                style="border-bottom: 4px solid #008F3F; padding-bottom: 10px; color:#008F3F; font-weight:bold;">
+                HandiPro 31<br />
+                <span style="text-decoration: underline;">Service recrutement</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top:10px; vertical-align: top;">
+                <p style="margin:0;">Immeuble Anthyllis<br />
+                    8, rue Paul Mesplé, 31100 Toulouse<br />
+                    05 34 40 91 91</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top:15px; font-size:9px; color:#666; line-height:1.2; text-align:justify;">
+                Les données à caractère personnel recueillies et traitées dans le cadre de cet échange sont utilisées
+                uniquement pour l'exécution d'une relation professionnelle et ce, pendant la durée nécessaire. Pour
+                exercer vos droits, contactez <a href="mailto:dpo.handipro31@lg-partenaires.fr"
+                    style="color:#0563C1;">dpo.handipro31@lg-partenaires.fr</a>.<br /><br />
+                Ce message et toutes ses pièces jointes sont confidentiels et destinés uniquement à leurs destinataires.
+                Si vous recevez ce message par erreur, merci de le supprimer et d’en informer l’expéditeur
+                immédiatement. Toute lecture, utilisation ou diffusion non autorisée est interdite.
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+id: 2
+source: 1
+name: tplActualiteGrande
+description: ''
+category: Accueil
+properties: 'a:0:{}'
+
+-----
+
+<div class="carte-actualite-grande">
+      [[!+actuimage:!empty=`
+    <img class="carte-actualite-grande__image" src="[[++site_url]][[+actuimage]]" alt="[[+pagetitle]]" />
+    `]]
+
+
+  <h2 class="carte-actualite-grande__titre">[[+pagetitle]]</h2>
+  <p class="carte-actualite-grande__intro">[[+introtext]]</p>
+  <a href="[[~[[+id]]]]" class="carte-actualite-grande__lien">
+    Voir l'article
+  </a>
+</div>

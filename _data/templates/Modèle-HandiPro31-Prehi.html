@@ -1,0 +1,41 @@
+id: 16
+source: 1
+templatename: 'Modèle HandiPro31 - Prehi'
+description: 'Modèle servant à la page du Prehi'
+category: PREHI
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+    <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+    <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/headerV2.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/[[*alias]].css"/>
+    <link rel="stylesheet" href="[[++assets_url]]css/footerSite.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="[[++assets_url]]css/renderHandiproMenu.css">
+
+     <!-- chunk CSS -->
+     <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+</head>
+<body>
+
+  [[$headerV2]]
+
+  <main class="main-[[*alias]]">
+      [[*content]]
+  </main>
+
+  [[$footerSite]]
+
+<script src="[[++assets_url]]js/dropdown.js"></script>
+</body>
+</html>

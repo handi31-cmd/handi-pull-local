@@ -1,0 +1,26 @@
+# Forcer LF dans le dépôt et conversion automatique sur Windows
+
+# Tous les fichiers texte doivent avoir LF dans le repo
+* text=auto
+
+# Forcer LF pour certains types spécifiques (php, js, html, css, etc.)
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Les fichiers binaires ne doivent pas être modifiés
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.exe binary
+
+# Par exemple, pour éviter conversion sur fichiers spécifiques (ex: scripts Windows)
+*.bat text eol=crlf

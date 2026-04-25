@@ -1,0 +1,31 @@
+id: 1
+source: 1
+name: header
+description: 'header du site handipro31.fr'
+category: Site
+properties: 'a:0:{}'
+
+-----
+
+<header role="banner" class="site-header">
+  <div class="container">
+    <a href="[[~1]]" class="logo" aria-label="Accueil HandiPro31">
+      <img src="[[++assets_url]]images/LogoHandipro31.png" alt="Logo HandiPro31" />
+    </a>
+
+    <div class="btn-mobile">
+    <a href="[[~1]]" class="btn-accueil" aria-label="Accueil HandiPro31">
+      <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+    <a href="[[~24? &scheme=`full`]]" class="btn-rejoindre" aria-label="Nous rejoindre">
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+    </a>
+    <a href="[[~7? &scheme=`full`]]" = class="btn-contact" aria-label="Contact">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    </a>
+    </div>
+    <nav role="navigation" aria-label="Menu Principal">
+        [[!menuDropdown]]
+    </nav>
+  </div>
+</header>

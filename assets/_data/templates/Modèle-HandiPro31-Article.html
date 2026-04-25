@@ -1,0 +1,44 @@
+id: 3
+source: 1
+templatename: 'Modèle HandiPro31 - Article'
+description: 'Modèle pour l''affichage d''un seul article'
+category: 'Actualités  Informations'
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+
+    <!-- CSS de base -->
+    <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/header.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/footer.css" />
+
+    <!-- chunk CSS -->
+    <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS générique pour les articles -->
+    <link rel="stylesheet" href="[[++assets_url]]css/article.css" /> <!--css pour les pages d'articles-->
+
+</head>
+
+
+<body>
+  [[$header]]
+  <main class="main-content">
+    [[$breadcrumb]]
+    [[$article]]
+  </main>
+  [[$footer]]
+  <script src="[[++assets_url]]js/dropdown.js"></script>
+</body>
+
+</html>

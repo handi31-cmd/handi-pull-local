@@ -1,0 +1,471 @@
+/* ===== CONTENU PRINCIPAL (droite) ===== */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== SECTIONS ===== */
+.right-content section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.right-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  width: 100%;
+}
+
+/* ===== SECTIONS CONDITIONNELLES ===== */
+.sidebar-section,
+.handipro-section {
+  display: none;
+}
+
+.sidebar-section.active,
+.handipro-section.active {
+  display: block;
+}
+
+/* ===== NAVIGATION SIDEBAR (masquée sur mobile) ===== */
+.sidebar-nav,
+.handipro-nav {
+  display: none;
+}
+
+/* ===== LAYOUT DESKTOP ===== */
+@media screen and (min-width: 768px) {
+  .main-sidebar-layout,
+  .main-capemploi-31,
+  .main-crehi,
+  .main-handipro31,
+  .main-prehi,
+  .main-cheops,
+  .main-handipro-conseil {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /* Sidebar gauche */
+  .left-sidebar,
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    position: sticky;
+    top: 90px;
+    align-self: flex-start;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Scroll interne du contenu sidebar */
+  .left-container .scrollable-content {
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  /* Navigation visible sur desktop */
+  .sidebar-nav,
+  .handipro-nav {
+    display: block;
+  }
+
+  .sidebar-nav ul,
+  .handipro-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-nav li,
+  .handipro-nav li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-nav a,
+  .handipro-nav a {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .sidebar-nav a:hover,
+  .sidebar-nav a:focus,
+  .handipro-nav a:hover,
+  .handipro-nav a:focus {
+    background-color: #007acc;
+    color: white;
+    outline: none;
+  }
+
+  /* Contenu principal */
+  .right-content {
+    width: 75%;
+    padding: 1rem;
+  }
+
+  .right-content section {
+    scroll-margin-top: 120px;
+  }
+}
+
+/* ===== VARIANTES DE COULEURS ===== */
+.sidebar-nav.theme-green a:hover,
+.sidebar-nav.theme-green a:focus {
+  background-color: #2d5a4a;
+  color: white;
+}
+
+.sidebar-nav.theme-handipro a:hover,
+.sidebar-nav.theme-handipro a:focus {
+  background-color: #007acc;
+  color: white;
+}
+
+/* ===== RESPONSIVE AMÉLIORÉ ===== */
+@media screen and (max-width: 1024px) {
+  .main-sidebar-layout,
+  .main-handipro-conseil,
+  .main-capemploi-31,
+  .main-crehi,
+  .main-handipro31,
+  .main-prehi,
+  .main-cheops {
+    gap: 1rem;
+  }
+
+  .left-sidebar,
+  .left-container {
+    width: 30%;
+  }
+
+  .right-content {
+    width: 70%;
+  }
+}
+
+.logo img {
+  height: auto;
+  display: block;
+}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+  .main-sidebar-layout,
+  .main-handipro-conseil,
+  .main-capemploi-31,
+  .main-crehi,
+  .main-handipro31,
+  .main-prehi,
+  .main-cheops {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .left-sidebar,
+  .right-content,
+  .left-container {
+    width: 100%;
+    position: relative;
+    top: auto;
+    height: auto; /* reset height for mobile */
+  }
+
+  .right-content {
+    padding: 0.5rem;
+  }
+
+  .right-content section {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* ===== TITRES ===== */
+.right-content section h2,
+.handipro-section h2,
+.sidebar-section h2 {
+  font-family: Arial, sans-serif;
+  color: #2c5282;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
+  border-bottom: 3px solid #2c5282;
+  padding-bottom: 0.8rem;
+}
+
+.right-content section h3,
+.handipro-section h3,
+.sidebar-section h3 {
+  font-family: Arial, sans-serif;
+  color: #2c5282;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 0 0.8rem 1rem;
+  border-left: 4px solid #2c5282;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.1) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+}
+
+.right-content section h2 + h3,
+.handipro-section h2 + h3,
+.sidebar-section h2 + h3 {
+  margin-top: 1.5rem;
+}
+
+.right-content section h4,
+.handipro-section h4,
+.sidebar-section h4 {
+  font-family: Arial, sans-serif;
+  color: #2c5282;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  padding: 0.6rem 0.8rem;
+  background: rgba(44, 82, 130, 0.05);
+  border-left: 3px solid #2c5282;
+  border-radius: 0 6px 6px 0;
+}
+
+.right-content section h5,
+.handipro-section h5,
+.sidebar-section h5 {
+  font-family: Arial, sans-serif;
+  color: #2c5282;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem 0;
+  padding: 0.4rem 0.6rem;
+  background: rgba(66, 153, 225, 0.08);
+  border-left: 2px solid #2c5282;
+  border-radius: 0 4px 4px 0;
+}
+
+.right-content section h6,
+.handipro-section h6,
+.sidebar-section h6 {
+  font-family: Arial, sans-serif;
+  color: #2d3748;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.6rem 0;
+  padding: 0.3rem 0.5rem;
+  background: rgba(66, 153, 225, 0.05);
+  border-left: 2px solid #a0aec0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* ===== PARAGRAPHES ===== */
+.right-content section p,
+.handipro-section p,
+.sidebar-section p {
+  color: #4a5568;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  padding: 0.3rem 0;
+}
+
+.right-content section h3 + p,
+.handipro-section h3 + p,
+.sidebar-section h3 + p {
+  margin-top: 1rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  background: rgba(66, 153, 225, 0.02);
+  border-left: 2px solid rgba(66, 153, 225, 0.3);
+  border-radius: 0 6px 6px 0;
+}
+
+/* ===== LISTES ORDONNÉES (TIMELINE) ===== */
+ol.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem 1.5rem 1rem 3rem;
+  border-radius: 8px;
+  border-left: 4px solid #2c5282;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: #2c5282;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.timeline-item:hover {
+  background: rgba(66, 153, 225, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LISTES NORMALES ===== */
+.right-content section ul,
+.handipro-section ul,
+.sidebar-section ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.right-content section ul li,
+.handipro-section ul li,
+.sidebar-section ul li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(66, 153, 225, 0.02);
+  border-left: 4px solid #2c5282;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  color: #4a5568;
+}
+
+/* ===== IMAGES ===== */
+.right-content section p img,
+.handipro-section p img,
+.sidebar-section p img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.right-content section p img[src*="frise"],
+.right-content section p img[src*="valeurs"],
+.right-content section p img[src*="principes"],
+.right-content section p img[src*="competences"],
+.right-content section p img[src*="orga"],
+.handipro-section p img[src*="frise"],
+.handipro-section p img[src*="valeurs"],
+.handipro-section p img[src*="principes"],
+.sidebar-section p img[src*="frise"] {
+  border: 2px solid #e2e8f0;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* ===== ANIMATIONS ===== */
+.right-content section h2,
+.right-content section h3,
+.right-content section h4,
+.handipro-section h2,
+.handipro-section h3,
+.handipro-section h4,
+.sidebar-section h2,
+.sidebar-section h3,
+.sidebar-section h4 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE TITRES & TEXTES ===== */
+@media screen and (max-width: 768px) {
+  .right-content section h2,
+  .handipro-section h2,
+  .sidebar-section h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .right-content section h3,
+  .handipro-section h3,
+  .sidebar-section h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 0.6rem 0 0.6rem 0.8rem;
+  }
+
+  .right-content section p,
+  .handipro-section p,
+  .sidebar-section p {
+    font-size: 18px;
+    padding-left: 0;
+  }
+
+  /* Timeline responsive */
+  .timeline-item {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline-item::before {
+    left: 9px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .right-content section h2,
+  .handipro-section h2,
+  .sidebar-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .right-content section h3,
+  .handipro-section h3,
+  .sidebar-section h3 {
+    font-size: 1.1rem;
+    padding: 0.5rem 0 0.5rem 0.6rem;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+  }
+}

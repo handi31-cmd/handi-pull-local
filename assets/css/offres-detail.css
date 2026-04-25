@@ -1,0 +1,125 @@
+/* ===== OFFRE DETAIL ===== */
+.offre-detail {
+  padding: 1rem;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.offre-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.offre-detail-header {
+  background-color: #fff;
+  border-left: 4px solid #007B8F;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.offre-detail-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #007B8F;
+}
+
+.offre-detail-ref,
+.offre-detail-header p {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+
+.offre-detail-section {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.offre-detail-section h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #007B8F;
+  padding-bottom: 0.25rem;
+}
+
+.offre-detail-section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+.offre-detail-section li {
+  margin-bottom: 0.5rem;
+}
+
+.offre-detail-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.right-container {
+  border: 1px solid blue;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.btn-retour,
+.btn-postuler {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  background-color: #007B8F;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-retour:hover,
+.btn-postuler:hover {
+  background-color: #005f6b;
+}
+
+/* ===== RESPONSIVE (≥ 768px) ===== */
+@media (min-width: 768px) {
+  .offre-detail {
+    max-width: 75%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .offre-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .right-container {
+    width: 80%;
+  }
+
+  .offre-detail-title {
+    font-size: 2rem;
+  }
+
+  .offre-detail-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn-retour {
+    font-size: 1rem;
+  }
+}

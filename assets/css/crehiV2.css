@@ -1,0 +1,134 @@
+/* === CREHI — styles spécifiques === */
+/* Layout et sidebar : réutilise sidebar.css */
+
+:root {
+  --crehi-accent: #00FF8B;
+  --crehi-accent-dark: #00cc6f;
+}
+
+/* Encart Malakoff Humanis */
+.crehi-encart {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--hp-bg-light);
+  border-left: 4px solid var(--crehi-accent);
+  border-radius: 0 var(--hp-radius) var(--hp-radius) 0;
+}
+
+.crehi-encart p { margin: 0; }
+
+/* Actions — 2 colonnes */
+.crehi-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.crehi-action-bloc {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.crehi-action-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: -1.5rem -1.5rem 0.85rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--crehi-accent);
+  border-radius: var(--hp-radius) var(--hp-radius) 0 0;
+}
+
+.crehi-action-bloc p { margin: 0; font-size: 0.95rem; line-height: 1.6; }
+
+.crehi-note {
+  font-size: 0.85rem !important;
+  font-style: italic;
+  color: #555 !important;
+}
+
+/* Listes */
+.crehi-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.crehi-liste li {
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.crehi-liste li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--crehi-accent);
+}
+
+/* Profils participation — 3 cards */
+.crehi-profils {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.crehi-profil {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.25rem;
+  border-top: 3px solid var(--crehi-accent);
+}
+
+.crehi-profil__titre {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  background: var(--crehi-accent);
+  margin: -1.25rem -1.25rem 0.85rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--hp-radius) var(--hp-radius) 0 0;
+}
+
+.crehi-profil p { margin: 0; font-size: 0.9rem; line-height: 1.6; }
+
+.crehi-lien {
+  color: var(--hp-primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--hp-transition);
+}
+
+.crehi-lien:hover,
+.crehi-lien:focus-visible {
+  color: var(--hp-primary);
+  outline: 2px solid var(--hp-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* === Responsive === */
+@media (max-width: 1023px) {
+  .crehi-profils { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 767px) {
+  .crehi-duo { grid-template-columns: 1fr; }
+  .crehi-profils { grid-template-columns: 1fr; }
+}

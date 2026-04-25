@@ -1,0 +1,95 @@
+id: 66
+source: 1
+name: formulaire_contact
+description: ''
+category: Contact
+properties: 'a:0:{}'
+
+-----
+
+[[!FormIt?
+    &hooks=`email`
+    &emailTpl=`ContactEmailTpl`
+    &emailTo=`stagiaire@capemploi31.com`
+    &emailSubject=`Nouvelle demande depuis le formulaire de contact`
+    &validate=`
+        userType:required,
+        lastName:required,
+        firstName:required,
+        email:required:email,
+        email_confirm:required:email:equals=email,
+        phone:required,
+        subject:required,
+        message:required,
+        consent:required:required
+    `
+    &validationErrorMessage=`Veuillez corriger les erreurs dans le formulaire.`
+    &successMessage=`Merci pour votre message, nous vous répondrons sous peu.`
+    &redirectTo=`/`
+]]
+
+<form action="[[~[[*id]]]]" method="post" id="contactForm">
+
+  <fieldset>
+    <legend>Vos informations</legend>
+
+    <label for="userType">Vous êtes* :</label><br>
+    <select name="userType" id="userType" required>
+      <option value="" [[!+fi.userType:isempty=`selected`]]>-- Sélectionnez --</option>
+      <option value="Un partenaire" [[!+fi.userType:is=`Un partenaire`:then=`selected`]]>Un partenaire</option>
+      <option value="Un employeur" [[!+fi.userType:is=`Un employeur`:then=`selected`]]>Un employeur</option>
+      <option value="Une personne en situation de handicap" [[!+fi.userType:is=`Une personne en situation de handicap`:then=`selected`]]>Une personne en situation de handicap</option>
+      <option value="Autre" [[!+fi.userType:is=`Autre`:then=`selected`]]>Autre</option>
+    </select>
+    <span class="error">[[!+fi.error.userType]]</span><br><br>
+
+    <label for="lastName">Votre nom* :</label><br>
+    <input type="text" name="lastName" id="lastName" value="[[!+fi.lastName]]" required>
+    <span class="error">[[!+fi.error.lastName]]</span><br><br>
+
+    <label for="firstName">Votre prénom* :</label><br>
+    <input type="text" name="firstName" id="firstName" value="[[!+fi.firstName]]" required>
+    <span class="error">[[!+fi.error.firstName]]</span><br><br>
+
+    <label for="email">Votre courriel* :</label><br>
+    <input type="email" name="email" id="email" value="[[!+fi.email]]" required>
+    <span class="error">[[!+fi.error.email]]</span><br><br>
+
+    <label for="email_confirm">Confirmation de votre courriel* :</label><br>
+    <input type="email" name="email_confirm" id="email_confirm" value="[[!+fi.email_confirm]]" required>
+    <span class="error">[[!+fi.error.email_confirm]]</span><br><br>
+
+    <label for="phone">Téléphone* :</label><br>
+    <input type="tel" name="phone" id="phone" value="[[!+fi.phone]]" required>
+    <span class="error">[[!+fi.error.phone]]</span><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Votre demande</legend>
+
+    <label for="subject">Objet* :</label><br>
+    <input type="text" name="subject" id="subject" value="[[!+fi.subject]]" required>
+    <span class="error">[[!+fi.error.subject]]</span><br><br>
+
+    <label for="message">Votre message* :</label><br>
+    <textarea name="message" id="message" rows="6" required>[[!+fi.message]]</textarea>
+    <span class="error">[[!+fi.error.message]]</span><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Consentement</legend>
+
+    <input type="checkbox" name="consent" id="consent" value="1" required [[!+fi.consent:isnot=`1`:then=``:else=`checked`]]>
+    <label for="consent">
+      J'ai lu et j'accepte les 
+      <a href="/cgu" target="_blank" rel="noopener">CGU (mentions légales)</a>, la 
+      <a href="/politique-protection-donnees" target="_blank" rel="noopener">politique de la protection des données personnelles</a> 
+      et la 
+      <a href="/politique-cookies" target="_blank" rel="noopener">politique des cookies</a> *
+    </label>
+    <span class="error">[[!+fi.error.consent]]</span><br><br>
+  </fieldset>
+
+  <button type="submit">Envoyer le message</button>
+</form>
+

@@ -1,0 +1,13 @@
+id: 27
+source: 1
+type: richtext
+name: profil_souhaite
+description: 'Compétences attendues / profil du candidat'
+category: 'Nos offres'
+elements: null
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:10:"allowBlank";s:4:"true";}'
+output_properties: 'a:0:{}'
+content: ''

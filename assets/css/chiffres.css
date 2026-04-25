@@ -1,0 +1,121 @@
+.logo img {
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.section-chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: #f5f7fa;
+  position: relative;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  border-radius: 20px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.stat .number {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stat:hover .number {
+  transform: scale(1.1);
+}
+
+.stat span {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 0 10px;
+  line-height: 1.4;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.stat:hover span {
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-chiffres {
+    gap: 25px;
+    padding: 40px 15px;
+  }
+  
+  .stat {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .stat .number {
+    font-size: 32px;
+  }
+  
+  .stat span {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-chiffres {
+    gap: 20px;
+  }
+  
+  .stat {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .stat .number {
+    font-size: 28px;
+  }
+  
+  .stat span {
+    font-size: 12px;
+  }
+}

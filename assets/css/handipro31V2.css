@@ -1,0 +1,183 @@
+/* === HandiPro31 — Qui sommes-nous === */
+/* Layout et sidebar : réutilise sidebar.css */
+
+/* ── En-tête période ── */
+.hp31-periode {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  overflow: hidden;
+  scroll-margin-top: 110px;
+}
+
+.hp31-periode__header {
+  background: var(--hp-primary);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 2rem;
+}
+
+.hp31-periode__num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.25);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hp31-periode__annees {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--hp-white);
+  margin: 0;
+}
+
+/* ── Tagline orange ── */
+.hp31-tagline {
+  background: #E8893A;
+  color: var(--hp-white);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 0.85rem 2rem;
+  line-height: 1.5;
+}
+
+/* ── 2 colonnes missions / temps forts ── */
+.hp31-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* ── Blocs internes ── */
+.hp31-bloc__titre {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--hp-primary);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--hp-bg-light);
+}
+
+/* ── Entité (Cap emploi / HandiPro Conseil / PLIE) ── */
+.hp31-entite {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hp-primary-dark);
+  margin: 1rem 0 0.4rem;
+}
+
+.hp31-entite:first-of-type { margin-top: 0; }
+
+/* ── Listes missions ── */
+.hp31-liste {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hp31-liste li {
+  padding-left: 1.1rem;
+  position: relative;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.hp31-liste li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+}
+
+/* ── Frise verticale ── */
+.hp31-frise {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 1.5rem;
+}
+
+.hp31-frise::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--hp-bg-light);
+}
+
+.hp31-event {
+  position: relative;
+  padding: 0 0 1.5rem 1.25rem;
+}
+
+.hp31-event:last-child { padding-bottom: 0; }
+
+.hp31-event::before {
+  content: '';
+  position: absolute;
+  left: -1.175rem;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--hp-white);
+  border: 2px solid var(--hp-primary);
+}
+
+.hp31-event--actuel::before {
+  background: var(--hp-primary);
+}
+
+.hp31-event__annee {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--hp-primary);
+  margin-bottom: 0.2rem;
+}
+
+.hp31-event__corps strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.hp31-event__corps p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1023px) {
+  .hp31-duo { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .hp31-periode__header { padding: 1rem 1.25rem; }
+  .hp31-periode__num { font-size: 1.75rem; }
+  .hp31-periode__annees { font-size: 1.25rem; }
+  .hp31-duo { padding: 1.25rem; }
+  .hp31-tagline { padding: 0.75rem 1.25rem; font-size: 0.9rem; }
+}

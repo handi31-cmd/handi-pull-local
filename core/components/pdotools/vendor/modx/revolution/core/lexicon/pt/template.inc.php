@@ -1,0 +1,58 @@
+<?php
+/**
+ * Template English lexicon topic
+ *
+ * @language en
+ * @package modx
+ * @subpackage lexicon
+ */
+
+$_lang['access'] = 'Acesso';
+$_lang['filter_by_category'] = 'Filtrar por Categoria...';
+$_lang['rank'] = 'Posição';
+$_lang['template'] = 'Template';
+$_lang['template_assignedtv_tab'] = 'Assigned TVs';
+$_lang['template_code'] = 'Código do template (html)';
+$_lang['template_desc'] = 'Descrição';
+$_lang['template_desc_category'] = 'A Categoria que este Template pertence.';
+$_lang['template_desc_description'] = 'Uma breve descrição deste template.';
+$_lang['template_desc_name'] = 'O nome do template.';
+$_lang['template_delete_confirm'] = 'Tem certeza que deseja excluir este template?';
+$_lang['template_duplicate_confirm'] = 'Tem certeza que deseja duplicar este template?';
+$_lang['template_edit_tab'] = 'Editar Template';
+$_lang['template_empty'] = '(vazio)';
+$_lang['template_err_default_template'] = 'Este template é definido como o template padrão. Por favor, escolha um template de padrão diferente na configuração MODX antes de excluir esse template <br /> .';
+$_lang['template_err_delete'] = 'An error occurred while trying to delete the template.';
+$_lang['template_err_duplicate'] = 'Ocorreu um erro durante a duplicação do template.';
+$_lang['template_err_ae'] = 'O template já existe com o nome de "[[+name]]".';
+$_lang['template_err_in_use'] = 'Este template está em uso. Por favor, defina os documentos usando o template para outro template. Documentos usando este template: <br /> ';
+$_lang['template_err_locked'] = 'Template é bloqueado para edição.';
+$_lang['template_err_nf'] = 'Template não encontrada';
+$_lang['template_err_ns'] = 'Template não especificado.';
+$_lang['template_err_ns_name'] = 'Por favor, indique um nome para o template.';
+$_lang['template_err_remove'] = 'An error occurred while trying to delete the template.';
+$_lang['template_err_save'] = 'Ocorreu um erro ao salvar o template.';
+$_lang['template_icon'] = 'Ícone';
+$_lang['template_icon_description'] = 'Optional. A custom CSS icon class for all resources with this template. For example a Font Awesome (free) class such as icon-home or fa-home.';
+$_lang['template_lock'] = 'Bloquear o template para edição ';
+$_lang['template_lock_msg'] = 'Os usuários devem ter o atributo edit_locked editar esse template.';
+$_lang['template_locked_message'] = 'Este template está bloqueado.';
+$_lang['template_management_msg'] = 'Aqui você pode escolher qual o template que pretende editar.';
+$_lang['template_msg'] = 'Criar e editar templates. Alterados ou novos templates não serão visíveis em páginas armazenadas em cache do seu site até que o cache é esvaziado, no entanto, você pode usar a função de visualização de uma página para ver o template em ação.';
+$_lang['template_name'] = 'Nome do Template ';
+$_lang['template_new'] = 'Create Template';
+$_lang['template_no_tv'] = 'No TVs have been assigned to this template yet.';
+$_lang['template_properties'] = 'Propriedades Padrão';
+$_lang['template_reset_all'] = 'Redefinir todas as páginas que usam template padrão ';
+$_lang['template_reset_specific'] = 'Redefinir apenas "%s" páginas';
+$_lang['template_title'] = 'Criar/Editar template';
+$_lang['template_tv_edit'] = 'Edit the sort order of the TVs';
+$_lang['template_tv_msg'] = 'The <abbr title="Template Variables">TVs</abbr> assigned to this template are listed below.';
+$_lang['template_untitled'] = 'Template Sem Título';
+$_lang['templates'] = 'Templates';
+$_lang['tvt_err_nf'] = 'TV does not have access to the specified Template.';
+$_lang['tvt_err_remove'] = 'An error occurred while trying to delete the TV from the template.';
+$_lang['template_source'] = 'Media Source';
+$_lang['template_source_description'] = 'The media source to select a static file or preview. Using "None" will assume you are specifying an absolute path.';
+$_lang['template_preview'] = 'Template preview';
+$_lang['template_preview_description'] = 'A screenshot of the template to use as preview in the template picker. Best size is 335 x 236 (w x h)';

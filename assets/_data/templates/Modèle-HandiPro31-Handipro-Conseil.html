@@ -1,0 +1,72 @@
+id: 11
+source: 1
+templatename: 'Modèle HandiPro31 - Handipro Conseil'
+description: 'Modèle avec le header, le footer pour chaque page'
+category: 'Handipro Conseil'
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+
+  <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/header.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/footer.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/[[*alias]].css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/classicpage.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/renderHandiproMenu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+  [[$header]]
+
+  <main class="main-[[*alias]]">
+      [[*content]]
+  </main>
+
+  [[$footer]]
+
+  <script src="[[++assets_url]]js/dropdown.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const links = document.querySelectorAll('.handipro-nav a');
+  const sections = document.querySelectorAll('.handipro-section');
+
+  // Fonction pour afficher une section et cacher les autres
+  function showSection(id) {
+    sections.forEach(section => {
+      section.classList.remove('active');
+      if (section.id === id) {
+        section.classList.add('active');
+      }
+    });
+  }
+
+  // Gestion du clic sur les liens
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const anchor = this.getAttribute('href').substring(1); // enlève le "#"
+      showSection(anchor);
+    });
+  });
+
+  // Afficher la première section par défaut
+  if (sections.length > 0) {
+    sections[0].classList.add('active');
+  }
+});
+</script>
+
+</body>
+</html>

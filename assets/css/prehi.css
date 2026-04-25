@@ -1,0 +1,13 @@
+.page-construction {
+  background-color: #fff3cd;
+  color: #2C3E50;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px dashed #2C3E50;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}

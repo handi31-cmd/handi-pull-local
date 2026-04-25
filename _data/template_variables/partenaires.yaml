@@ -1,0 +1,12 @@
+id: 4
+source: 1
+type: migx
+name: partenaires
+category: Partenaires
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: "a:7:{s:7:\"configs\";s:0:\"\";s:8:\"formtabs\";s:287:\"[\n  {\n    \"caption\": \"Partenaire\",\n    \"fields\": [\n      {\n        \"field\": \"image\",\n        \"caption\": \"Logo du partenaire\",\n        \"inputTVtype\": \"image\"\n      },\n      {\n        \"field\": \"url\",\n        \"caption\": \"Lien vers le site\",\n        \"inputTVtype\": \"text\"\n      }\n    ]\n  }\n]\";s:7:\"columns\";s:185:\"[\n  {\n    \"header\": \"Logo\",\n    \"dataIndex\": \"image\",\n    \"renderer\": \"this.renderImage\",\n    \"width\": 100\n  },\n  {\n    \"header\": \"Lien\",\n    \"dataIndex\": \"url\",\n    \"width\": 200\n  }\n]\n\";s:7:\"btntext\";s:0:\"\";s:10:\"previewurl\";s:0:\"\";s:10:\"jsonvarkey\";s:0:\"\";s:19:\"autoResourceFolders\";s:5:\"false\";}"
+output_properties: 'a:0:{}'
+content: ''

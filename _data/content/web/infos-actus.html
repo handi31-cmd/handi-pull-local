@@ -1,0 +1,37 @@
+id: 8
+pagetitle: 'Informations & Actualites'
+alias: infos-actus
+published: 1
+isfolder: 1
+introtext: ''
+template: 5
+menuindex: 7
+createdby: 1
+createdon: 1752580827
+publishedon: 1752580860
+publishedby: 1
+uri: infos-actus/
+properties: null
+tvs:
+    actuimage: ''
+
+-----
+
+[[!pdoPage? 
+  &element=`pdoResources` 
+  &parents=`8` 
+  &tpl=`tplArticles` 
+  &limit=`5` 
+  &includeTVs=`actuimage` 
+  &tvPrefix=`` 
+  &pageLimit=`2` 
+  &pageNavOuterTpl=`paginationOuterTpl` 
+  &pageNavTpl=`paginationPageTpl` 
+  &pageNavPrevTpl=`paginationPrevTpl` 
+  &pageNavNextTpl=`paginationNextTpl` 
+  &pageNavFirstTpl=`paginationFirstTpl` 
+  &pageNavLastTpl=`paginationLastTpl` 
+  &pageNavTplActive=`paginationActiveTpl`
+  &scheme=`full`
+]]
+[[!+page.nav]]

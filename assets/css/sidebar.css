@@ -1,0 +1,173 @@
+/* === Layout sidebar commun — toutes les pages HandiPro31 === */
+
+/* Variables */
+:root {
+  --hp-primary:      #4BA78C;
+  --hp-primary-dark: #3A8A72;
+  --hp-bg-light:     #E8F7F3;
+  --hp-text:         #2D2D2D;
+  --hp-dark:         #2D2D2D;
+  --hp-white:        #FFFFFF;
+  --hp-radius:       0.75rem;
+  --hp-shadow:       0 4px 16px rgba(0,0,0,0.08);
+  --hp-transition:   0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+* { font-family: 'Nunito', Arial, sans-serif; box-sizing: border-box; color: #2D2D2D; }
+
+/* === Layout === */
+.ce-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 12rem 3rem 2rem;
+}
+
+/* === Sidebar === */
+.ce-sidebar {
+  width: 200px;
+  min-width: 200px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ce-sidebar__logo {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.ce-sidebar__logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.ce-sidebar__nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ce-sidebar__nav a {
+  display: block;
+  background: linear-gradient(135deg, var(--hp-primary), #66C9A8);
+  color: var(--hp-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 10px rgba(75,167,140,0.25);
+  transition: background var(--hp-transition), transform var(--hp-transition);
+}
+
+.ce-sidebar__nav a:hover,
+.ce-sidebar__nav a:focus-visible {
+  background: linear-gradient(135deg, var(--hp-primary-dark), var(--hp-primary));
+  transform: translateX(5px);
+  outline: 2px solid var(--hp-primary-dark);
+  outline-offset: 2px;
+}
+
+/* === Contenu droit === */
+.ce-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+/* === Sections === */
+.ce-section {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  padding: 2rem;
+  scroll-margin-top: 110px;
+}
+
+.ce-section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--hp-primary);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--hp-primary);
+  display: inline-block;
+}
+
+.ce-section p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.ce-section p:last-child { margin-bottom: 0; }
+
+/* === CTA orange === */
+.ce-cta {
+  text-align: center;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.ce-btn--orange {
+  display: inline-block;
+  background: #E8893A;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.ce-btn--orange:hover,
+.ce-btn--orange:focus-visible {
+  background: #d0762e;
+  outline: 2px solid #d0762e;
+  outline-offset: 3px;
+}
+
+/* === Responsive === */
+@media (max-width: 1023px) {
+  .ce-sidebar { width: 30%; }
+}
+
+@media (max-width: 767px) {
+  .ce-page {
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 0 1rem 2rem;
+  }
+  .ce-sidebar {
+    width: 100%;
+    position: relative;
+    top: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .ce-sidebar__logo { display: none; }
+  .ce-sidebar__nav { width: 100%; }
+  .ce-sidebar__nav ul { flex-direction: row; flex-wrap: wrap; }
+  .ce-sidebar__nav li { flex: 1 1 calc(50% - 0.3rem); }
+  .ce-sidebar__nav a { text-align: center; font-size: 0.8rem; padding: 0.6rem; }
+  .ce-section { padding: 1.25rem; }
+}

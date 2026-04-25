@@ -1,0 +1,69 @@
+/* ===== FIL D'ARIANE ===== */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  padding: 14px 0px;
+  border-bottom: 1px solid #edecf1;
+  background: none;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+  white-space: nowrap;
+  color: #fff;
+  text-decoration: none;
+}
+
+.B_crumbBox {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.4rem;
+}
+
+
+.B_crumbBox li+li::before {
+  padding: 0 0.2rem;
+  color: white;
+}
+
+@media screen and (min-width: 1023px) {
+
+  .breadcrumb {
+    width: 75%;
+    border-bottom: 1px solid #edecf1;
+    padding: 14px 0;
+    background: none;
+    display: flex;
+    justify-content: flex-start; /* aligne à gauche */
+  }
+
+  .B_crumbBox {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .breadcrumb a,
+  .breadcrumb span {
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .B_crumbBox li + li::before {
+    padding: 0 0.4rem;
+    color: white;
+  }
+}

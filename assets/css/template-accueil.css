@@ -1,0 +1,776 @@
+html { scroll-behavior: smooth; }
+* { font-family: 'Nunito', Arial, sans-serif; color: #2D2D2D; }
+
+/* === Variables CSS HandiPro31 === */
+:root {
+  --hp-primary:      #4BA78C;
+  --hp-primary-dark: #3A8A72;
+  --hp-bg-light:     #E8F7F3;
+  --hp-text:         #2D3E35;
+  --hp-text-sec:     #717171;
+  --hp-dark:         #2D3E35;
+  --hp-white:        #FFFFFF;
+  --hp-orange:       #E8893A;
+  --hp-orange-dark:  #d0762e;
+  --hp-radius:       0.75rem;
+  --hp-shadow:       0 4px 16px rgba(0,0,0,0.1);
+  --hp-transition:   0.25s ease;
+}
+
+/* ============================================================
+   HEADER — 2 barres de navigation
+   ============================================================ */
+.hp-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background: var(--hp-white);
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.hp-nav-top__logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.hp-nav-top__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hp-nav-top__links a {
+  text-decoration: none;
+  color: var(--hp-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--hp-transition);
+}
+
+.hp-nav-top__links a:hover,
+.hp-nav-top__links a:focus-visible {
+  color: var(--hp-primary);
+}
+
+.hp-btn-contact {
+  background: var(--hp-orange);
+  color: var(--hp-white);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--hp-transition);
+  white-space: nowrap;
+}
+
+.hp-btn-contact:hover,
+.hp-btn-contact:focus-visible {
+  background: var(--hp-orange-dark);
+}
+
+/* Barre verte secondaire — forme pilule */
+.hp-nav-secondary {
+  background: var(--hp-white);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hp-nav-secondary__pill {
+  background: var(--hp-primary);
+  border-radius: 50px;
+  padding: 0.6rem 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.hp-nav-secondary__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hp-nav-secondary__links a {
+  text-decoration: none;
+  color: var(--hp-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity var(--hp-transition);
+}
+
+.hp-nav-secondary__links a:hover,
+.hp-nav-secondary__links a:focus-visible {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   HERO — image équipe + titre overlay
+   ============================================================ */
+.hp-hero {
+  background: var(--hp-white);
+  padding: 2rem 0 0;
+}
+
+.hp-hero__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: var(--hp-primary);
+  max-width: 1092px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  height: 400px;
+}
+
+.hp-hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hp-hero__overlay-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--hp-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.hp-hero__overlay-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--hp-white);
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+}
+
+/* ============================================================
+   HERO CARD — engagement (flotte entre hero et stats)
+   ============================================================ */
+.hp-hero-engagement {
+  position: relative;
+  z-index: 10;
+  margin-top: -1.5rem;
+  margin-bottom: -4.3rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.hp-hero__card {
+  background: #f5f4f1;
+  border: 2px solid var(--hp-orange);
+  border-radius: var(--hp-radius);
+  padding: 2rem 2.5rem;
+  max-width: 832px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.hp-hero__card h1 {
+  font-size: 1.5rem;
+  color: var(--hp-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.hp-hero__card p {
+  color: var(--hp-text);
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.hp-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Boutons génériques */
+.hp-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background var(--hp-transition), color var(--hp-transition), border-color var(--hp-transition);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+/* Bouton vert (services) */
+.hp-btn--primary {
+  background: var(--hp-primary);
+  color: var(--hp-white);
+  border-color: var(--hp-primary);
+}
+
+.hp-btn--primary:hover,
+.hp-btn--primary:focus-visible {
+  background: var(--hp-primary-dark);
+  border-color: var(--hp-primary-dark);
+}
+
+/* Bouton orange (contact, articles) */
+.hp-btn--contact {
+  background: var(--hp-orange);
+  color: var(--hp-white);
+  border-color: var(--hp-orange);
+  text-align: center;
+}
+
+.hp-btn--contact:hover,
+.hp-btn--contact:focus-visible {
+  background: var(--hp-orange-dark);
+  border-color: var(--hp-orange-dark);
+}
+
+/* ============================================================
+   STATS — 3 boîtes chiffres clés
+   ============================================================ */
+.hp-stats-section {
+  background: var(--hp-white);
+  padding: 3rem 0 2.5rem;
+}
+
+.hp-stats__outer {
+  background: var(--hp-primary);
+  max-width: 1020px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 3rem 2.5rem;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-stats__inner {
+  background: var(--hp-white);
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 1.25rem;
+  width: 650px;
+  height: 100px;
+}
+
+.hp-stat-box {
+  flex: 1;
+  background: var(--hp-primary);
+  border: 2px solid var(--hp-orange);
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--hp-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hp-stat-box__main {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hp-stat-box__label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   NOS SERVICES
+   ============================================================ */
+.hp-services {
+  padding: 3rem 1.5rem;
+  background: var(--hp-white);
+}
+
+.hp-section-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  margin-bottom: 2rem;
+}
+
+.hp-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hp-service-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--hp-orange);
+  border-radius: var(--hp-radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--hp-text);
+  transition: transform var(--hp-transition), box-shadow var(--hp-transition);
+  height: 420px;
+}
+
+.hp-service-card:hover,
+.hp-service-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.hp-service-card__logo {
+  background: var(--hp-white);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 33.33%;
+}
+
+.hp-service-card__logo--dark {
+  background: var(--hp-dark);
+}
+
+.hp-service-card__logo img {
+  max-width: 240px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.hp-service-card__body {
+  background: var(--hp-bg-light);
+  padding: 1.5rem;
+  flex: 0 0 66.67%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.hp-service-card__body p {
+  font-size: 0.9375rem;
+  color: var(--hp-text);
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+/* ============================================================
+   À QUI S'ADRESSE
+   ============================================================ */
+section.hp-audiences {
+  padding: 3rem 1.5rem;
+  background: var(--hp-primary);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hp-audiences .hp-section-title {
+  color: var(--hp-white);
+}
+
+.hp-audiences__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hp-audience-card {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hp-audience-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  line-height: 1.3;
+}
+
+.hp-audience-card p {
+  font-size: 0.9375rem;
+  color: var(--hp-text-sec);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.hp-audience-card a {
+  display: inline-block;
+  color: var(--hp-orange);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color var(--hp-transition);
+}
+
+.hp-audience-card a:hover,
+.hp-audience-card a:focus-visible {
+  color: var(--hp-orange-dark);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   ACTUALITÉS — slider
+   ============================================================ */
+.hp-actualites {
+  padding: 3rem 1.5rem;
+  background: var(--hp-white);
+}
+
+.hp-actu-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hp-actu-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.hp-actu-card {
+  min-width: 100%;
+  background: var(--hp-white);
+  border: 2px solid var(--hp-orange);
+  border-radius: var(--hp-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-actu-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.hp-actu-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+
+.hp-actu-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  line-height: 1.3;
+}
+
+.hp-actu-card p {
+  font-size: 0.9375rem;
+  color: var(--hp-text);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Contrôles slider */
+.hp-actu-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.hp-actu-btn {
+  background: var(--hp-white);
+  border: 2px solid var(--hp-primary);
+  color: var(--hp-primary);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--hp-transition), color var(--hp-transition);
+}
+
+.hp-actu-btn:hover,
+.hp-actu-btn:focus-visible {
+  background: var(--hp-primary);
+  color: var(--hp-white);
+}
+
+.hp-actu-dots {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hp-actu-dots li {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: var(--hp-text-sec);
+  cursor: pointer;
+  transition: background var(--hp-transition);
+}
+
+.hp-actu-dots li.active,
+.hp-actu-dots li:hover {
+  background: var(--hp-primary);
+}
+
+/* ============================================================
+   PARTENAIRES — défilement infini
+   ============================================================ */
+section.hp-partenaires {
+  padding: 3rem 1.5rem;
+  background: var(--hp-primary);
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hp-partenaires .hp-section-title {
+  color: var(--hp-white);
+}
+
+.hp-partenaires__track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.hp-partenaires__track {
+  display: flex;
+  gap: 1.5rem;
+  animation: hp-scroll 28s linear infinite;
+  width: max-content;
+}
+
+.hp-partenaires__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes hp-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.hp-partner-logo {
+  flex: 0 0 160px;
+  height: 90px;
+  background: var(--hp-white);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.hp-partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Grille statique fallback (reduced-motion) */
+.hp-partenaires__grid-static {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+/* ============================================================
+   FOCUS GLOBAL (accessibilité)
+   ============================================================ */
+:focus-visible {
+  outline: 3px solid var(--hp-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .hp-nav-top {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .hp-nav-top__links {
+    gap: 1rem;
+  }
+
+  .hp-nav-secondary__links {
+    gap: 1.5rem;
+  }
+
+  .hp-hero__card {
+    padding: 1.5rem;
+  }
+
+  .hp-hero__card h1 {
+    font-size: 1.35rem;
+  }
+
+  .hp-hero__overlay-title {
+    font-size: 1.875rem;
+  }
+
+  .hp-stats__inner {
+    gap: 1rem;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .hp-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile ≤599px — même rendu visuel que desktop, proportionné */
+@media (max-width: 599px) {
+
+  /* Section 1 — conteneur image même structure, hauteur proportionnée */
+  .hp-hero {
+    padding: 1rem 1rem 0;
+  }
+  .hp-hero__image-wrapper {
+    height: 200px;
+    max-width: 100%;
+    border-radius: 0.75rem;
+  }
+  .hp-hero__img {
+    height: 200px;
+  }
+  .hp-hero__overlay-title {
+    font-size: 1.2rem;
+    top: 0.75rem;
+  }
+
+  /* Section 2 — float recalculé pour hauteur image 200px */
+  .hp-hero-engagement {
+    margin-top: -1.2rem;
+    padding: 0 1rem;
+  }
+  .hp-hero__card {
+    padding: 1.25rem 1rem;
+    max-width: 76%;
+  }
+  .hp-hero__card h1 { font-size: 1.05rem; }
+  .hp-hero__card p  { font-size: 0.85rem; }
+  .hp-btn-row {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .hp-btn {
+    text-align: center;
+    flex: 1;
+    max-width: 130px;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Section 3 — même structure, 3 boîtes en ligne, taille réduite */
+  .hp-stats-section {
+    padding: 4.5rem 1rem 1.5rem;
+    margin-top: -5.5rem;
+  }
+  .hp-stats__outer {
+    max-width: 100%;
+    height: auto;
+    min-height: 120px;
+    padding: 1.25rem 2rem;
+    border-radius: 0.75rem;
+  }
+  .hp-stats__inner {
+    width: 100%;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .hp-stat-box {
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .hp-stat-box__main  { font-size: 0.9rem; }
+  .hp-stat-box__label { font-size: 0.65rem; }
+
+  /* Autres */
+  .hp-actu-card img { height: 180px; }
+  .hp-partner-logo { flex: 0 0 120px; height: 70px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hp-partenaires__track {
+    animation: none;
+  }
+
+  .hp-partenaires__track-wrapper {
+    display: none;
+  }
+
+  .hp-partenaires__grid-static {
+    display: grid;
+  }
+}

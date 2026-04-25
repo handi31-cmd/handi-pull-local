@@ -1,0 +1,46 @@
+id: 18
+source: 1
+templatename: 'Modèle HandiPro31 - Candidature'
+description: 'Modèle qui affichera le formulaire de candidature'
+category: Recrutement
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+
+    <!-- CSS de base -->
+    <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/header.css" />
+    <link rel="stylesheet" href="[[++assets_url]]css/footer.css" />
+
+    <!-- chunk CSS -->
+    <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS générique pour les articles -->
+    <link rel="stylesheet" href="[[++assets_url]]css/candidature.css" /> <!--css pour les candidatures-->
+</head>
+
+
+<body>
+  [[$header]]
+  <main>
+    [[$candidatureChunk]]
+  </main>
+  [[$footer]]
+
+
+  <script src="[[++assets_url]]js/dropdown.js"></script>
+  <script src="[[++assets_url]]js/toast.js"></script>
+  <script src="[[++assets_url]]js/toastSuccess.js"></script>
+</body>
+
+</html>

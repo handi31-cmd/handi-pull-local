@@ -1,0 +1,21 @@
+id: 3
+source: 1
+name: tplActualitePetite
+description: ''
+category: Accueil
+properties: 'a:0:{}'
+
+-----
+
+<div class="carte-actualite-petite">
+    [[!+actuimage:!empty=`
+    <img class="carte-actualite-petite__image" src="[[++site_url]][[+actuimage]]" alt="[[+pagetitle]]" />
+    `]]
+
+
+  <h2 class="carte-actualite-petite__titre">[[+pagetitle]]</h2>
+  <p class="carte-actualite-petite__intro">[[+introtext]]</p>
+  <a href="[[~[[+id]]]]" class="carte-actualite-petite__lien">
+    Voir l'article
+  </a>
+</div>

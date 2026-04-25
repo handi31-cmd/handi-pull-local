@@ -1,0 +1,24 @@
+id: 24
+pagetitle: 'Offres d''emploi'
+alias: offres-demploi
+published: 1
+parent: 18
+isfolder: 1
+introtext: ''
+template: 13
+menuindex: 1
+createdby: 1
+createdon: 1753877717
+publishedon: 1753877700
+publishedby: 1
+uri: recrutement/offres-demploi/
+properties: '{"markdowneditor":{"markdown":"{\"ta\":\"<h2>Liste des offres<\\\/h2>\\r\\n\\r\\n[[!getResources?\\r\\n  &parents=`24`\\r\\n  &depth=`1`\\r\\n  &tpl=`@CODE:\\r\\n    <article class=\\\"offre\\\">\\r\\n      <h3>[[+pagetitle]]<\\\/h3>\\r\\n      <p>R\\u00e9f : [[+numero_offre]]<\\\/p>\\r\\n      <p>Lieu : [[+lieu]]<\\\/p>\\r\\n      <p>Contrat : [[+type_contrat]]<\\\/p>\\r\\n      <a href=\\\"[[~[[+id]]]]\\\">> D\\u00e9tail<\\\/a>\\r\\n    <\\\/article>`\\r\\n  &includeTVs=`1`\\r\\n  &limit=`0`\\r\\n  &sortby=`publishedon`\\r\\n  &sortdir=`DESC`\\r\\n]]\"}"}}'
+tvs:
+    lieu: ''
+    logoPage: ''
+    nom_poste: ''
+
+-----
+
+<p>[[!pdoPage?<br /> &amp;element=`pdoResources`<br /> &amp;parents=`24`<br /> &amp;tpl=`offreTpl`<br /> &amp;limit=`5`<br /> &amp;depth=`1`<br /> &amp;includeTVs=`1`<br /> &amp;tvPrefix=``<br /> &amp;showHidden=`1`<br /> &amp;hideContainers=`1`<br /> &amp;sortby=`publishedon`<br /> &amp;sortdir=`DESC`<br /> &amp;pageNavTpl=`paginationPageTpl`<br /> &amp;pageNavTplActive=`paginationActiveTpl`<br /> &amp;pageNavOuterTpl=`paginationOuterTpl`<br /> &amp;pageNavFirstTpl=`paginationFirstTpl`<br /> &amp;pageNavLastTpl=`paginationLastTpl`<br /> &amp;pageNavPrevTpl=`paginationPrevTpl`<br /> &amp;pageNavNextTpl=`paginationNextTpl`<br /> &amp;pageLimit=`2`<br /> &cache=`0`<br />]]</p>
+<p>[[!+page.nav]]</p>

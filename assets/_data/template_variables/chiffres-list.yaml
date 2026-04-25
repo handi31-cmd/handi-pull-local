@@ -1,0 +1,14 @@
+id: 8
+source: 1
+type: migx
+name: chiffres_list
+description: 'Liste des chiffres en JSON '
+category: Handipro31
+elements: ''
+rank: 4
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: "a:7:{s:7:\"configs\";s:0:\"\";s:8:\"formtabs\";s:264:\"[\n  {\n    \"caption\": \"Chiffre\",\n    \"fields\": [\n      {\n        \"field\": \"val\",\n        \"caption\": \"Valeur\",\n        \"inputTVtype\": \"text\"\n      },\n      {\n        \"field\": \"desc\",\n        \"caption\": \"Description\",\n        \"inputTVtype\": \"text\"\n      }\n    ]\n  }\n]\";s:7:\"columns\";s:156:\"[\n  {\n    \"header\": \"Valeur\",\n    \"dataIndex\": \"val\",\n    \"width\": 100\n  },\n  {\n    \"header\": \"Description\",\n    \"dataIndex\": \"desc\",\n    \"width\": 200\n  }\n]\";s:7:\"btntext\";s:0:\"\";s:10:\"previewurl\";s:0:\"\";s:10:\"jsonvarkey\";s:0:\"\";s:19:\"autoResourceFolders\";s:5:\"false\";}"
+output_properties: 'a:0:{}'
+content: ''

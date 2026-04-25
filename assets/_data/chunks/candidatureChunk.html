@@ -1,0 +1,31 @@
+id: 40
+source: 1
+name: candidatureChunk
+description: ''
+category: Candidature
+properties: 'a:0:{}'
+
+-----
+
+[[!setOffreCode]]
+
+[[!pdoResources?
+  &tpl=`formulaireCandidatureTpl`
+  &includeTVs=`numero_offre,type_contrat,lieu,nom_poste`
+  &limit=`1`
+  &parents=`24`
+  &tvFilters=`numero_offre==[[+offreCode]]`
+  &cacheable=`0`
+]]
+
+[[+pdoResourcesCount:is=`0`:then=`
+  <p class="error">Offre introuvable ou expirée.</p>
+`]]
+
+[[!FormIt?
+&formName=`candidatureForm`
+&hooks=`doubleEmailHook,FormItSaveForm`
+&validate=`prenom:required,nom:required,email:required:email,email_confirm:required:email_confirm,tel:required,poste:required,cv:required,optin_rgpd:required`
+&successMessage=`Merci, formulaire envoyé !`
+]]
+

@@ -1,0 +1,41 @@
+id: 28
+source: 1
+name: nosOffresChunk
+description: ''
+category: 'Nos offres'
+properties: 'a:0:{}'
+
+-----
+
+<div class="main-content">
+  <h2 class="offres-title">[[*pagetitle]]</h2>
+
+  <div class="offres-content">
+    [[!pdoPage?
+       &element=`pdoResources`
+       &parents=`24`
+       &tpl=`offreTpl`
+       &limit=`5`
+       &depth=`1`
+       &includeTVs=`type_contrat, lieu, numero_offre, mission_principale`
+       &tvPrefix=``
+       &sortby=`publishedon`
+       &sortdir=`DESC`
+       &showHidden=`1`
+       &cache=`0`
+    ]]
+  </div>
+
+  <h2 class="offres-title">Candidature spontanée</h2>
+  <p class="offres-p">Vous ne trouvez pas d'offre qui correspond à votre profil ? Envoyez-nous votre candidature spontanée, nous l'étudierons avec attention.</p>
+  <a href="[[~20? &scheme=`full`]]" class="btn-candidature-spontanee" aria-label="Accéder au formulaire de candidature spontanée">
+  ✉️ Déposer une candidature spontanée
+  </a>
+  <div class="pagination">
+    [[!+page.nav]]
+  </div>
+
+  <a href="[[~1]]" class="btn-retour-accueil" aria-label="Retour à la page d’accueil du site">
+    🏠 Retour à l’accueil
+  </a>
+</div>

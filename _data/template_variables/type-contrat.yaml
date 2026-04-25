@@ -1,0 +1,13 @@
+id: 32
+source: 1
+type: listbox
+name: type_contrat
+description: 'CDI, CDD, Alternance, Stage etc...'
+category: 'Nos offres'
+elements: "CDI==CDI||CDD 3 mois==CDD 3 mois||CDD 6 mois==CDD 6 mois||CDD 12 mois==CDD 12 mois||Stage==Stage||Alternance==Alternance||Intérim==Intérim\n"
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:10:"allowBlank";s:4:"true";s:5:"title";s:0:"";s:9:"typeAhead";s:1:"0";}'
+output_properties: 'a:0:{}'
+content: ''

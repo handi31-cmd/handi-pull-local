@@ -1,0 +1,4 @@
+key: markdowneditor.general.theme
+value: github
+namespace: markdowneditor
+area: markdowneditor.area.general

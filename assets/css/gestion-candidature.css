@@ -1,0 +1,177 @@
+/* ======= FORMULAIRE ======= */
+form {
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+form input,
+form select {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+form button:hover {
+    background-color: #005f8d;
+}
+
+/* ======= TABLEAU MOBILE (CARDS) ======= */
+table.candidatures {
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+
+table.candidatures tbody tr {
+    display: block;
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+table.candidatures td {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+table.candidatures td:last-child {
+    border-bottom: none;
+}
+
+table.candidatures td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+    padding-right: 10px;
+}
+
+td .statut {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+}
+
+.statut.on {
+    background-color: #d4f8d4;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.statut.off {
+    background-color: #fbe9e7;
+    color: #d84315;
+    border: 1px solid #ffab91;
+}
+
+.statut:hover {
+    opacity: 0.85;
+}
+
+.btn-modif {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-modif:hover {
+    background-color: #005f8d;
+}
+
+
+/* ======= TABLEAU DESKTOP ======= */
+@media (min-width: 768px) {
+
+    form {
+        flex-direction: row;
+    }
+
+    form button {
+        align-self: center;
+    }
+
+    table.candidatures {
+        width: 75%;
+        border-collapse: collapse;
+    }
+
+    table.candidatures thead {
+        display: table-header-group;
+        background-color: #0073aa;
+        color: white;
+    }
+
+    table.candidatures thead th {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table.candidatures tbody tr {
+        display: table-row;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 0;
+    }
+
+    table.candidatures td {
+        display: table-cell;
+        padding: 10px;
+        border: 1px solid #eee;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    table.candidatures td::before {
+        content: none;
+    }
+}

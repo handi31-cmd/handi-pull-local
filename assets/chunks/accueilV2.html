@@ -1,0 +1,253 @@
+<!-- Chunk MODx : ChunkAccueil
+     À coller dans : Éléments → Chunks → "ChunkAccueil"
+     Appelé depuis le contenu de la Resource Accueil via [[$ChunkAccueil]]
+-->
+
+<!-- ============================================================
+     HERO — image équipe avec titre overlay
+     ============================================================ -->
+<section class="hp-hero" aria-label="Bannière d'accueil">
+  <div class="hp-hero__image-wrapper">
+    <img
+      class="hp-hero__img"
+      src="[[++assets_url]]images/Equipe-HandiPro.png"
+      alt="L'équipe HandiPro31 réunie"
+      width="1440"
+      height="400"
+      loading="eager"
+    />
+    <p class="hp-hero__overlay-title">Bienvenu chez HandiPro 31</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HERO CARD — engagement
+     ============================================================ -->
+<section class="hp-hero-engagement" aria-label="Notre engagement">
+  <div class="hp-hero__card">
+    <h1>Votre emploi, notre engagement</h1>
+    <p>
+      Depuis plus de 30 ans, nous œuvrons pour l'inclusion professionnelle des
+      personnes en situation de handicap. Notre mission :
+      vous accompagner vers l'emploi qui vous ressemble.
+    </p>
+    <div class="hp-btn-row">
+      <a href="[[~contact]]" class="hp-btn hp-btn--contact">Contactez-nous</a>
+      <a href="#nos-services" class="hp-btn hp-btn--primary">Découvrir nos services</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STATS — 3 chiffres clés
+     ============================================================ -->
+<section class="hp-stats-section" aria-label="Chiffres clés">
+  <div class="hp-stats__outer">
+  <div class="hp-stats__inner">
+    <div class="hp-stat-box">
+      <span class="hp-stat-box__main">+ 30 ans</span>
+      <span class="hp-stat-box__label">d'expériences</span>
+    </div>
+    <div class="hp-stat-box">
+      <span class="hp-stat-box__main">1 expertise</span>
+      <span class="hp-stat-box__label">Handicap &amp; Emploi</span>
+    </div>
+    <div class="hp-stat-box">
+      <span class="hp-stat-box__main">Labélisé</span>
+      <span class="hp-stat-box__label">Cap Emploi</span>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     NOS SERVICES
+     ============================================================ -->
+<section id="nos-services" class="hp-services" aria-labelledby="titre-services">
+  <h2 class="hp-section-title" id="titre-services">Nos services</h2>
+
+  <div class="hp-services__grid">
+
+    <a href="[[~capemploi]]" class="hp-service-card" aria-label="Cap Emploi Haute-Garonne">
+      <div class="hp-service-card__logo">
+        <img src="[[++assets_url]]images/LogoCapEmploi.png" alt="Logo Cap Emploi Haute-Garonne" />
+      </div>
+      <div class="hp-service-card__body">
+        <p>Notre équipe vous propose un accompagnement personnalisé pour faciliter vos démarches, sécuriser votre parcours professionnel et mobiliser les aides adaptées à votre situation.</p>
+      </div>
+    </a>
+
+    <a href="[[~crehi]]" class="hp-service-card" aria-label="Le CREHI">
+      <div class="hp-service-card__logo">
+        <img src="[[++assets_url]]images/logoCREHI.png" alt="Logo CREHI" />
+      </div>
+      <div class="hp-service-card__body">
+        <p>Notre équipe vous propose un accompagnement personnalisé pour faciliter vos démarches, sécuriser votre parcours professionnel et mobiliser les aides adaptées à votre situation.</p>
+      </div>
+    </a>
+
+    <a href="[[~handiproconseil]]" class="hp-service-card" aria-label="HandiPro Conseil">
+      <div class="hp-service-card__logo">
+        <img src="[[++assets_url]]images/LogoHandiproConseil.jpg" alt="Logo HandiPro Conseil" />
+      </div>
+      <div class="hp-service-card__body">
+        <p>Notre équipe vous accompagne dans votre stratégie RH Handicap pour vous aider à mettre en place une politique RH - TH coordonnée et efficace, tout en favorisant l'adhésion de vos collaborateurs.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     À QUI S'ADRESSE HANDIPRO31
+     ============================================================ -->
+<section class="hp-audiences" aria-labelledby="titre-audiences">
+  <h2 class="hp-section-title" id="titre-audiences">À qui s'adresse HandiPro 31 ?</h2>
+
+  <div class="hp-audiences__grid">
+
+    <div class="hp-audience-card">
+      <h3>Personne en situation de handicap</h3>
+      <p>Trouver un emploi, maintenir votre poste, évoluer professionnellement</p>
+      <a href="[[~candidats]]">Découvrir →</a>
+    </div>
+
+    <div class="hp-audience-card">
+      <h3>Employeur</h3>
+      <p>Recruter, maintenir en emploi, remplir votre obligation légale OETH</p>
+      <a href="[[~employeurs]]">Découvrir →</a>
+    </div>
+
+    <div class="hp-audience-card">
+      <h3>Partenaire</h3>
+      <p>Travailler ensemble pour une société plus inclusive en Haute-Garonne</p>
+      <a href="[[~partenaires]]">Découvrir →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ACTUALITÉS — slider
+     ============================================================ -->
+<section class="hp-actualites" aria-labelledby="titre-actu">
+  <h2 class="hp-section-title" id="titre-actu">Actualités</h2>
+
+  <div
+    class="hp-actu-slider"
+    role="region"
+    aria-label="Slider actualités"
+    aria-roledescription="carrousel"
+    tabindex="0"
+  >
+    <div class="hp-actu-track">
+
+      <article class="hp-actu-card">
+        <img
+          src="[[++assets_url]]images/rencontre-haero.png"
+          alt="Les Rencontres de l'Haéro 9ième édition"
+          width="800"
+          height="280"
+          loading="lazy"
+        />
+        <div class="hp-actu-card__body">
+          <h3>Les Rencontres de l'Haéro<br />9ième édition</h3>
+          <p>
+            Pour la 9ième année, Handipro Conseil organise ce forum emploi majeur dans le secteur
+            de l'industrie aéronautique et spatial. Dédié uniquement à un public bénéficiaire de
+            l'obligation d'emploi préparé pour l'occasion, il offre à des employeurs engagés de
+            recruter leurs nouveaux talents.
+          </p>
+          <a href="[[~actu_haero]]" class="hp-btn hp-btn--contact">Voir l'article</a>
+        </div>
+      </article>
+
+    </div><!-- /.hp-actu-track -->
+
+    <div class="hp-actu-controls">
+      <button class="hp-actu-btn" data-actu-prev aria-label="Article précédent" type="button">&#8249;</button>
+      <ul class="hp-actu-dots" data-actu-dots role="list" aria-label="Navigation slides"></ul>
+      <button class="hp-actu-btn" data-actu-next aria-label="Article suivant" type="button">&#8250;</button>
+    </div>
+
+  </div><!-- /.hp-actu-slider -->
+</section>
+
+
+<!-- ============================================================
+     NOS PARTENAIRES — défilement infini
+     ============================================================ -->
+<section class="hp-partenaires" aria-labelledby="titre-partenaires">
+  <h2 class="hp-section-title" id="titre-partenaires">Nos partenaires</h2>
+
+  <div class="hp-partenaires__track-wrapper" aria-hidden="true">
+    <div class="hp-partenaires__track">
+      <!-- Originaux -->
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAGEFIPH.jpg"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFIPHFP.jpg"              alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMissionLocales.png"      alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="" /></div>
+
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ADF.WEBP"               alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hemeria.webp"           alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hensoldt.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-kliff.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-randsdat.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-scaliann.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-tofer.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ymca.webp"              alt="" /></div>
+
+      <!-- Doublons pour la boucle infinie -->
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoAGEFIPH.jpg"             alt="" /></div>
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoFIPHFP.jpg"              alt="" /></div>
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoMissionLocales.png"      alt="" /></div>
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="" /></div>
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="" /></div>
+      <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="" /></div>
+
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hemeria.webp"           alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hensoldt.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-kliff.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-randsdat.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-scaliann.webp"          alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-tofer.webp"             alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ymca.webp"              alt="" /></div>
+    </div>
+  </div>
+
+  <ul class="hp-partenaires__grid-static" aria-label="Liste des partenaires">
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAGEFIPH.jpg"             alt="AGEFIPH" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFIPHFP.jpg"              alt="FIPHFP" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMissionLocales.png"      alt="Mission Locales" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="Fondation Handicap" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="Autonomia" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="France Travail" /></li>
+
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hemeria.webp"           alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-hensold.webp"           alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-kliff.webp"             alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-randsdat.webp"          alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-scaliann.webp"          alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-tofer.webp"             alt="France Travail" /></li>
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ymca.webp"              alt="France Travail" /></li>
+
+    
+  </ul>
+
+</section>

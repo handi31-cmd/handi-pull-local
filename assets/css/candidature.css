@@ -1,0 +1,173 @@
+:root {
+  --primary: #007B8F;
+  --primary-dark: #005f6b;
+  --bg-light: #f9f9f9;
+  --text: #333;
+  --border: #d1d5db;
+  --radius: 8px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Base formulaire --- */
+.form-candidature {
+  padding: 1rem;
+  background-color: var(--bg-light);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-candidature h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.25rem;
+}
+
+/* --- Information_poste --- */
+
+.information_poste {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+}
+
+.information_poste h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #007B8F;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #007B8F;
+  padding-bottom: 0.25rem;
+}
+
+.information_poste p {
+  margin: 0.5rem 0;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.information_poste_legend {
+  display: none;
+}
+
+
+/* --- Fieldsets stylés façon cartes --- */
+fieldset {
+  border: 1px solid var(--border);
+  padding: 2rem 1rem 1.5rem;
+  border-radius: var(--radius);
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: #fff;
+  padding: 0 0.5rem;
+  position: absolute;
+  top: -0.9rem;
+  left: 1rem;
+}
+
+/* --- Champs formulaire --- */
+.form-candidature label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.form-candidature input,
+.form-candidature select,
+.form-candidature textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.form-candidature input:focus,
+.form-candidature select:focus,
+.form-candidature textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  background-color: #f0f9ff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* --- Bouton envoyer --- */
+.form-candidature button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 1rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-candidature button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* --- Consentement et messages --- */
+.checkbox-inline {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.checkbox-inline input {
+  transform: scale(1.2);
+  margin-top: 0.3rem;
+  width: auto;
+}
+
+small {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* --- Responsive alignement --- */
+@media (min-width: 768px) {
+
+  .information_poste {
+    width: 75%;
+    margin: 2rem 0;
+    border-left: 4px solid #007B8F;
+  }
+
+  .form-candidature {
+    width: 75%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--radius);
+  }
+}

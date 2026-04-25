@@ -1,0 +1,24 @@
+id: 6
+source: 1
+name: article
+description: 'Chunk pour l''affichage d''un article spécifique'
+category: 'Actualités  Informations'
+properties: 'a:0:{}'
+
+-----
+
+<article class="article">
+  <div class="article-header">
+          [[!*actuimage:!empty=`
+    <img class="article-images" src="[[++site_url]][[*actuimage]]" alt="[[+pagetitle]]" />
+    `]]
+    <h3 class="article-title">[[*pagetitle]]</h3>
+  </div>
+  <div class="article-content">
+    [[*content]]
+  </div>
+</article>
+  <a href="[[~1]]" class="btn-retour-accueil" aria-label="Retour à la page d’accueil du site">
+    🏠 Retour à l’accueil
+  </a>
+<button class="btn-retour" aria-label="Retour à la page précédente" onClick="window.history.back()">Retour à la page précédente</button>

@@ -1,0 +1,23 @@
+id: 8
+source: 1
+name: tplArticles
+description: ''
+category: 'Actualités  Informations'
+properties: 'a:0:{}'
+
+-----
+
+<article class="article">
+  <div class="article-header">
+    [[!+actuimage:!empty=`
+      <img class="article-image" src="[[++site_url]][[+actuimage]]" alt="[[+pagetitle]]" />
+    `]]
+    <h3 class="article-title">[[+pagetitle]]</h3>
+  </div>
+  <div class="article-content">
+    [[+introtext]]
+  </div>
+  <a href="[[++site_url]][[+uri]]" class="btn-voirArticle">
+    Voir l'article
+  </a>
+</article>

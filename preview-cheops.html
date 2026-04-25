@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHEOPS — HandiPro31 [PREVIEW LOCAL]</title>
+
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/headerV2.css" />
+  <link rel="stylesheet" href="assets/css/sidebar.css" />
+  <link rel="stylesheet" href="assets/css/cheopsV2.css" />
+  <link rel="stylesheet" href="assets/css/footerSite.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #fff; color: #2D2D2D; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header role="banner" class="hp-header">
+    <div class="hp-header__inner">
+      <a href="#" class="hp-header__logo" aria-label="Accueil HandiPro31">
+        <img src="assets/images/LogoHandipro31.png" alt="HandiPro31" />
+      </a>
+      <nav class="hp-header__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#">Cap Emploi - Haute Garonne</a></li>
+          <li><a href="#">Le CREHI</a></li>
+          <li><a href="#">HandiPro Conseil</a></li>
+        </ul>
+      </nav>
+      <div class="hp-header__actions">
+        <a href="#" class="hp-header__contact">Contact</a>
+        <button class="hp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav class="hp-header__secondary" aria-label="Navigation secondaire">
+    <div class="hp-header__pill">
+      <ul>
+        <li><a href="#">Qui sommes-nous ?</a></li>
+        <li><a href="#">Actualités &amp; Informations</a></li>
+        <li><a href="#">Nous rejoindre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main id="contenu-principal" role="main">
+
+    <div class="ce-page">
+
+      <!-- SIDEBAR -->
+      <aside class="ce-sidebar" aria-label="Navigation de la page">
+        <div class="ce-sidebar__logo">
+          <img src="assets/images/LogoHandipro31.png" alt="Logo CHEOPS" width="180" height="80" />
+        </div>
+        <nav class="ce-sidebar__nav" aria-label="Sections de la page">
+          <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#missions">Nos missions</a></li>
+            <li><a href="#public">Public concerné</a></li>
+            <li><a href="#reseau">Notre réseau</a></li>
+            <li><a href="https://www.cheops.asso.fr/" target="_blank" rel="noopener noreferrer">Site CHEOPS</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENU DROIT -->
+      <div class="ce-content">
+
+        <!-- Présentation -->
+        <section id="presentation" class="ce-section" aria-labelledby="titre-presentation">
+          <h2 class="ce-section-title" id="titre-presentation">Présentation</h2>
+          <p>
+            <strong>Cheops</strong> (Conseil national Handicap et Emploi des Organismes de Placement Spécialisés)
+            est le réseau national qui fédère et représente les <strong>98 Cap emploi</strong> présents sur
+            l'ensemble du territoire français.
+          </p>
+          <p>
+            Il a pour mission de coordonner, soutenir et développer l'action des Cap emploi en faveur de
+            l'insertion professionnelle et du maintien dans l'emploi des personnes en situation de handicap.
+          </p>
+        </section>
+
+        <!-- Missions + Public — 2 colonnes -->
+        <div class="chp-duo">
+
+          <section id="missions" class="ce-section" aria-labelledby="titre-missions">
+            <h2 class="ce-section-title" id="titre-missions">Nos missions</h2>
+            <p>Cheops agit pour :</p>
+            <ul class="chp-liste">
+              <li>Représenter et défendre les intérêts des Cap emploi auprès des pouvoirs publics et partenaires institutionnels</li>
+              <li>Promouvoir l'insertion professionnelle et le maintien dans l'emploi des personnes en situation de handicap</li>
+              <li>Coordonner le réseau national et harmoniser les pratiques</li>
+              <li>Développer des partenariats nationaux et régionaux pour améliorer l'accompagnement</li>
+              <li>Favoriser l'innovation et le partage d'expériences au sein du réseau</li>
+            </ul>
+          </section>
+
+          <section id="public" class="ce-section" aria-labelledby="titre-public">
+            <h2 class="ce-section-title" id="titre-public">Public concerné</h2>
+            <p>Cheops s'adresse :</p>
+            <ul class="chp-liste">
+              <li>Aux personnes en situation de handicap cherchant un accompagnement vers ou dans l'emploi</li>
+              <li>Aux employeurs publics et privés</li>
+              <li>Aux partenaires institutionnels et associatifs œuvrant pour l'emploi et le handicap</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Notre réseau -->
+        <section id="reseau" class="ce-section" aria-labelledby="titre-reseau">
+          <h2 class="ce-section-title" id="titre-reseau">Notre réseau</h2>
+          <p>
+            Cheops regroupe l'ensemble des Cap emploi de France, organisés en délégations régionales et locales,
+            afin d'assurer un maillage territorial complet et une réponse adaptée aux besoins des personnes
+            et des entreprises.
+          </p>
+          <div class="chp-reseau-grille">
+            <div class="chp-reseau-carte">
+              <span class="chp-reseau-nombre">98</span>
+              <span class="chp-reseau-label">Cap emploi en France</span>
+            </div>
+            <div class="chp-reseau-carte">
+              <span class="chp-reseau-nombre">1</span>
+              <span class="chp-reseau-label">réseau national unifié</span>
+            </div>
+            <div class="chp-reseau-carte">
+              <span class="chp-reseau-nombre">HandiPro31</span>
+              <span class="chp-reseau-label">pour la Haute-Garonne</span>
+            </div>
+          </div>
+          <div class="ce-cta">
+            <a
+              href="https://www.cheops.asso.fr/"
+              class="ce-btn--orange"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Accéder au site officiel Cheops (nouvelle fenêtre)"
+            >
+              Accéder au site Cheops →
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

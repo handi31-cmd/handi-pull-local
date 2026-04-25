@@ -1,0 +1,31 @@
+id: 37
+source: 1
+name: emailRecruteurTpl
+description: ''
+category: Recrutement
+properties: 'a:0:{}'
+
+-----
+
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px; margin:auto; background-color:#ffffff; padding:20px;">
+    <tr>
+      <td>
+        <h2 style="color:#4DA68B; font-size:20px;">Nouvelle candidature reçue</h2>
+
+        <hr style="border:0; height:1px; background-color:#dddddd; margin:15px 0;">
+
+        <p><strong>Nom :</strong> [[+prenom]] [[+nom]]</p>
+        <p><strong>Email :</strong> [[+email]]</p>
+        <p><strong>Téléphone :</strong> [[+tel]]</p>
+        <p><strong>Poste souhaité :</strong> [[+poste]]</p>
+        <p><strong>Disponibilité :</strong> [[+disponibilite]]</p>
+        <p><strong>Type de demande :</strong> [[+type_demande]]</p>
+
+        [[+message:ifempty=``:then=``:else=`
+          <p><strong>Message :</strong><br>[[+message]]</p>
+        `]]
+      </td>
+    </tr>
+  </table>

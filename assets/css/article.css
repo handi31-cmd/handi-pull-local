@@ -1,0 +1,192 @@
+/* === CONTENEUR PRINCIPAL === */
+.main-content {
+  background-color: #4DA68B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+/* === ARTICLE === */
+.article {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* === IMAGES === */
+.article-header img,
+.article-content p img {
+  width: 100%;        /* prend toute la largeur disponible du conteneur */
+  max-width: 800px;   /* limite maximale pour grands écrans */
+  height: auto;       /* conserve les proportions */
+  display: block;     /* nécessaire pour le centrage */
+  margin: 0 auto;     /* centre l’image */
+  object-fit: contain;/* évite le recadrage */
+  border-radius: 0.5rem;
+}
+
+/* === TITRE & DATE === */
+.article-title {
+  font-size: 2rem;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.article-date {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* === CONTENU DE L’ARTICLE === */
+.article-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.7;
+  gap: 1.5rem;
+}
+
+.article-content p {
+  text-align: justify;
+}
+
+/* === TITRES DANS LE CONTENU === */
+.article-content h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.article-content h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+/* === LISTES === */
+.article-content ul,
+.article-content ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.75rem;
+}
+
+/* === TABLEAUX === */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-content thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* === TABLEAU RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .article-content table,
+  .article-content thead,
+  .article-content tbody,
+  .article-content th,
+  .article-content td,
+  .article-content tr {
+    display: block;
+    width: 100%;
+  }
+
+  .article-content tr {
+    margin-bottom: 1rem;
+  }
+
+  .article-content td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .article-content td::before {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+    content: attr(data-label);
+  }
+
+  .article-content th {
+    display: none;
+  }
+}
+
+/* === BOUTONS === */
+.btn-retour-accueil,
+.btn-voirArticle,
+.btn-retour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4DA68B;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.btn-retour-accueil:hover,
+.btn-retour-accueil:focus,
+.btn-voirArticle:hover,
+.btn-voirArticle:focus,
+.btn-retour:hover,
+.btn-retour:focus {
+  background-color: #fff;
+  color: #4DA68B;
+  outline-offset: 2px;
+}
+
+/* === MEDIA QUERIES POUR GRAND ÉCRAN === */
+@media screen and (min-width: 1023px) {
+  .article {
+    margin-top: 5rem;
+  }
+  /* plus de largeur fixe pour les images */
+}

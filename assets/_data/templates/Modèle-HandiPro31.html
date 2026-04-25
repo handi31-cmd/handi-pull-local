@@ -1,0 +1,38 @@
+id: 2
+source: 1
+templatename: 'Modèle HandiPro31'
+description: 'Modèle avec le header, le footer pour chaque page'
+category: Accueil
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[[*pagetitle]] - HandiPro31</title>
+
+  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png">
+
+
+  <link rel="stylesheet" href="[[++assets_url]]css/header.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/[[*alias]].css"/>
+  <link rel="stylesheet" href="[[++assets_url]]css/footer.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+
+   <! -- chunk CSS -->
+   <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  [[$header]]
+  <main class=main-[[*alias]]>
+      [[*content]]
+  </main>
+  [[$footer]]
+<script src="[[++assets_url]]js/dropdown.js"></script>
+<script src="[[++assets_url]]js/carousel.js"></script>
+</body>
+</html>

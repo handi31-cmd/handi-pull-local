@@ -1,0 +1,21 @@
+id: 10
+source: 1
+name: articles
+description: 'Chunk pour l''affichage de tous les articles'
+category: 'Actualités  Informations'
+properties: 'a:0:{}'
+
+-----
+
+<div class="main-content">
+  [[$breadcrumb]]
+  <h2 class="articles-title">[[*pagetitle]]</h2>
+  <article class="articles">
+    <div class="articles-content">
+      [[*content]]
+    </div>
+  </article>
+  <a href="[[~1]]" class="btn-retour-accueil" aria-label="Retour à la page d’accueil du site">
+    🏠 Retour à l’accueil
+  </a>
+</div>

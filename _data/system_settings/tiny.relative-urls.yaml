@@ -1,0 +1,4 @@
+key: tiny.relative_urls
+value: '0'
+xtype: combo-boolean
+namespace: tinymce

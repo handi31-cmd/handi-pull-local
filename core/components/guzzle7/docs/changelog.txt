@@ -1,0 +1,40 @@
+Guzzle7 v7.8.1-pl
+-----------------
+Released on 2024-04-24
+
+- Fix logic on checking ClientInterface to make sure dependencies aren't loaded when already available [#5]
+
+Guzzle7 v7.8.0-pl
+-----------------
+Released on 2023-09-12
+
+- Update guzzle to ^7.8
+- Update shipped composer to v2.6.2
+
+Guzzle7 v7.3.1-pl
+-----------------
+Released on 2021-10-13
+
+- Update shipped composer for installation to v2.1.9. This fixes an issue installing dependencies on environments without `proc_open()`.
+
+Guzzle7 v7.3.0-pl
+-----------------
+Released on 2021-08-17
+
+- Change the way we check for and "pre-load" Guzzle into memory. We're now first attempting to load the ClientInterface, Client, HandlerStack and Utils class to determine if we should provide Guzzle. If so, we include the autoloader and load those classes again.
+- Remove MODX3-specific check. Rather, rely on class detection to see if Guzzle should be loaded or not.
+- Moving forward, this package will follow Guzzle minor version numbering.
+    - The major/minor version (currently 7.3) will match the minor version of Guzzle (so we'll release an update when 7.4 is released), while the patch version and release index will be specific to this MODX package. This way, dependant packages could indicate they require at least a certain minimum of Guzzle.
+    - The latest Guzzle release is still installed like before during package installation. Re-install the package to update to a new Guzzle patch release.
+
+Guzzle7 v1.0.1-pl
+-----------------
+Released on 2021-08-03
+
+- Fix composer resolver failing on uninstall
+
+Guzzle7 v1.0.0-pl
+-----------------
+Released on 2021-08-03
+
+- First release
