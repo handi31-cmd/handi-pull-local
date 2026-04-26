@@ -1,0 +1,51 @@
+/* === HANDIPRO CONSEIL V2 — Accordéon
+   Dépend de sidebar.css pour les variables --hp-*
+*/
+
+.hpc-accordeon { margin-top: 1.25rem; }
+
+.hpc-accordeon__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--hp-bg-light);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--hp-dark);
+  cursor: pointer;
+  transition: background var(--hp-transition);
+}
+
+.hpc-accordeon__trigger:hover,
+.hpc-accordeon__trigger:focus-visible { background: #d4ede6; }
+
+.hpc-accordeon__chevron {
+  transition: transform 0.3s;
+  font-style: normal;
+}
+
+.hpc-accordeon__trigger[aria-expanded="true"] .hpc-accordeon__chevron {
+  transform: rotate(180deg);
+}
+
+.hpc-accordeon__panel { padding: 1rem 0.5rem 0; }
+
+.hpc-accordeon__panel ul { padding-left: 1.25rem; }
+
+.hpc-accordeon__panel li {
+  margin-bottom: 0.4rem;
+  color: var(--hp-text);
+}
+
+.hpc-accordeon__panel img {
+  max-width: 100%;
+  border-radius: var(--hp-radius);
+}
+
+@media (max-width: 599px) {
+  .hpc-accordeon__trigger { font-size: 0.85rem; }
+}
