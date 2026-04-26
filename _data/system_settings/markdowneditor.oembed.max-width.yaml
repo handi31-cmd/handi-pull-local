@@ -1,5 +1,0 @@
-key: markdowneditor.oembed.max_width
-value: '640'
-xtype: numberfield
-namespace: markdowneditor
-area: markdowneditor.area.oembed

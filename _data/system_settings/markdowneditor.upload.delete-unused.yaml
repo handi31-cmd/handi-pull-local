@@ -1,5 +1,0 @@
-key: markdowneditor.upload.delete_unused
-value: '1'
-xtype: combo-boolean
-namespace: markdowneditor
-area: markdowneditor.area.upload

@@ -1,4 +1,0 @@
-key: markdowneditor.lp.parse_modx_tags_timeout
-value: '300'
-namespace: markdowneditor
-area: markdowneditor.area.lp

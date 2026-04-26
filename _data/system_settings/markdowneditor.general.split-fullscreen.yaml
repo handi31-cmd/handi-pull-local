@@ -1,5 +1,0 @@
-key: markdowneditor.general.split_fullscreen
-value: '1'
-xtype: combo-boolean
-namespace: markdowneditor
-area: markdowneditor.area.general

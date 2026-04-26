@@ -1,4 +1,0 @@
-key: upload_maxsize
-value: '2147483648'
-xtype: numberfield
-area: file

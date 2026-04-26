@@ -1,5 +1,0 @@
-key: markdowneditor.oembed.frontend_css
-value: '1'
-xtype: combo-boolean
-namespace: markdowneditor
-area: markdowneditor.area.oembed

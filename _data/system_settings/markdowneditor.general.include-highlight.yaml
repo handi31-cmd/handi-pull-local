@@ -1,5 +1,0 @@
-key: markdowneditor.general.include_highlight
-value: '1'
-xtype: combo-boolean
-namespace: markdowneditor
-area: markdowneditor.area.general
