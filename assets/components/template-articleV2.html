@@ -4,33 +4,58 @@
 -->
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[[*pagetitle]] - HandiPro31</title>
-  <link rel="icon" type="image/png" href="[[++assets_url]]images/HandiPro31.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[[*description]]" />
+  <title>[[*pagetitle]] — HandiPro31</title>
 
+  <!-- Styles globaux -->
   <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
-  <link rel="stylesheet" href="[[++assets_url]]css/accueil.css" />
   <link rel="stylesheet" href="[[++assets_url]]css/headerV2.css" />
-  <link rel="stylesheet" href="[[++assets_url]]css/footerSite.css" />
-  <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/sidebar.css" />
   <link rel="stylesheet" href="[[++assets_url]]css/articleV2.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/breadcrumb.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/footerSite.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Polices (Nunito) -->                                                       
+  <link rel="preconnect" href="https://fonts.googleapis.com" />                   
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+
 </head>
 
 <body>
-  [[$headerV2]]
-  <main>
-    [[$articleV2]]
-  </main>
-  [[$footerSite]]
-  <script src="[[++assets_url]]js/dropdown.js"></script>
-  <script src="[[++assets_url]]js/boutonTop.js"></script>
-</body>
 
+  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+
+  <!-- En-tête -->
+  [[$headerV2]]
+
+  <!-- Contenu principal -->
+  <main id="contenu-principal" role="main">
+       [[$breadcrumb]]
+     <div class="arv-page">
+    <article class="arv-article">
+      <header class="arv-article__header">
+        [[*actuimage:!empty=`<img class="arv-article__image" 
+          src="[[++site_url]][[*actuimage]]"
+          alt="[[*pagetitle]]" loading="lazy" />`]]
+        <h1 class="arv-article__titre">[[*pagetitle]]</h1>
+      </header>
+      <div class="arv-article__contenu">
+        [[*content]]
+      </div>
+    </article>
+    <nav class="arv-nav">
+      <a href="[[~8]]" class="hp-btn hp-btn--outline">← Toutes les actualités</a>
+    </nav>
+  </div>
+  </main>
+
+  <!-- Pied de page -->
+  [[$footerSite]]
+
+</body>
 </html>
+
