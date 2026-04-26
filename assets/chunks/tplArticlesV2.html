@@ -1,0 +1,16 @@
+<!-- Chunk MODx : tplArticlesV2
+     À coller dans : Éléments → Chunks → "tplArticlesV2"
+     Utilisé comme &tpl=`tplArticlesV2` dans pdoResources sur la resource Articles
+-->
+
+  <article class="art-card">                                                                                                                                       
+    <div class="art-card__inner">                                                                                                                                  
+      [[+actuimage:!empty=`<div class="art-card__image-wrap"><img class="art-card__image" src="[[++site_url]][[+actuimage]]" alt="[[+pagetitle]]" loading="lazy"   
+  /></div>`]]                                               
+      <div class="art-card__body">
+        <h3 class="art-card__titre">[[+pagetitle]]</h3>
+        <p class="art-card__intro">[[+introtext]]</p>
+      </div>
+      <a href="[[+uri]]" class="hp-btn hp-btn--primary art-card__btn">Lire l'article</a>
+    </div>
+  </article>

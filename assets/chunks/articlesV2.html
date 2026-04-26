@@ -1,0 +1,26 @@
+<!-- Chunk MODx : articlesV2
+     À coller dans : Éléments → Chunks → "articlesV2"
+     CSS requis    : assets/css/accueil.css + assets/css/articlesV2.css
+     JS requis     : assets/js/articles-slider.js
+-->
+
+<div class="art-page">
+
+  <header class="art-header">
+    <h1 class="art-header__titre">[[*pagetitle]]</h1>
+  </header>
+
+  <div class="art-slider" role="region" aria-label="Slider articles" aria-roledescription="carrousel">
+    <div class="art-slider__track">
+      [[!pdoResources? &parents=`[[*id]]` &tpl=`tplArticlesV2` &limit=`9` &includeTVs=`actuimage` &tvPrefix=``]]
+    </div>
+    <div class="art-slider__controls">
+      <button class="art-slider__btn" data-art-prev aria-label="Article précédent" type="button">&#8249;</button>
+      <ul class="art-slider__dots" data-art-dots role="list" aria-label="Navigation slides"></ul>
+      <button class="art-slider__btn" data-art-next aria-label="Article suivant" type="button">&#8250;</button>
+    </div>
+  </div>
+
+  <a href="[[~1]]" class="hp-btn hp-btn--outline art-btn-retour">Retour à l'accueil</a>
+
+</div>

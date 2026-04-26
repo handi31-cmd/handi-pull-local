@@ -1,0 +1,118 @@
+/* === ARTICLE — DETAIL
+   Dépend de accueil.css pour les variables --hp-* et .hp-btn
+*/
+
+.arv-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  background: var(--hp-bg-light);
+}
+
+.arv-article {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.arv-article__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem 0;
+}
+
+.arv-article__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--hp-radius);
+  object-fit: cover;
+}
+
+.arv-article__titre {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  text-align: center;
+}
+
+.arv-article__contenu {
+  padding: 1.5rem 2rem 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--hp-text);
+}
+
+.arv-article__contenu h2 {
+  font-size: 1.4rem;
+  color: var(--hp-dark);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.arv-article__contenu h3 {
+  font-size: 1.125rem;
+  color: var(--hp-dark);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.arv-article__contenu p { margin-bottom: 1rem; }
+
+.arv-article__contenu img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--hp-radius);
+  margin: 1rem 0;
+}
+
+.arv-article__contenu ul,
+.arv-article__contenu ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.arv-article__contenu li { margin-bottom: 0.5rem; }
+
+.arv-article__contenu table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.arv-article__contenu th,
+.arv-article__contenu td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.arv-article__contenu thead th {
+  background: var(--hp-bg-light);
+  color: var(--hp-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 599px) {
+  .arv-article__contenu table { display: block; overflow-x: auto; }
+}
+
+.arv-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (min-width: 1024px) {
+  .arv-article__titre { font-size: 2rem; }
+}

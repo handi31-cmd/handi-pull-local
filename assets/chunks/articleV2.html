@@ -1,0 +1,34 @@
+<!-- Chunk MODx : articleV2
+     À coller dans : Éléments → Chunks → "articleV2"
+     CSS requis    : assets/css/articleV2.css
+-->
+
+<div class="arv-page">
+
+  [[$breadcrumb]]
+
+  <article class="arv-article">
+
+    <header class="arv-article__header">
+      [[!*actuimage:!empty=`
+      <img class="arv-article__image" src="[[++site_url]][[*actuimage]]" alt="[[*pagetitle]]" loading="lazy" />
+      `]]
+      <h1 class="arv-article__titre">[[*pagetitle]]</h1>
+    </header>
+
+    <div class="arv-article__contenu">
+      [[*content]]
+    </div>
+
+  </article>
+
+  <nav class="arv-nav" aria-label="Navigation">
+    <button class="hp-btn hp-btn--outline arv-nav__retour" onclick="window.history.back()">
+      Retour
+    </button>
+    <a href="[[~[[*parent]]]]" class="hp-btn hp-btn--outline arv-nav__liste">
+      Toutes les actualités
+    </a>
+  </nav>
+
+</div>
