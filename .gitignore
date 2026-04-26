@@ -40,3 +40,15 @@ out/
 
 # === Autres ===
 core/config/config.inc.php
+
+# === Fichiers de prévisualisation ===
+preview-*.html
+
+# === Fichiers privés / sensibles ===
+*.md
+.gitify
+tasks/
+_data/system_settings/
+_data/context_settings/
+.htaccess
+index.php
