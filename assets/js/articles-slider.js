@@ -48,10 +48,8 @@
 
   function updateActive() {
     var centerIdx = current + Math.floor(getVisible() / 2);
-    var visible = getVisible();
     cards.forEach(function (c, i) {
       c.classList.toggle('art-card--active', i === centerIdx);
-      c.setAttribute('aria-hidden', (i < current || i >= current + visible) ? 'true' : 'false');
     });
   }
 
