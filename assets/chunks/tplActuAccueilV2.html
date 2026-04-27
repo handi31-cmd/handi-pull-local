@@ -1,0 +1,13 @@
+<!-- Chunk MODx : tplActuAccueilV2
+     À coller dans : Éléments → Chunks → "tplActuAccueilV2"
+     Utilisé comme &tpl=`tplActuAccueilV2` dans pdoResources sur la resource Accueil
+-->
+
+<article class="hp-actu-card">
+  [[+actuimage:!empty=`<img src="[[++site_url]][[+actuimage]]" alt="[[+pagetitle]]" loading="lazy" />`]]
+  <div class="hp-actu-card__body">
+    <h3>[[+pagetitle]]</h3>
+    <p>[[+introtext]]</p>
+    <a href="[[+uri]]" class="hp-btn hp-btn--contact">Voir l'article</a>
+  </div>
+</article>
