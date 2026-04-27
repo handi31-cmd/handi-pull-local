@@ -35,7 +35,7 @@
   <!-- Pied de page -->
   [[$footerSite]]
 
-  <script src="[[++assets_url]]js/handiproConseilV2.js" defer></script>
+  <script src="[[++assets_url]]js/handiproConseil.js" defer></script>
 
 </body>
 </html>
