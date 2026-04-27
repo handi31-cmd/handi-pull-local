@@ -27,14 +27,8 @@
     dotsContainer.innerHTML = '';
     for (var i = 0; i < slideCount(); i++) {
       var li = document.createElement('li');
-      li.setAttribute('tabindex', '0');
-      li.setAttribute('role', 'button');
-      li.setAttribute('aria-label', 'Article ' + (i + 1));
       (function (idx) {
         li.addEventListener('click', function () { goTo(idx); resetAuto(); });
-        li.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(idx); resetAuto(); }
-        });
       })(i);
       dotsContainer.appendChild(li);
     }
@@ -71,10 +65,6 @@
   btnPrev && btnPrev.addEventListener('click', function () { prev(); resetAuto(); });
   slider.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
   slider.addEventListener('mouseleave', startAuto);
-  slider.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); resetAuto(); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); next(); resetAuto(); }
-  });
   window.addEventListener('resize', function () { buildDots(); goTo(0); });
 
   buildDots();
