@@ -43,7 +43,7 @@
   transition: color 0.2s;
 }
 
-.hp-header__nav a:hover {
+.hp-header__nav a:hover { 
   color: #4BA78C;
 }
 

@@ -116,6 +116,53 @@ html { scroll-behavior: smooth; }
   text-decoration: underline;
 }
 
+/* ===== SUPER SECTION ===== */
+.hp-super-section {
+  background: #fff;
+ 
+  display: flex;
+  justify-content: center;
+}
+.hp-super-section__pill {
+max-width: 832px;
+  width: 100%;
+  background:#3D5463;
+  border-radius: 10px;
+  padding: 0.55rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+ display: flex;
+  justify-content: center;
+border: 1px solid var(--hp-orange);
+}
+
+.hp-super-section__pill span {
+  color:  #00FF8B;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.hp-super-section__link {
+  color: #00FF8B;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.hp-super-section__link:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  .hp-super-section { padding: 0.5rem 0; }
+  .hp-super-section__pill {
+    border-radius: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+
 /* ============================================================
    HERO — image équipe + titre overlay
    ============================================================ */
@@ -397,7 +444,7 @@ section.hp-audiences {
   background: var(--hp-primary);
   width: 100%;
   box-sizing: border-box;
-  border-radius: 0;
+  border-radius: 20px;
   box-shadow: none;
 }
 
@@ -476,6 +523,8 @@ section.hp-audiences {
   min-width: 100%;
   background: var(--hp-white);
   border: 2px solid var(--hp-orange);
+  border-left: none;
+  border-right: none;
   border-radius: var(--hp-radius);
   overflow: hidden;
   display: flex;
@@ -519,6 +568,15 @@ section.hp-audiences {
   justify-content: center;
   gap: 1rem;
   margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .hp-actu-card .art-card__btn {
+    align-self: center;
+    height: auto;
+    width: auto;
+    margin: 0 auto 1.25rem;
+  }
 }
 
 .hp-actu-btn {
@@ -571,10 +629,10 @@ section.hp-partenaires {
   padding: 3rem 1.5rem;
   background: var(--hp-primary);
   overflow: hidden;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 0;
-  box-shadow: none;
+    width: 100vw;
+  margin-left: calc(50% - 50vw);
+text-align: center;
+
 }
 
 .hp-partenaires .hp-section-title {
@@ -718,7 +776,7 @@ section.hp-partenaires {
   }
   .hp-btn {
     text-align: center;
-    flex: 1;
+    flex: none;
     max-width: 130px;
     padding: 0.5rem 0.5rem;
     font-size: 0.78rem;
@@ -756,7 +814,7 @@ section.hp-partenaires {
   .hp-stat-box__label { font-size: 0.65rem; }
 
   /* Autres */
-  .hp-actu-card img { height: 180px; }
+  .hp-actu-card img { height: 160px; }
   .hp-partner-logo { flex: 0 0 120px; height: 70px; }
 }
 
