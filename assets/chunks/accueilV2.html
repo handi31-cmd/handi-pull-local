@@ -2,6 +2,15 @@
      À coller dans : Éléments → Chunks → "ChunkAccueil"
      Appelé depuis le contenu de la Resource Accueil via [[$ChunkAccueil]]
 -->
+  <!-- ============================================================                        
+      SUPER SECTION — Bandeau programme du mois                                           
+      ============================================================ -->                    
+     <div class="hp-super-section">                                                           
+        <div class="hp-super-section__pill">                                                   
+          <span>Actualités : programme CREHI</span>                             
+          <a href="[[~crehi]]" class="hp-super-section__link">En savoir plus →</a>             
+        </div>                                                                                 
+     </div>                                                                                                                       
 
 <!-- ============================================================
      HERO — image équipe avec titre overlay
@@ -16,20 +25,9 @@
       height="400"
       loading="eager"
     />
-    <p class="hp-hero__overlay-title">Bienvenu chez HandiPro 31</p>
+    <p class="hp-hero__overlay-title">Bienvenue chez HandiPro 31</p>
   </div>
 </section>
-
-
-<!-- ============================================================
-     SUPER SECTION — Bandeau programme du mois
-     ============================================================ -->
-<div class="hp-super-section">
-  <div class="hp-super-section__pill">
-    <span>Découvrir le programme CREHI du mois de mai</span>
-    <a href="[[~crehi]]" class="hp-super-section__link">En savoir plus →</a>
-  </div>
-</div>
 
 
 <!-- ============================================================
@@ -142,6 +140,42 @@
   </div>
 </section>
 
+<!-- =====================================================
+         PROGRAMME CREHI DU MOIS
+         ===================================================== -->
+    <section class="hp-crehi-mois" aria-labelledby="titre-crehi-mois">
+      <h2 class="hp-section-title" id="titre-crehi-mois">Le programme CREHI du mois</h2>
+      <div class="hp-crehi-mois__inner">
+        <!-- ================================================
+             ADMINISTRATEUR : modifiez le src de l'image (ci-dessous)
+             et le href du bouton téléchargement.
+             Image : assets/images/crehi-juin-2026.jpg (portrait, ratio 2/3)
+             PDF   : assets/pdf/programme-crehi-juin-2026.pdf
+             ================================================ -->
+        <button
+          class="hp-crehi-mois__trigger"
+          aria-label="Agrandir le programme CREHI du mois"
+          onclick="document.getElementById('crehi-lightbox').classList.add('is-open')"
+        >
+          <img
+            src="assets/images/crehi-du-mois.png"
+            alt="Programme CREHI du mois"
+            class="hp-crehi-mois__img"
+            id="crehi-thumb"
+          />
+        </button>
+
+        <!-- ADMINISTRATEUR : remplacez le href par le lien vers votre PDF -->
+        <a
+          href="assets/pdf/crehi-du-mois.pdf"
+          download
+          class="hp-btn hp-btn--contact"
+          aria-label="Télécharger le programme CREHI du mois en PDF"
+        >
+          Télécharger le programme (PDF)
+        </a>
+      </div>
+    </section>
 
 <!-- ============================================================
      ACTUALITÉS — slider
@@ -158,9 +192,9 @@
   >
     <div class="hp-actu-track">
 
-      [[!pdoResources? &parents=`8` &tpl=`tplActuAccueilV2` &limit=`5` &fenom=`0` &includeTVs=`actuimage` &tvPrefix=`` &sortby=`createdon` &sortdir=`DESC`]]
+      [[!pdoResources? &parents=`8` &tpl=`tplActuAccueilV2` &limit=`8` &fenom=`0` &includeTVs=`actuimage` &tvPrefix=`` &sortby=`createdon` &sortdir=`DESC`]]
 
-    </div><!-- /.hp-actu-track -->
+    </div>
 
     <div class="hp-actu-controls">
       <button class="hp-actu-btn" data-actu-prev aria-label="Article précédent" type="button">&#8249;</button>
@@ -170,6 +204,8 @@
 
   </div><!-- /.hp-actu-slider -->
 </section>
+
+ 
 
 
 <!-- ============================================================
@@ -187,8 +223,7 @@
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="" /></div>
-
-      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ADF.WEBP"               alt="" /></div>
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ADF.webp"               alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="" /></div>
@@ -207,7 +242,7 @@
       <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="" /></div>
       <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="" /></div>
       <div class="hp-partner-logo" aria-hidden="true"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="" /></div>
-
+      <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ADF.webp"               alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="" /></div>
       <div class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="" /></div>
@@ -228,7 +263,7 @@
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoMalakoff.jpg"            alt="Fondation Handicap" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoAutonomia.jpg"           alt="Autonomia" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/LogoFranceTravail.png"       alt="France Travail" /></li>
-
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ADF.webp"                alt="France Travail" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-alten.webp"             alt="France Travail" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-celad.webp"             alt="France Travail" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-derichebourg.webp"      alt="France Travail" /></li>
@@ -244,3 +279,22 @@
   </ul>
 
 </section>
+
+ <!-- Lightbox CREHI — HORS du main pour éviter les conflits de z-index -->
+  <div
+    id="crehi-lightbox"
+    class="hp-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Programme CREHI du mois agrandi"
+    onclick="this.classList.remove('is-open')"
+  >
+    <button class="hp-lightbox__close" aria-label="Fermer">&times;</button>
+    <img
+      src="assets/images/crehi-du-mois.png"
+      alt="Programme CREHI du mois"
+      class="hp-lightbox__img"
+      onclick="event.stopPropagation()"
+    />
+  </div>
+
