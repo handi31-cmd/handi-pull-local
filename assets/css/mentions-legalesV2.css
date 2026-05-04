@@ -1,0 +1,74 @@
+/* === Mentions Légales V2 === */
+
+/* Bloc contenu dans chaque ce-section */
+.ml-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ml-bloc p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--hp-text);
+}
+
+/* Zone droits RGPD */
+.ml-droits {
+  background: var(--hp-bg-light);
+  border-radius: calc(var(--hp-radius) - 2px);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.ml-droits__titre {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--hp-dark);
+  margin: 0 !important;
+}
+
+/* Liste droits */
+.ml-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ml-liste li {
+  font-size: 0.88rem;
+  color: var(--hp-text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.ml-liste li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+  margin-top: 0.45em;
+}
+
+/* Liens */
+.ml-lien {
+  color: var(--hp-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ml-lien:hover,
+.ml-lien:focus-visible {
+  color: var(--hp-primary);
+}

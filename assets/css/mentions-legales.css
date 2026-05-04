@@ -1,0 +1,124 @@
+/* === Mentions Légales V2 === */
+
+.ml-page {
+  max-width: 860px;
+  margin: 3rem auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* En-tête */
+.ml-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--hp-bg-light);
+}
+
+.ml-header__titre {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hp-dark);
+  margin: 0 0 0.4rem;
+  line-height: 1.2;
+}
+
+.ml-header__maj {
+  font-size: 0.85rem;
+  color: var(--hp-text-sec);
+  margin: 0;
+}
+
+/* Sections */
+.ml-section {
+  margin-bottom: 2rem;
+}
+
+.ml-section__titre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--hp-primary-dark);
+  margin: 0 0 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--hp-primary);
+}
+
+.ml-bloc {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ml-bloc p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--hp-text);
+}
+
+/* Zone droits RGPD */
+.ml-droits {
+  background: #fff;
+  border-radius: calc(var(--hp-radius) - 2px);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ml-droits__titre {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--hp-dark);
+  margin: 0 !important;
+}
+
+/* Liste droits */
+.ml-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ml-liste li {
+  font-size: 0.88rem;
+  color: var(--hp-text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.ml-liste li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+  margin-top: 0.45em;
+}
+
+/* Liens */
+.ml-lien {
+  color: var(--hp-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ml-lien:hover,
+.ml-lien:focus-visible {
+  color: var(--hp-primary);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ml-page { padding: 0 1rem 3rem; margin: 1.5rem auto; }
+  .ml-header__titre { font-size: 1.5rem; }
+  .ml-section__titre { font-size: 1rem; }
+  .ml-bloc { padding: 1rem; }
+}
