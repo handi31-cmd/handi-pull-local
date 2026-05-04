@@ -579,6 +579,24 @@ section.hp-audiences {
   cursor: pointer;
   line-height: 1;
 }
+
+/* --- Programme CREHI du mois — V2 : 2 cartes côte à côte --- */
+.hp-crehi-mois__inner--duo {
+  flex-direction: row;
+  max-width: 760px;
+  justify-content: center;
+}
+
+.hp-crehi-mois__inner--duo .hp-crehi-mois__img {
+  max-width: 280px;
+}
+
+@media (max-width: 599px) {
+  .hp-crehi-mois__inner--duo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* ============================================================
    ACTUALITÉS — slider
    ============================================================ */

@@ -1,0 +1,28 @@
+<!-- ============================================================
+     ACTUALITÉS — slider
+     ============================================================ -->
+<section class="hp-actualites" aria-labelledby="titre-actu">
+  <h2 class="hp-section-title" id="titre-actu">Actualités</h2>
+
+  <div
+    class="hp-actu-slider"
+    role="region"
+    aria-label="Slider actualités"
+    aria-roledescription="carrousel"
+    tabindex="0"
+  >
+    <div class="hp-actu-track">
+
+      [[!pdoResources? &parents=`8` &tpl=`tplActuAccueilV2` &limit=`8` &fenom=`0` &includeTVs=`actuimage` &tvPrefix=`` &sortby=`createdon` &sortdir=`DESC`]]
+
+    </div>
+
+    <div class="hp-actu-controls">
+      <button class="hp-actu-btn" data-actu-prev aria-label="Article précédent" type="button">&#8249;</button>
+      <ul class="hp-actu-dots" data-actu-dots role="list" aria-label="Navigation slides"></ul>
+      <button class="hp-actu-btn" data-actu-next aria-label="Article suivant" type="button">&#8250;</button>
+    </div>
+
+  </div><!-- /.hp-actu-slider -->
+</section>
+
