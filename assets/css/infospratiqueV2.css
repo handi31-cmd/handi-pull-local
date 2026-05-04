@@ -1,0 +1,220 @@
+/* === Infos Pratiques V2 === */
+
+/* Groupes de contenu */
+.ip-groupe {
+  margin-bottom: 2rem;
+}
+
+.ip-sous-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--hp-bg-light);
+}
+
+/* Cards menus */
+.ip-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.ip-card {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1rem 1.25rem;
+}
+
+.ip-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--hp-primary-dark);
+  margin: 0 0 0.4rem;
+}
+
+.ip-card p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--hp-text);
+}
+
+/* Fonctionnalités clavier */
+.ip-liste-fonctions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ip-fonction {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  flex-wrap: wrap;
+}
+
+.ip-fonction__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.ip-fonction__detail {
+  font-size: 0.85rem;
+  color: var(--hp-text-sec);
+}
+
+kbd {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.78rem;
+  font-family: monospace;
+  color: var(--hp-dark);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+
+/* Encart contact / info */
+.ip-encart-contact {
+  background: var(--hp-bg-light);
+  border-left: 4px solid var(--hp-primary);
+  border-radius: 0 var(--hp-radius) var(--hp-radius) 0;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.ip-encart-contact strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--hp-dark);
+  margin-bottom: 0.4rem;
+}
+
+.ip-encart-contact p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--hp-text);
+}
+
+.ip-lien {
+  color: var(--hp-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ip-lien:hover,
+.ip-lien:focus-visible {
+  color: var(--hp-primary);
+}
+
+/* Astuces navigateur */
+.ip-astuces {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ip-astuce {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1rem 1.25rem;
+}
+
+.ip-astuce__icone {
+  color: var(--hp-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.ip-astuce__titre {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--hp-dark);
+  margin: 0 0 0.35rem;
+}
+
+.ip-astuce__texte {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--hp-text);
+  margin: 0;
+}
+
+.ip-astuce__mac {
+  font-size: 0.8rem;
+  color: var(--hp-text-sec);
+  margin: 0.3rem 0 0;
+}
+
+/* Plan du site */
+.ip-plan-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.ip-plan-bloc {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1rem 1.25rem;
+}
+
+.ip-plan-bloc h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--hp-primary-dark);
+  margin: 0 0 0.5rem;
+}
+
+.ip-plan-bloc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ip-plan-bloc li {
+  font-size: 0.83rem;
+  color: var(--hp-text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ip-plan-bloc li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+  margin-top: 0.45em;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .ip-cards { grid-template-columns: 1fr; }
+  .ip-plan-grille { grid-template-columns: 1fr 1fr; }
+  .ip-fonction { flex-direction: column; gap: 0.25rem; }
+}
+
+@media (max-width: 480px) {
+  .ip-plan-grille { grid-template-columns: 1fr; }
+}

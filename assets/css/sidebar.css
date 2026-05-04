@@ -102,23 +102,6 @@ html { scroll-behavior: smooth; }
   scroll-margin-top: 110px;
 }
 
- .ce-logo-hero {                                                                               
-    display: flex;                                          
-    align-items: center;
-    justify-content: center;
-    background: var(--hp-bg-light);
-    border-radius: var(--hp-radius);
-    padding: 3rem 2rem;
-    min-height: 120px;
-  }
-
-  .ce-logo-hero img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-  }
-
 .ce-section-title {
   font-size: 1.5rem;
   font-weight: 800;
@@ -130,12 +113,6 @@ html { scroll-behavior: smooth; }
 }
 
 .ce-section p {
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 0.75rem;
-}
-
-.ce-section ul li {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 0.75rem;
