@@ -126,6 +126,36 @@ html { scroll-behavior: smooth; }
   padding: 0.5rem 0 0.25rem;
 }
 
+/* Logo hero : fond vert doux, logos sur fond blanc */
+.ce-section.ce-logo-hero {
+  background: var(--hp-bg-light);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ce-section.ce-logo-hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+background: var(--hp-white);
+padding: 40px;
+border-radius: 16px;
+}
+
+.ce-logo-hero__logos {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
 .ce-btn--orange {
   display: inline-block;
   background: #E8893A;

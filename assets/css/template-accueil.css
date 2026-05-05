@@ -499,104 +499,6 @@ section.hp-audiences {
   text-decoration: underline;
 }
 
-/* --- Programme CREHI du mois --- */
-.hp-crehi-mois {
-  padding: 3rem 1.5rem;
-  background: var(--hp-white);
-}
-
-.hp-crehi-mois__inner {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.hp-crehi-mois__trigger {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: zoom-in;
-  border-radius: var(--hp-radius);
-  display: block;
-}
-
-.hp-crehi-mois__img {
-  width: 100%;
-  max-width: 240px;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: var(--hp-radius);
-  box-shadow: var(--hp-shadow);
-  display: block;
-  transition: transform var(--hp-transition);
-}
-
-.hp-crehi-mois__trigger:hover .hp-crehi-mois__img,
-.hp-crehi-mois__trigger:focus-visible .hp-crehi-mois__img {
-  transform: scale(1.03);
-}
-
-.hp-crehi-mois__trigger:focus-visible {
-  outline: 3px solid var(--hp-primary);
-  outline-offset: 4px;
-}
-
-/* Lightbox */
-.hp-lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
-
-.hp-lightbox.is-open {
-  display: flex;
-}
-
-.hp-lightbox__img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: var(--hp-radius);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-  object-fit: contain;
-}
-
-.hp-lightbox__close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  line-height: 1;
-}
-
-/* --- Programme CREHI du mois — V2 : 2 cartes côte à côte --- */
-.hp-crehi-mois__inner--duo {
-  flex-direction: row;
-  max-width: 760px;
-  justify-content: center;
-}
-
-.hp-crehi-mois__inner--duo .hp-crehi-mois__img {
-  max-width: 280px;
-}
-
-@media (max-width: 599px) {
-  .hp-crehi-mois__inner--duo {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 /* ============================================================
    ACTUALITÉS — slider
    ============================================================ */
@@ -914,6 +816,88 @@ text-align: center;
   /* Autres */
   .hp-actu-card img { height: 160px; }
   .hp-partner-logo { flex: 0 0 120px; height: 70px; }
+}
+
+/* --- Programme CREHI du mois --- */
+.hp-crehi-mois {
+  padding: 3rem 1.5rem;
+  background: var(--hp-white);
+}
+
+.hp-crehi-mois__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hp-crehi-mois__trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  border-radius: var(--hp-radius);
+  display: block;
+}
+
+.hp-crehi-mois__img {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  display: block;
+  transition: transform var(--hp-transition);
+}
+
+.hp-crehi-mois__trigger:hover .hp-crehi-mois__img,
+.hp-crehi-mois__trigger:focus-visible .hp-crehi-mois__img {
+  transform: scale(1.03);
+}
+
+.hp-crehi-mois__trigger:focus-visible {
+  outline: 3px solid var(--hp-primary);
+  outline-offset: 4px;
+}
+
+/* Lightbox */
+.hp-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.hp-lightbox.is-open {
+  display: flex;
+}
+
+.hp-lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--hp-radius);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+
+.hp-lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
 }
 
 /* Reduced motion */

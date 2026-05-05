@@ -52,3 +52,4 @@ _data/system_settings/
 _data/context_settings/
 .htaccess
 index.php
+.htaccess-maintenance

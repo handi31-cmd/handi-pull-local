@@ -1,18 +1,19 @@
 <!-- HEADER 1 -->
 <header role="banner" class="hp-header">
   <div class="hp-header__inner">
-    <a href="[[~1]]" class="hp-header__logo" aria-label="Accueil HandiPro31">
+    <a href="/[[~1]]" class="hp-header__logo" aria-label="Accueil HandiPro31">
       <img src="[[++assets_url]]images/LogoHandipro31.png" alt="HandiPro31" />
     </a>
     <nav class="hp-header__nav" aria-label="Menu principal">
       <ul>
-        <li><a href="[[~4]]">Cap Emploi - Haute Garonne</a></li>
-        <li><a href="[[~5]]">Le CREHI</a></li>
-        <li><a href="[[~6]]">HandiPro Conseil</a></li>
+        <li><a href="/[[~4]]">Cap Emploi</a></li>
+        <li><a href="/[[~5]]">Le CREHI</a></li>
+        <li><a href="/[[~6]]">HandiPro Conseil</a></li>
+        <li><a href="/[[~48]]">Espace adhérent</a></li>
       </ul>
     </nav>
     <div class="hp-header__actions">
-      <a href="[[~7]]" class="hp-header__contact">Contact</a>
+      <a href="/[[~7]]" class="hp-header__contact">Contact</a>
       <button class="hp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="hp-mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -24,24 +25,27 @@
 <nav class="hp-header__secondary" aria-label="Navigation secondaire">
   <div class="hp-header__pill">
     <ul>
-      <li><a href="[[~3]]">Qui sommes-nous ?</a></li>
-      <li><a href="[[~8]]">Actualités &amp; Informations</a></li>
-      <li><a href="[[~18]]">Nous rejoindre</a></li>
+      <li><a href="/[[~3]]">Qui sommes-nous ?</a></li>
+      <li><a href="/[[~8]]">Actualités &amp; Informations</a></li>
+      <li><a href="/[[~18]]">Nous rejoindre</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- MENU MOBILE -->
-<div class="hp-mobile-menu" id="hp-mobile-menu" aria-label="Menu mobile" role="dialog">
-  <ul>
-    <li><a href="[[~4]]">Cap Emploi - Haute Garonne</a></li>
-    <li><a href="[[~5]]">Le CREHI</a></li>
-    <li><a href="[[~6]]">HandiPro Conseil</a></li>
-    <li><a href="[[~21]]">Cheops Occitanie</a></li>
-    <li class="hp-mobile-menu__sep" role="separator"></li>
-    <li><a href="[[~3]]">Qui sommes-nous ?</a></li>
-    <li><a href="[[~8]]">Actualités &amp; Informations</a></li>
-    <li><a href="[[~18]]">Nous rejoindre</a></li>
-    <li><a href="[[~7]]" class="hp-mobile-menu__contact">Contact</a></li>
-  </ul>
-</div>
+  <!-- MENU MOBILE OVERLAY -->
+  <div class="hp-mobile-menu" id="hp-mobile-menu" aria-label="Menu mobile" role="dialog">
+    <ul>
+      <li><a href="/[[~4]]">Cap Emploi</a></li>
+      <li><a href="/[[~5]]">Le CREHI</a></li>
+      <li><a href="/[[~6]]">HandiPro Conseil</a></li>
+      <li><a href="/[[~48]]">Espace adhérent</a></li>
+
+      <li class="hp-mobile-menu__sep" role="separator"></li>
+      <li><a href="/[[~3]]">Qui sommes-nous ?</a></li>
+      <li><a href="/[[~8]]">Actualités &amp; Informations</a></li>
+      <li><a href="/[[~18]]">Nous rejoindre</a></li>
+      <li><a href="/[[~7]]" class="hp-mobile-menu__contact">Contact</a></li>
+    </ul>
+  </div>
+
+<script src="[[++assets_url]]js/headerV2.js" defer></script>

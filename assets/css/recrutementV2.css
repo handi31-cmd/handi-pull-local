@@ -1,0 +1,252 @@
+/* === Recrutement V2 === */
+
+/* Grille offres */
+.recr-offres-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+/* Card offre */
+.recr-offre-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.25rem;
+  border-left: 4px solid var(--hp-primary);
+  transition: box-shadow var(--hp-transition);
+}
+
+.recr-offre-card:hover {
+  box-shadow: var(--hp-shadow);
+}
+
+.recr-offre-card__logo {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.recr-offre-card__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.recr-offre-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.recr-offre-card__lieu {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--hp-text-sec);
+}
+
+.recr-offre-card__titre {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  margin: 0;
+}
+
+.recr-offre-card__texte {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--hp-text);
+  margin: 0;
+}
+
+.recr-offre-card__btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: var(--hp-primary);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--hp-radius);
+  text-decoration: none;
+  transition: background var(--hp-transition);
+}
+
+.recr-offre-card__btn:hover,
+.recr-offre-card__btn:focus-visible {
+  background: var(--hp-primary-dark);
+  outline: 2px solid var(--hp-primary-dark);
+  outline-offset: 2px;
+}
+
+.recr-aucune-offre {
+  font-size: 0.9rem;
+  color: var(--hp-text-sec);
+  font-style: italic;
+  margin: 1rem 0 0;
+}
+
+/* ===== Formulaire ===== */
+.recr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.recr-fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--hp-radius);
+  padding: 1.5rem 1.25rem 1.25rem;
+  position: relative;
+  background: #fff;
+}
+
+.recr-legend {
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hp-primary-dark);
+  background: #fff;
+  padding: 0 0.5rem;
+  position: absolute;
+  top: -0.7rem;
+  left: 1rem;
+}
+
+.recr-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.recr-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.recr-form__group:first-child {
+  margin-top: 0;
+}
+
+.recr-form__group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--hp-dark);
+}
+
+.recr-required {
+  color: #e53e3e;
+}
+
+.recr-form__group input,
+.recr-form__group select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.93rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fafafa;
+  transition: border-color var(--hp-transition), background var(--hp-transition);
+  color: var(--hp-text);
+}
+
+.recr-form__group input:focus,
+.recr-form__group select:focus {
+  border-color: var(--hp-primary);
+  background: #fff;
+  outline: 2px solid var(--hp-primary);
+  outline-offset: 1px;
+}
+
+.recr-form__group input[type="file"] {
+  padding: 0.45rem 0.85rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.recr-form__group small {
+  font-size: 0.78rem;
+  color: var(--hp-text-sec);
+}
+
+/* Checkbox RGPD */
+.recr-checkbox {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 0.25rem;
+}
+
+.recr-checkbox input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  accent-color: var(--hp-primary);
+  cursor: pointer;
+}
+
+.recr-checkbox label {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--hp-text);
+}
+
+.recr-lien {
+  color: var(--hp-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.recr-lien:hover { color: var(--hp-primary); }
+
+/* Messages FormIt */
+.recr-msg--erreur { color: #c0392b; font-size: 0.9rem; margin: 0; }
+.recr-msg--succes { color: #27ae60; font-size: 0.9rem; margin: 0; }
+
+/* Bouton submit */
+.recr-btn-submit {
+  align-self: flex-start;
+  background: var(--hp-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: var(--hp-radius);
+  cursor: pointer;
+  transition: background var(--hp-transition);
+}
+
+.recr-btn-submit:hover,
+.recr-btn-submit:focus-visible {
+  background: var(--hp-primary-dark);
+  outline: 2px solid var(--hp-primary-dark);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .recr-offre-card { flex-direction: column; gap: 0.75rem; }
+  .recr-offre-card__logo { width: 48px; height: 48px; }
+  .recr-form__row { grid-template-columns: 1fr; }
+}
