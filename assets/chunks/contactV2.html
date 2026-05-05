@@ -1,0 +1,146 @@
+<!-- Chunk MODx : contactV2
+     À coller dans : Éléments → Chunks → "contactV2"
+     CSS requis    : assets/css/contactV2.css
+-->
+
+[[!FormIt?
+    &hooks=`email`
+    &emailTpl=`contactEmailTpl`
+    &emailTo=`stagiaire@capemploi31.com`
+    &emailSubject=`Nouvelle demande depuis le formulaire de contact`
+    &validate=`
+        userType:required,
+        lastName:required,
+        firstName:required,
+        email:required:email,
+        email_confirm:required:email:equals=email,
+        phone:required,
+        subject:required,
+        message:required,
+        consent:required
+    `
+    &validationErrorMessage=`Veuillez corriger les erreurs dans le formulaire.`
+    &successMessage=`Merci pour votre message, nous vous répondrons dans les meilleurs délais.`
+]]
+
+<div class="ct-page">
+
+  <header class="ct-header">
+    <h1 class="ct-header__titre">Nous contacter</h1>
+    <p class="ct-header__desc">Une question ? Un projet ? Contactez-nous, nous vous répondrons dans les meilleurs délais.</p>
+  </header>
+
+  [[!+fi.successMessage:notempty=`<div class="ct-success">[[!+fi.successMessage]]</div>`]]
+  [[!+fi.validationErrorMessage:notempty=`<div class="ct-error-global">[[!+fi.validationErrorMessage]]</div>`]]
+
+  <div class="ct-wrap">
+
+    <aside class="ct-infos">
+      <div class="ct-infos__card">
+        <h2 class="ct-infos__titre">HandiPro31</h2>
+        <ul class="ct-infos__list">
+          <li>
+            <span class="ct-infos__icon" aria-hidden="true">&#128205;</span>
+            <span>Immeuble Anthyllis<br>8 rue Paul Mespié<br>31100 Toulouse</span>
+          </li>
+          <li>
+            <span class="ct-infos__icon" aria-hidden="true">&#128222;</span>
+            <a href="tel:+33561993630">05 61 99 36 30</a>
+          </li>
+          <li>
+            <span class="ct-infos__icon" aria-hidden="true">&#9993;</span>
+            <a href="mailto:contact@handipro31.fr">contact@handipro31.fr</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="ct-form-wrap" aria-label="Formulaire de contact">
+
+      <form action="[[~[[*id]]]]" method="post" id="contactForm" novalidate>
+
+        <fieldset class="ct-fieldset">
+          <legend class="ct-legend">Vos informations</legend>
+
+          <div class="ct-field">
+            <label for="userType">Vous êtes <span aria-hidden="true">*</span></label>
+            <select name="userType" id="userType" required>
+              <option value="" [[!+fi.userType:isempty=`selected`]]>-- Sélectionnez --</option>
+              <option value="Un partenaire" [[!+fi.userType:is=`Un partenaire`:then=`selected`]]>Un partenaire</option>
+              <option value="Un employeur" [[!+fi.userType:is=`Un employeur`:then=`selected`]]>Un employeur</option>
+              <option value="Une personne en situation de handicap" [[!+fi.userType:is=`Une personne en situation de handicap`:then=`selected`]]>Une personne en situation de handicap</option>
+              <option value="Autre" [[!+fi.userType:is=`Autre`:then=`selected`]]>Autre</option>
+            </select>
+            <span class="ct-error">[[!+fi.error.userType]]</span>
+          </div>
+
+          <div class="ct-row">
+            <div class="ct-field">
+              <label for="lastName">Nom <span aria-hidden="true">*</span></label>
+              <input type="text" name="lastName" id="lastName" value="[[!+fi.lastName]]" autocomplete="family-name" required />
+              <span class="ct-error">[[!+fi.error.lastName]]</span>
+            </div>
+            <div class="ct-field">
+              <label for="firstName">Prénom <span aria-hidden="true">*</span></label>
+              <input type="text" name="firstName" id="firstName" value="[[!+fi.firstName]]" autocomplete="given-name" required />
+              <span class="ct-error">[[!+fi.error.firstName]]</span>
+            </div>
+          </div>
+
+          <div class="ct-row">
+            <div class="ct-field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" name="email" id="email" value="[[!+fi.email]]" autocomplete="email" required />
+              <span class="ct-error">[[!+fi.error.email]]</span>
+            </div>
+            <div class="ct-field">
+              <label for="email_confirm">Confirmation email <span aria-hidden="true">*</span></label>
+              <input type="email" name="email_confirm" id="email_confirm" value="[[!+fi.email_confirm]]" required />
+              <span class="ct-error">[[!+fi.error.email_confirm]]</span>
+            </div>
+          </div>
+
+          <div class="ct-field">
+            <label for="phone">Téléphone <span aria-hidden="true">*</span></label>
+            <input type="tel" name="phone" id="phone" value="[[!+fi.phone]]" autocomplete="tel" required />
+            <span class="ct-error">[[!+fi.error.phone]]</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="ct-fieldset">
+          <legend class="ct-legend">Votre demande</legend>
+
+          <div class="ct-field">
+            <label for="subject">Objet <span aria-hidden="true">*</span></label>
+            <input type="text" name="subject" id="subject" value="[[!+fi.subject]]" required />
+            <span class="ct-error">[[!+fi.error.subject]]</span>
+          </div>
+
+          <div class="ct-field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea name="message" id="message" rows="6" required>[[!+fi.message]]</textarea>
+            <span class="ct-error">[[!+fi.error.message]]</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="ct-fieldset ct-fieldset--consent">
+          <legend class="ct-legend">Consentement</legend>
+          <div class="ct-checkbox">
+            <input type="checkbox" name="consent" id="consent" value="1" required [[!+fi.consent:isnot=`1`:then=``:else=`checked`]] />
+            <label for="consent">
+              J'ai lu et j'accepte les
+              <a href="[[++site_url]]mentions-legales/" target="_blank" rel="noopener">mentions légales</a>
+              et la politique de protection des données <span aria-hidden="true">*</span>
+            </label>
+          </div>
+          <span class="ct-error">[[!+fi.error.consent]]</span>
+        </fieldset>
+
+        <button type="submit" class="hp-btn hp-btn--primary ct-submit">Envoyer le message</button>
+
+      </form>
+
+    </section>
+  </div>
+
+</div>

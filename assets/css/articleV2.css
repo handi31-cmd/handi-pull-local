@@ -2,6 +2,12 @@
    Dépend de accueil.css pour les variables --hp-* et .hp-btn
 */
 
+.breadcrumb a, .breadcrumb span {
+    white-space: nowrap;
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
 .arv-page {
   display: flex;
   flex-direction: column;

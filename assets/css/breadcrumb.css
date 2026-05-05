@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  color: #fff;
+  color: #2D2D2D;
   padding: 14px 0px;
   border-bottom: 1px solid #edecf1;
   background: none;
@@ -14,7 +14,7 @@
 .breadcrumb a,
 .breadcrumb span {
   white-space: nowrap;
-  color: #fff;
+  color: #2D2D2D;
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@
   .breadcrumb a,
   .breadcrumb span {
     white-space: nowrap;
-    color: #fff;
+    color: #2D2D2D;
     text-decoration: none;
   }
 

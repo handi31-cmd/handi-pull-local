@@ -1,0 +1,265 @@
+/* === CONTACT V2
+   Dépend de accueil.css pour les variables --hp-* et .hp-btn
+   Dépend de sidebar.css pour le layout global
+*/
+
+.ct-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ct-header {
+  text-align: center;
+  padding-bottom: 30px;
+  
+}
+
+.ct-header__titre {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  margin-bottom: 0.5rem;
+ padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--hp-primary);
+  display: inline-block;
+}
+
+.ct-header__desc {
+  color: var(--hp-text-sec);
+  font-size: 1rem;
+}
+
+.ct-wrap {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* === INFOS LATERALES === */
+
+.ct-infos__card {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  padding: 1.5rem;
+  border-top: 4px solid #E8893A;
+  width: 100%;
+}
+
+.ct-infos__titre {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--hp-primary);
+  margin-bottom: 1rem;
+}
+
+.ct-infos__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.ct-infos__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--hp-text);
+  line-height: 1.5;
+}
+
+.ct-infos__icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.ct-infos__list a {
+  color: var(--hp-primary);
+  text-decoration: none;
+}
+
+.ct-infos__list a:hover,
+.ct-infos__list a:focus-visible {
+  text-decoration: underline;
+  color: var(--hp-primary-dark);
+}
+
+/* === FORMULAIRE === */
+
+.ct-form-wrap {
+  width: 100%;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ct-fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--hp-radius);
+  padding: 1.75rem 1.5rem 1.25rem;
+  background: var(--hp-white);
+  box-shadow: var(--hp-shadow);
+  position: relative;
+}
+
+.ct-legend {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hp-primary);
+  background: var(--hp-white);
+  padding: 0.5rem;
+  position: absolute;
+  top: -0.65rem;
+  left: 1rem;
+  border-radius: 5px;
+}
+
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.ct-field:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.ct-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--hp-dark);
+}
+
+.ct-field label span {
+  color: #dc2626;
+}
+
+.ct-field input,
+.ct-field select,
+.ct-field textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-family: inherit;
+  color: var(--hp-text);
+  transition: border-color var(--hp-transition), box-shadow var(--hp-transition);
+  box-sizing: border-box;
+}
+
+.ct-field input:focus,
+.ct-field select:focus,
+.ct-field textarea:focus {
+  border-color: var(--hp-primary);
+  box-shadow: 0 0 0 3px rgba(75, 167, 140, 0.2);
+  outline: none;
+}
+
+.ct-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.ct-row {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.ct-error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  min-height: 1rem;
+}
+
+/* === CONSENTEMENT === */
+
+.ct-fieldset--consent {
+  padding-bottom: 1.5rem;
+}
+
+.ct-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.ct-checkbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+  accent-color: var(--hp-primary);
+  cursor: pointer;
+}
+
+.ct-checkbox label {
+  font-size: 0.9rem;
+  color: var(--hp-text);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.ct-checkbox label a {
+  color: var(--hp-primary);
+  text-decoration: underline;
+}
+
+.ct-checkbox label a:hover {
+  color: var(--hp-primary-dark);
+}
+
+/* === BOUTON === */
+
+.ct-submit {
+  align-self: flex-start;
+  background: #E8893A;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+
+/* === RESPONSIVE === */
+
+@media (min-width: 768px) {
+  .ct-row {
+    flex-direction: row;
+  }
+
+  .ct-row .ct-field {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ct-wrap {
+    flex-direction: row;
+  }
+
+  .ct-infos {
+    flex: 0 0 280px;
+  }
+
+  .ct-form-wrap {
+    flex: 1;
+  }
+}
