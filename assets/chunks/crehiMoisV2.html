@@ -1,0 +1,47 @@
+<!-- Chunk MODx : crehiMoisV2
+     À coller dans : Éléments → Chunks → "crehiMoisV2"
+     Appel        : [[$crehiMoisV2]]
+     TVs requises sur resource CREHI (ID 5) :
+       crehi_img_actuel, crehi_pdf_actuel, crehi_img_suivant, crehi_pdf_suivant
+-->
+
+<section class="crehi-mois" aria-labelledby="titre-crehi-mois">
+  <h2 class="hp-section-title" id="titre-crehi-mois">Programmes CREHI</h2>
+
+  <div class="crehi-mois__grid">
+
+    <!-- Mois en cours -->
+    <div class="crehi-card"
+         data-img="[[!pdoField? &id=`5` &field=`crehi_img_actuel` &processTV=`1`]]"
+         data-pdf="[[!pdoField? &id=`5` &field=`crehi_pdf_actuel` &processTV=`1`]]"
+         data-type="actuel">
+      <h3 class="crehi-card__mois"></h3>
+      <a class="crehi-card__img-link" href="#" target="_blank" rel="noopener" aria-label="Voir le programme en grand">
+        <img class="crehi-card__img" src="" alt="Programme CREHI du mois" />
+      </a>
+      <a class="hp-btn hp-btn--primary crehi-card__dl" href="#" download>
+        &#8659; Télécharger le PDF
+      </a>
+    </div>
+
+    <!-- Mois suivant -->
+    <div class="crehi-card crehi-card--suivant"
+         data-img="[[!pdoField? &id=`5` &field=`crehi_img_suivant` &processTV=`1`]]"
+         data-pdf="[[!pdoField? &id=`5` &field=`crehi_pdf_suivant` &processTV=`1`]]"
+         data-type="suivant">
+      <h3 class="crehi-card__mois"></h3>
+      <a class="crehi-card__img-link" href="#" target="_blank" rel="noopener" aria-label="Voir le programme en grand">
+        <img class="crehi-card__img" src="" alt="Programme CREHI du mois suivant" />
+      </a>
+      <a class="hp-btn hp-btn--primary crehi-card__dl" href="#" download>
+        &#8659; Télécharger le PDF
+      </a>
+      <div class="crehi-card__notready" hidden>
+        <p>Le programme du mois prochain<br>n'est pas encore disponible.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="[[++assets_url]]js/crehiMois.js"></script>

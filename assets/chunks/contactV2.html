@@ -4,24 +4,30 @@
 -->
 
 [[!FormIt?
-    &hooks=`email`
-    &emailTpl=`contactEmailTpl`
-    &emailTo=`stagiaire@capemploi31.com`
-    &emailSubject=`Nouvelle demande depuis le formulaire de contact`
-    &validate=`
-        userType:required,
-        lastName:required,
-        firstName:required,
-        email:required:email,
-        email_confirm:required:email:equals=email,
-        phone:required,
-        subject:required,
-        message:required,
-        consent:required
-    `
-    &validationErrorMessage=`Veuillez corriger les erreurs dans le formulaire.`
-    &successMessage=`Merci pour votre message, nous vous répondrons dans les meilleurs délais.`
+  &hooks=`email, spam`
+  &emailTpl=`contactEmailTpl`
+  &emailTo=`stagiaire@capemploi31.com`
+  &emailSubject=`Nouvelle demande depuis le formulaire de contact`
+  &validate=`
+    userType:required,
+    lastName:required,
+    firstName:required,
+    email:required:email,
+    email_confirm:required:email:equals=email,
+    phone:required,
+    subject:required,
+    message:required,
+    consent:required
+  `
+  &validationErrorMessage=`Veuillez corriger les erreurs dans le formulaire.`
+  &successMessage=`Votre demande a bien été envoyée.`
+  &emailHTML=`1`
+  &store=`1`
+  &sanitizers=`trim,strip_tags`
 ]]
+
+[[!+fi.validation_error:notempty=`<div class="fi-validation-error" style="display:none;" data-message="[[!+fi.validation_error:htmlent]]"></div>`]]
+[[!+fi.success_message:notempty=`<div class="fi-success-message" style="display:none;" data-message="[[!+fi.success_message:htmlent]]"></div>`]]
 
 <div class="ct-page">
 
@@ -77,33 +83,33 @@
           <div class="ct-row">
             <div class="ct-field">
               <label for="lastName">Nom <span aria-hidden="true">*</span></label>
-              <input type="text" name="lastName" id="lastName" value="[[!+fi.lastName]]" autocomplete="family-name" required />
-              <span class="ct-error">[[!+fi.error.lastName]]</span>
+              <input type="text" name="lastName" id="lastName" value="[[!+fi.lastName:htmlent]]" autocomplete="family-name" required />
+              <span class="ct-error" data-field="lastName">[[!+fi.error.lastName:htmlent]]</span>
             </div>
             <div class="ct-field">
               <label for="firstName">Prénom <span aria-hidden="true">*</span></label>
-              <input type="text" name="firstName" id="firstName" value="[[!+fi.firstName]]" autocomplete="given-name" required />
-              <span class="ct-error">[[!+fi.error.firstName]]</span>
+              <input type="text" name="firstName" id="firstName" value="[[!+fi.firstName:htmlent]]" autocomplete="given-name" required />
+              <span class="ct-error" data-field="firstName">[[!+fi.error.firstName:htmlent]]</span>
             </div>
           </div>
 
           <div class="ct-row">
             <div class="ct-field">
               <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" name="email" id="email" value="[[!+fi.email]]" autocomplete="email" required />
-              <span class="ct-error">[[!+fi.error.email]]</span>
+              <input type="email" name="email" id="email" value="[[!+fi.email:htmlent]]" autocomplete="email" required />
+              <span class="ct-error" data-field="email">[[!+fi.error.email:htmlent]]</span>
             </div>
             <div class="ct-field">
               <label for="email_confirm">Confirmation email <span aria-hidden="true">*</span></label>
-              <input type="email" name="email_confirm" id="email_confirm" value="[[!+fi.email_confirm]]" required />
-              <span class="ct-error">[[!+fi.error.email_confirm]]</span>
+              <input type="email" name="email_confirm" id="email_confirm" value="[[!+fi.email_confirm:htmlent]]" required />
+              <span class="ct-error" data-field="email_confirm">[[!+fi.error.email_confirm:htmlent]]</span>
             </div>
           </div>
 
           <div class="ct-field">
             <label for="phone">Téléphone <span aria-hidden="true">*</span></label>
-            <input type="tel" name="phone" id="phone" value="[[!+fi.phone]]" autocomplete="tel" required />
-            <span class="ct-error">[[!+fi.error.phone]]</span>
+            <input type="tel" name="phone" id="phone" value="[[!+fi.phone:htmlent]]" autocomplete="tel" required pattern="^[0-9]{10}$" title="10 chiffres uniquement, sans espace ni tiret" maxlength="10" />
+            <span class="ct-error" data-field="phone">[[!+fi.error.phone:htmlent]]</span>
           </div>
         </fieldset>
 
@@ -112,14 +118,14 @@
 
           <div class="ct-field">
             <label for="subject">Objet <span aria-hidden="true">*</span></label>
-            <input type="text" name="subject" id="subject" value="[[!+fi.subject]]" required />
-            <span class="ct-error">[[!+fi.error.subject]]</span>
+            <input type="text" name="subject" id="subject" value="[[!+fi.subject:htmlent]]" required />
+            <span class="ct-error" data-field="subject">[[!+fi.error.subject:htmlent]]</span>
           </div>
 
           <div class="ct-field">
             <label for="message">Message <span aria-hidden="true">*</span></label>
-            <textarea name="message" id="message" rows="6" required>[[!+fi.message]]</textarea>
-            <span class="ct-error">[[!+fi.error.message]]</span>
+            <textarea name="message" id="message" rows="6" required>[[!+fi.message:htmlent]]</textarea>
+            <span class="ct-error" data-field="message">[[!+fi.error.message:htmlent]]</span>
           </div>
         </fieldset>
 
@@ -136,9 +142,12 @@
           <span class="ct-error">[[!+fi.error.consent]]</span>
         </fieldset>
 
-        <button type="submit" class="hp-btn hp-btn--primary ct-submit">Envoyer le message</button>
+        <input type="text" name="nobot" value="" style="display:none;" />
+        <button type="submit" id="submitBtn" class="hp-btn hp-btn--primary ct-submit">Envoyer le message</button>
 
       </form>
+
+      [[$toastChunk]]
 
     </section>
   </div>

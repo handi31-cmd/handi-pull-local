@@ -23,7 +23,7 @@
   font-weight: 700;
   color: var(--hp-dark);
   margin-bottom: 0.5rem;
- padding-bottom: 0.5rem;
+ padding-bottom: 10px;
   border-bottom: 3px solid var(--hp-primary);
   display: inline-block;
 }
@@ -161,6 +161,13 @@
   color: var(--hp-text);
   transition: border-color var(--hp-transition), box-shadow var(--hp-transition);
   box-sizing: border-box;
+}
+
+.ct-field input:invalid,
+.ct-field select:invalid,
+.ct-field textarea:invalid {
+  border-color: #E8F7F3;
+  box-shadow: none;
 }
 
 .ct-field input:focus,
