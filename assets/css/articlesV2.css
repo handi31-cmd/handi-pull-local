@@ -172,3 +172,15 @@
   .art-card__inner { height: auto; }
   .art-card__image-wrap { height: 180px; }
 }
+
+/* === WIDGET INJECTABLE ([[$actusRecentes]]) === */
+.art-recentes {
+  padding: 2.5rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.art-recentes__cta {
+  margin-top: 1.75rem;
+}

@@ -5,12 +5,17 @@
   <!-- ============================================================                        
       SUPER SECTION — Bandeau programme du mois                                           
       ============================================================ -->                    
-     <div class="hp-super-section">                                                           
-        <div class="hp-super-section__pill">                                                   
-          <span>Actualités : programme CREHI</span>                             
-          <a href="[[~5]]" class="hp-super-section__link">En savoir plus →</a>             
-        </div>                                                                                 
-     </div>                                                                                                                       
+  <div class="hp-super-section">
+  <div class="hp-super-section__pill">
+    <div class="hp-super-section__ticker-wrap">
+      <div class="hp-super-section__ticker">
+        <span>Actualités : programme CREHI &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>
+        <span>Actualités : programme CREHI &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </div>
+    <a href="[[~5]]" class="hp-super-section__link">En savoir plus →</a>
+  </div>
+</div>
 
 <!-- ============================================================
      HERO — image équipe avec titre overlay
@@ -139,75 +144,35 @@
 
   </div>
 </section>
-
 <!-- =====================================================
          PROGRAMME CREHI DU MOIS
          ===================================================== -->
-    <section class="hp-crehi-mois" aria-labelledby="titre-crehi-mois">
-      <h2 class="hp-section-title" id="titre-crehi-mois">Le programme CREHI du mois</h2>
-      <div class="hp-crehi-mois__inner">
-        <!-- ================================================
-             ADMINISTRATEUR : modifiez le src de l'image (ci-dessous)
-             et le href du bouton téléchargement.
-             Image : assets/images/crehi-juin-2026.jpg (portrait, ratio 2/3)
-             PDF   : assets/pdf/programme-crehi-juin-2026.pdf
-             ================================================ -->
-        <button
-          class="hp-crehi-mois__trigger"
-          aria-label="Agrandir le programme CREHI du mois"
-          onclick="document.getElementById('crehi-lightbox').classList.add('is-open')"
-        >
-          <img
-            src="assets/images/crehi-du-mois.png"
-            alt="Programme CREHI du mois"
-            class="hp-crehi-mois__img"
-            id="crehi-thumb"
-          />
-        </button>
+[[$crehiMoisV2]]
 
-        <!-- ADMINISTRATEUR : remplacez le href par le lien vers votre PDF -->
-        <a
-          href="assets/pdf/crehi-du-mois.pdf"
-          download
-          class="hp-btn hp-btn--contact"
-          aria-label="Télécharger le programme CREHI du mois en PDF"
-        >
-          Télécharger le programme (PDF)
-        </a>
-      </div>
-    </section>
+<!-- =====================================================
+         actualites recentes
+         ===================================================== -->
 
-<!-- ============================================================
-     ACTUALITÉS — slider
-     ============================================================ -->
-<section class="hp-actualites" aria-labelledby="titre-actu">
-  <h2 class="hp-section-title" id="titre-actu">Actualités</h2>
 
-  <div
-    class="hp-actu-slider"
-    role="region"
-    aria-label="Slider actualités"
-    aria-roledescription="carrousel"
-    tabindex="0"
-  >
-    <div class="hp-actu-track">
+<section class="art-recentes" aria-labelledby="titre-actus">
+  <h2 class="hp-section-title" id="titre-actus">Actualités récentes</h2>
 
-      [[!pdoResources? &parents=`8` &tpl=`tplActuAccueilV2` &limit=`8` &fenom=`0` &includeTVs=`actuimage` &tvPrefix=`` &sortby=`createdon` &sortdir=`DESC`]]
-
+  <div class="art-slider" role="region" aria-label="Slider actualités" aria-roledescription="carrousel">
+    <div class="art-slider__track">
+      [[!pdoResources? &parents=`8` &tpl=`tplArticlesV2` &limit=`6` &includeTVs=`actuimage` &tvPrefix=`` &sortby=`publishedon` &sortdir=`DESC`]]
     </div>
-
-    <div class="hp-actu-controls">
-      <button class="hp-actu-btn" data-actu-prev aria-label="Article précédent" type="button">&#8249;</button>
-      <ul class="hp-actu-dots" data-actu-dots role="list" aria-label="Navigation slides"></ul>
-      <button class="hp-actu-btn" data-actu-next aria-label="Article suivant" type="button">&#8250;</button>
+    <div class="art-slider__controls">
+      <button class="art-slider__btn" data-art-prev aria-label="Article précédent" type="button">&#8249;</button>
+      <ul class="art-slider__dots" data-art-dots role="list" aria-label="Navigation slides"></ul>
+      <button class="art-slider__btn" data-art-next aria-label="Article suivant" type="button">&#8250;</button>
     </div>
+  </div>
 
-  </div><!-- /.hp-actu-slider -->
+  <div class="art-recentes__cta">
+    <a href="[[~8]]" class="hp-btn hp-btn--primary">Toutes les actualités</a>
+  </div>
 </section>
-
  
-
-
 <!-- ============================================================
      NOS PARTENAIRES — défilement infini
      ============================================================ -->
@@ -273,28 +238,7 @@
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-randsdat.webp"          alt="France Travail" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-scaliann.webp"          alt="France Travail" /></li>
     <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-tofer.webp"             alt="France Travail" /></li>
-    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ymca.webp"              alt="France Travail" /></li>
-
-    
+    <li class="hp-partner-logo"><img src="[[++assets_url]]images/Logo-ymca.webp"              alt="France Travail" /></li>    
   </ul>
-
 </section>
-
- <!-- Lightbox CREHI — HORS du main pour éviter les conflits de z-index -->
-  <div
-    id="crehi-lightbox"
-    class="hp-lightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Programme CREHI du mois agrandi"
-    onclick="this.classList.remove('is-open')"
-  >
-    <button class="hp-lightbox__close" aria-label="Fermer">&times;</button>
-    <img
-      src="assets/images/crehi-du-mois.png"
-      alt="Programme CREHI du mois"
-      class="hp-lightbox__img"
-      onclick="event.stopPropagation()"
-    />
-  </div>
 
