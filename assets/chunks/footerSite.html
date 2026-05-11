@@ -1,82 +1,94 @@
-<footer class="site-footer" role="contentinfo" aria-label="Pied de page">
+/* === CREHI MOIS V2
+   Dépend de accueil.css pour les variables --hp-* et .hp-btn
+*/
 
-    <!-- Ligne 1 : Logo + réseaux sociaux -->
-    <div class="footer-row-top">
-      <a href="#" aria-label="Accueil HandiPro31" class="hp-footer-logo">
-       <img src="[[++assets_url]]images/Logo-handipro31-sans fond.webp" alt="HandiPro31" width="160" height="60" loading="lazy" />
-      </a>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook HandiPro31" class="footer-social__link">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#4ba78c" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn HandiPro31" class="footer-social__link">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#4ba78c" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-      </div>
-    </div>
+.crehi-mois {
+  padding: 2rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-    <!-- Ligne 2 : Carte + colonnes nav/info/contact -->
-    <div class="footer-row-bottom">
+.crehi-mois__grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
 
-      <div class="footer-col--map">
-        <div class="map-container" aria-label="Localisation HandiPro31">
-          <iframe
-            src="https://maps.google.com/maps?q=8+rue+Paul+Mespl%C3%A9+31100+Toulouse&output=embed&z=16"
-            title="Carte Google Maps — HandiPro31"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
+.crehi-card {
+  flex: 1 1 280px;
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-top: 4px solid var(--hp-primary);
+}
 
-      <div class="footer-cols-group">
+.crehi-card--suivant {
+  border-top-color: #E8893A;
+}
 
-        <nav class="footer-col footer-links" aria-label="Navigation pied de page">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="/[[~3]]">Qui sommes-nous</a></li>
-            <li><a href="/[[~4]]">Cap emploi 31</a></li>
-            <li><a href="/[[~5]]">Le CREHI</a></li>
-            <li><a href="/[[~6]]">HandiPro Conseil</a></li>
-            <li><a href="/[[~7]]">Contact</a></li>
-          </ul>
-        </nav>
+.crehi-card__mois {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--hp-dark);
+  text-align: center;
+  margin: 0;
+}
 
-        <nav class="footer-col footer-links" aria-label="Informations légales">
-          <h4>Informations</h4>
-          <ul>
-            <li><a href="[[~29]]">Mentions légales</a></li>
-            <li><a href="[[~29]]">CGU</a></li>
-            <li><a href="[[~29]]">Politique cookies</a></li>
-            <li><a href="[[~29]]">Protection des données</a></li>
-            <li><a href="[[~29]]">Accessibilité WCAG 2.1</a></li>
-          </ul>
-        </nav>
+.crehi-card__img-link {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: opacity var(--hp-transition);
+}
 
-        <address class="footer-col footer-contact">
-          <h4>Contact</h4>
-          <p>Immeuble Anthyllis<br />8 rue Paul Mespié<br />31100 Toulouse</p>
-          <p><a href="tel:+33534409191">05.34.40.91.91</a></p>
-          <p>🚶 5 min à pied de la station<br />Basso Cambo<br />🚌 Arrêt bus : Mesplé</p>
-        </address>
+.crehi-card__img-link:hover,
+.crehi-card__img-link:focus-visible {
+  opacity: 0.85;
+}
 
-      </div>
+.crehi-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
 
-    </div><!-- /.footer-row-bottom -->
+.crehi-card__dl {
+  width: auto;
+  align-self: center;
+  padding: 0.6rem 1.8rem;
+  text-align: center;
+  background: #E8893A;
+  border-color: #E8893A;
+  border-radius: 0.5rem;                                                          
+  text-decoration: none; 
+}
 
-    <div class="footer-bar">
-      <nav aria-label="Liens de bas de page">
-        <a href="[[~22]]">Aides</a>
-        <a href="[[~22]]">Plan du site</a>
-        <a href="[[~22]]">Informations accessibilité</a>
-        <a href="[~7]]">Contact</a>
-      </nav>
-    </div>
+.crehi-card__dl:hover,
+.crehi-card__dl:focus-visible {
+  background: #cc7630;
+  border-color: #cc7630;
+}
 
-    <div class="footer-copyright">
-      <span>© HandiPro31 - Tous droits réservés</span>
-    </div>
+.crehi-card__notready {
+  text-align: center;
+  color: var(--hp-text-sec);
+  font-size: 0.95rem;
+  padding: 2rem 1rem;
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  width: 100%;
+}
 
-  </footer>
-
-  <script src="[[++assets_url]]js/crehiMois.js"></script>
+@media (max-width: 599px) {
+  .crehi-mois__grid {
+    flex-direction: column;
+  }

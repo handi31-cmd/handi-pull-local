@@ -2,10 +2,10 @@
      À coller dans : Éléments → Chunks → "crehiMoisV2"
      Appel        : [[$crehiMoisV2]]
      TVs requises sur resource CREHI (ID 5) :
-       crehi_img_actuel, crehi_pdf_actuel, crehi_img_suivant, crehi_pdf_suivant
+       crehi_img_actuel, crehi_pdf_actuel, crehi_img_suivant, crehi_pdf_suivant, mardi_handicap
 -->
 
-<section class="crehi-mois" aria-labelledby="titre-crehi-mois">
+ <section class="crehi-mois" aria-labelledby="titre-crehi-mois">
   <h2 class="hp-section-title" id="titre-crehi-mois">Programmes CREHI</h2>
 
   <div class="crehi-mois__grid">
@@ -41,7 +41,23 @@
       </div>
     </div>
 
+    <!-- Mardi du handicap -->
+    <div class="crehi-card crehi-card--mardi"
+         data-img="[[!pdoField? &id=`5` &field=`mardi_handicap_img` &processTV=`1`]]"
+         data-pdf="[[!pdoField? &id=`5` &field=`mardi_handicap_pdf` &processTV=`1`]]"
+         data-type="mardi">
+      <h3 class="crehi-card__mois">Mardi du handicap</h3>
+      <a class="crehi-card__img-link" href="#" target="_blank" rel="noopener" aria-label="Voir le programme en grand">
+        <img class="crehi-card__img" src="" alt="Programme Mardi du handicap" />
+      </a>
+      <a class="hp-btn hp-btn--primary crehi-card__dl" href="#" download>
+        &#8659; Télécharger le PDF
+      </a>
+      <div class="crehi-card__notready" hidden>
+        <p>Le programme du mois prochain<br>n'est pas encore disponible.</p>
+      </div>
+    </div>
+
+
   </div>
 </section>
-
-<script src="[[++assets_url]]js/crehiMois.js"></script>

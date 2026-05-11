@@ -6,12 +6,17 @@
   padding: 2rem 1.5rem;
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.crehi-mois .hp-section-title {
+  text-align: center;
 }
 
 .crehi-mois__grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  flex-wrap: wrap;
   margin-top: 1.5rem;
 }
 
@@ -26,6 +31,10 @@
   align-items: center;
   gap: 1rem;
   border-top: 4px solid var(--hp-primary);
+}
+
+.crehi-mois__grid .crehi-card:first-child {
+  border-top-color: #E8893A;
 }
 
 .crehi-card--suivant {
@@ -68,6 +77,8 @@
   text-align: center;
   background: #E8893A;
   border-color: #E8893A;
+  border-radius: 0.5rem;
+  text-decoration: none;
 }
 
 .crehi-card__dl:hover,
@@ -88,6 +99,12 @@
 
 @media (max-width: 599px) {
   .crehi-mois__grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .crehi-mois__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -16,11 +16,13 @@
     var dlBtn   = card.querySelector('.crehi-card__dl');
     var notReady = card.querySelector('.crehi-card__notready');
 
-    label.textContent = (type === 'actuel' ? months[cm] + ' ' + cy : months[nm] + ' ' + ny);
+    if (type !== 'mardi') {
+      label.textContent = (type === 'actuel' ? months[cm] + ' ' + cy : months[nm] + ' ' + ny);
+    }
 
     var isEmpty = !dataPdf || dataPdf === '';
 
-    if (type === 'suivant' && isEmpty) {
+    if ((type === 'suivant' || type === 'mardi') && isEmpty) {
       if (imgLink)  imgLink.style.display  = 'none';
       if (dlBtn)    dlBtn.style.display    = 'none';
       if (notReady) notReady.removeAttribute('hidden');
