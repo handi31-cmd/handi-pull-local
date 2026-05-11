@@ -27,50 +27,9 @@
     <section class="ce-section" id="offres" aria-labelledby="titre-offres">
       <h2 class="ce-section-title" id="titre-offres">Nos offres d'emploi</h2>
 
-      <div class="recr-offres-grid">
-
-        <!-- MODx : remplacer ce bloc par [[!getResources? &parents=`18` &tpl=`recrutementOffreTpl` &where=`{"isfolder":0}` &limit=`10`]] -->
-
-        <!-- Offre placeholder 1 -->
-        <article class="recr-offre-card">
-          <div class="recr-offre-card__logo">
-            <!-- [[*logoPage]] -->
-            <img src="assets/images/LogoHandipro31.png" alt="HandiPro31" />
-          </div>
-          <div class="recr-offre-card__body">
-            <span class="recr-offre-card__lieu">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <!-- [[*lieu]] -->
-              Toulouse (31)
-            </span>
-            <h3 class="recr-offre-card__titre"><!-- [[*nom_poste]] -->Conseiller(ère) en emploi accompagné</h3>
-            <p class="recr-offre-card__texte">Accompagnement des personnes en situation de handicap vers et dans l'emploi. Poste en CDI à temps plein.</p>
-            <a href="#" class="recr-offre-card__btn">Voir l'offre &amp; postuler</a>
-          </div>
-        </article>
-
-        <!-- Offre placeholder 2 -->
-        <article class="recr-offre-card">
-          <div class="recr-offre-card__logo">
-            <img src="assets/images/LogoHandipro31.png" alt="HandiPro31" />
-          </div>
-          <div class="recr-offre-card__body">
-            <span class="recr-offre-card__lieu">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Toulouse (31)
-            </span>
-            <h3 class="recr-offre-card__titre">Chargé(e) de projet CREHI</h3>
-            <p class="recr-offre-card__texte">Animation des ateliers et événements du Centre Ressources Emploi Handicap Innovation. CDD 12 mois.</p>
-            <a href="#" class="recr-offre-card__btn">Voir l'offre &amp; postuler</a>
-          </div>
-        </article>
-
-      </div>
-
-      <p class="recr-aucune-offre" aria-live="polite">
-        <!-- Afficher si aucune offre : -->
-        <!-- Aucune offre disponible actuellement. N'hésitez pas à déposer une candidature spontanée. -->
-      </p>
+    <div class="recr-offres-grid">
+  [[!pdoResources? &parents=`24` &tpl=`recrutementOffreTplV2` &where=`{"published":1}` &limit=`6` &includeTVs=`nom_poste,lieu,type_contrat,mission_principale` &tvPrefix=`` &sortby=`publishedon` &sortdir=`DESC` &noResults=`<p class="recr-aucune-offre">Aucune offre disponible actuellement.</p>`]]
+</div>
 
     </section>
 

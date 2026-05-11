@@ -1,0 +1,14 @@
+<article class="recr-offre-card">
+  <div class="recr-offre-card__body">
+    <div class="recr-offre-card__meta">
+      <span class="recr-offre-card__lieu">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        [[+lieu]]
+      </span>
+      [[+type_contrat:!empty=`<span class="recr-offre-card__contrat">[[+type_contrat]]</span>`]]
+    </div>
+    <h3 class="recr-offre-card__titre">[[+nom_poste]]</h3>
+    <p class="recr-offre-card__texte">[[+mission_principale:stripTags:ellipsis=`160`]]</p>
+   <a href="[[++site_url]][[~[[+id]]]]" class="recr-offre-card__btn">Voir l'offre &amp; postuler</a>
+  </div>
+</article>

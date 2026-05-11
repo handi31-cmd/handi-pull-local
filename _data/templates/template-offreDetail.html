@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[[*description]]" />
+  <title>[[*pagetitle]] — HandiPro31</title>
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="[[++assets_url]]css/reset.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/headerV2.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/sidebar.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/offre-DetailV2.css" />
+  <link rel="stylesheet" href="[[++assets_url]]css/footerSite.css" />
+  <!-- Polices (Nunito) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+  [[$headerV2]]
+  <main id="contenu-principal" role="main">
+    <div class="offre-page">
+      <header class="offre-detail__header">
+        <p class="offre-detail__numero">[[*numero_offre]]</p>
+        <h1 class="offre-detail__titre">[[*nom_poste]]</h1>
+        <div class="offre-detail__badges">
+          <span class="offre-detail__badge">[[*lieu]]</span>
+          <span class="offre-detail__badge offre-detail__badge--contrat">[[*type_contrat]]</span>
+        </div>
+      </header>
+      <div class="offre-detail__body">
+        [[*content]]
+      </div>
+      <div class="offre-detail__cta">
+        <a href="[[++site_url]][[~18]]" class="offre-detail__retour">← Retour aux offres</a>
+        <a href="[[++site_url]][[~20]]" class="hp-btn hp-btn--primary">Postuler</a>
+      </div>
+    </div>
+  </main>
+  [[$footerSite]]
+</body>
+</html>
