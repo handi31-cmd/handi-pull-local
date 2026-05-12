@@ -1,0 +1,209 @@
+/* === POSTULER OFFRE V2
+   Dépend de sidebar.css pour .ce-page / .ce-sidebar / .ce-content
+*/
+
+/* --- En-tête offre --- */
+.postuler__header {
+  background: var(--hp-primary);
+  color: var(--hp-white);
+  padding: 2rem 2rem 1.75rem;
+  border-radius: var(--hp-radius) var(--hp-radius) 0 0;
+  margin-bottom: 0;
+}
+
+.postuler__offre-label {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000000;
+  margin: 0 0 0.4rem;
+}
+
+.postuler__titre {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.postuler__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.postuler__badge {
+  background: rgba(255,255,255,0.12);
+  border-radius: 2rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.postuler__badge--contrat {
+  background: var(--hp-primary);
+  color: var(--hp-white);
+}
+
+.postuler__header--spontanee {
+  border-radius: var(--hp-radius);
+}
+
+.postuler__header-desc {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #c8ddd7;
+  line-height: 1.5;
+}
+
+/* --- Formulaire --- */
+.postuler__form {
+  background: var(--hp-white);
+  border-radius: 0 0 var(--hp-radius) var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  padding: 2rem;
+}
+
+.postuler__section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.postuler__section:last-of-type {
+  border-bottom: none;
+}
+
+.postuler__section-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hp-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-left: 3px solid var(--hp-primary);
+  padding-left: 0.75rem;
+  margin: 0 0 1.25rem;
+}
+
+/* --- Champs --- */
+.postuler__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.postuler__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.postuler__field--half {
+  max-width: 50%;
+}
+
+.postuler__field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--hp-text);
+}
+
+.postuler__field label span {
+  color: var(--hp-primary);
+}
+
+.postuler__field input,
+.postuler__field select,
+.postuler__field textarea {
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--hp-text);
+  background: #fafafa;
+  transition: border-color var(--hp-transition);
+}
+
+.postuler__field input:focus,
+.postuler__field select:focus,
+.postuler__field textarea:focus {
+  outline: none;
+  border-color: var(--hp-primary);
+  background: var(--hp-white);
+}
+
+.postuler__field input[readonly] {
+  background: #f0f0f0;
+  color: #666;
+  cursor: default;
+}
+
+.postuler__field input[type="file"] {
+  padding: 0.4rem 0.5rem;
+  background: var(--hp-white);
+  cursor: pointer;
+}
+
+.postuler__field small {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.postuler__field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* --- RGPD --- */
+.postuler__rgpd {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.postuler__rgpd input[type="checkbox"] {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--hp-primary);
+  width: 1rem;
+  height: 1rem;
+}
+
+.postuler__rgpd a {
+  color: var(--hp-primary);
+  text-decoration: underline;
+}
+
+/* --- Actions --- */
+.postuler__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+.postuler__retour {
+  font-size: 0.85rem;
+  color: #888;
+  text-decoration: none;
+  transition: color var(--hp-transition);
+}
+
+.postuler__retour:hover { color: var(--hp-primary); }
+
+/* --- Responsive --- */
+@media (max-width: 599px) {
+  .postuler__row { grid-template-columns: 1fr; }
+  .postuler__field--half { max-width: 100%; }
+  .postuler__form { padding: 1.25rem; }
+  .postuler__header { padding: 1.5rem 1.25rem 1.25rem; }
+  .postuler__titre { font-size: 1.15rem; }
+}

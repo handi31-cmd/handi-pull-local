@@ -1,0 +1,136 @@
+<div class="ce-page">
+
+  <aside class="ce-sidebar" aria-label="Navigation de la page">
+    <div class="ce-sidebar__logo">
+      <img src="[[++assets_url]]images/LogoHandipro31.png" alt="Logo HandiPro31" width="180" height="80" loading="eager" />
+    </div>
+    <nav class="ce-sidebar__nav" aria-label="Sections du formulaire">
+      <ul>
+        <li><a href="[[++site_url]][[~18]]">← Retour à l'offre</a></li>
+        <li><a href="#infos-perso">Vos informations</a></li>
+        <li><a href="#candidature">Votre candidature</a></li>
+        <li><a href="#pieces-jointes">Pièces jointes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="ce-content">
+
+    <div class="postuler__header">
+      <p class="postuler__offre-label">Formulaire de candidature</p>
+      <h1 class="postuler__titre">[[*nom_poste]]</h1>
+      <div class="postuler__badges">
+        [[*lieu:!empty=`<span class="postuler__badge">[[*lieu]]</span>`]]
+        [[*type_contrat:!empty=`<span class="postuler__badge postuler__badge--contrat">[[*type_contrat]]</span>`]]
+      </div>
+    </div>
+
+    [[!FormIt?
+      &formName=`candidatureOffreForm`
+      &hooks=`spam,doubleEmailHook,FormItSaveForm`
+      &validate=`prenom:required,nom:required,email:required:email,email_confirm:required:email_confirm,tel:required,cv:required,optin_rgpd:required`
+      &successMessage=`Votre candidature a bien été envoyée. Nous vous contacterons prochainement.`
+    ]]
+
+    [[+fi.successMessage:notempty=`<p class="postuler__success">[[+fi.successMessage]]</p>`]]
+
+    <form class="postuler__form" action="[[~[[*id]]]]" method="post" enctype="multipart/form-data" novalidate>
+
+      <input type="hidden" name="nospam:blank" value="" />
+
+      <section class="postuler__section" id="infos-perso" aria-labelledby="titre-infos">
+        <h2 class="postuler__section-titre" id="titre-infos">Vos informations</h2>
+
+        <div class="postuler__row">
+          <div class="postuler__field">
+            <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+            <input type="text" id="prenom" name="prenom" value="[[!+fi.prenom]]" required autocomplete="given-name" />
+            [[!+fi.error.prenom:notempty=`<span class="postuler__error">[[!+fi.error.prenom]]</span>`]]
+          </div>
+          <div class="postuler__field">
+            <label for="nom">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" value="[[!+fi.nom]]" required autocomplete="family-name" />
+            [[!+fi.error.nom:notempty=`<span class="postuler__error">[[!+fi.error.nom]]</span>`]]
+          </div>
+        </div>
+
+        <div class="postuler__row">
+          <div class="postuler__field">
+            <label for="email">E-mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" value="[[!+fi.email]]" required autocomplete="email" />
+            [[!+fi.error.email:notempty=`<span class="postuler__error">[[!+fi.error.email]]</span>`]]
+          </div>
+          <div class="postuler__field">
+            <label for="email_confirm">Confirmer l'e-mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email_confirm" name="email_confirm" value="[[!+fi.email_confirm]]" required autocomplete="email" />
+            [[!+fi.error.email_confirm:notempty=`<span class="postuler__error">[[!+fi.error.email_confirm]]</span>`]]
+          </div>
+        </div>
+
+        <div class="postuler__field postuler__field--half">
+          <label for="tel">Téléphone <span aria-hidden="true">*</span></label>
+          <input type="tel" id="tel" name="tel" value="[[!+fi.tel]]" required autocomplete="tel" />
+          [[!+fi.error.tel:notempty=`<span class="postuler__error">[[!+fi.error.tel]]</span>`]]
+        </div>
+      </section>
+
+      <section class="postuler__section" id="candidature" aria-labelledby="titre-cand">
+        <h2 class="postuler__section-titre" id="titre-cand">Votre candidature</h2>
+
+        <div class="postuler__field">
+          <label for="poste">Poste</label>
+          <input type="text" id="poste" name="poste" value="[[*nom_poste]]" readonly aria-readonly="true" />
+        </div>
+
+        <div class="postuler__field postuler__field--half">
+          <label for="disponibilite">Disponibilité</label>
+          <select id="disponibilite" name="disponibilite">
+            <option value="">-- Sélectionnez --</option>
+            <option value="immediate">Immédiate</option>
+            <option value="1mois">Sous 1 mois</option>
+            <option value="3mois">Sous 3 mois</option>
+            <option value="definir">À définir</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="postuler__section" id="pieces-jointes" aria-labelledby="titre-pj">
+        <h2 class="postuler__section-titre" id="titre-pj">Pièces jointes</h2>
+
+        <div class="postuler__field">
+          <label for="cv">CV <span aria-hidden="true">*</span></label>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required aria-describedby="cv-aide" />
+          <small id="cv-aide">PDF, DOC ou DOCX — 5 Mo max</small>
+          [[!+fi.error.cv:notempty=`<span class="postuler__error">[[!+fi.error.cv]]</span>`]]
+        </div>
+
+        <div class="postuler__field">
+          <label for="lettre">Lettre de motivation</label>
+          <input type="file" id="lettre" name="lettre_motiv" accept=".pdf,.doc,.docx" aria-describedby="lm-aide" />
+          <small id="lm-aide">PDF, DOC ou DOCX — 5 Mo max</small>
+        </div>
+
+        <div class="postuler__field">
+          <label for="message">Message ou commentaire</label>
+          <textarea id="message" name="message" rows="4" placeholder="Quelque chose à ajouter ?">[[!+fi.message]]</textarea>
+        </div>
+      </section>
+
+      <div class="postuler__rgpd">
+        <input type="checkbox" id="optin_rgpd" name="optin_rgpd" value="oui" required />
+        <label for="optin_rgpd">
+          J'accepte les <a href="[[~29]]">mentions légales</a>, la <a href="#">politique de confidentialité</a> et la <a href="#">politique des cookies</a>. <span aria-hidden="true">*</span>
+        </label>
+        [[!+fi.error.optin_rgpd:notempty=`<span class="postuler__error">[[!+fi.error.optin_rgpd]]</span>`]]
+      </div>
+
+      <div class="postuler__actions">
+        <a href="[[~18]]" class="postuler__retour">← Retour aux offres</a>
+        <button type="submit" class="hp-btn hp-btn--primary">Envoyer ma candidature</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
