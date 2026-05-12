@@ -63,10 +63,14 @@ html { scroll-behavior: smooth; }
   gap: 0.6rem;
 }
 
+.ce-sidebar__nav ul[hidden] {
+  display: none;
+}
+
 .ce-sidebar__nav a {
   display: block;
   background: linear-gradient(135deg, var(--hp-primary), #66C9A8);
-  color: var(--hp-white);
+  color: var(--hp-white) !important;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
