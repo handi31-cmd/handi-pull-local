@@ -1,6 +1,259 @@
-/* === HANDIPRO CONSEIL V2 — Accordéon
-   Dépend de sidebar.css pour les variables --hp-*
-*/
+/* === HandiPro Conseil — Formation V2 === */
+
+.hpc-intro { border-left: 4px solid var(--hp-primary); }
+
+.hpc-tagline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--hp-primary);
+  margin: 0 0 0.75rem;
+}
+
+/* ── Formations accordéon (<details>) ── */
+.hpc-formations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hpc-formation {
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  overflow: hidden;
+}
+
+.hpc-formation summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--hp-primary);
+  color: var(--hp-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background var(--hp-transition);
+}
+
+.hpc-formation summary::-webkit-details-marker { display: none; }
+
+.hpc-formation summary::after {
+  content: '▼';
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.hpc-formation[open] summary::after { transform: rotate(180deg); }
+
+.hpc-formation summary:hover,
+.hpc-formation summary:focus-visible {
+  background: var(--hp-primary-dark);
+  outline: none;
+}
+
+.hpc-formation__body {
+  padding: 1.5rem;
+  background: var(--hp-white);
+}
+
+.hpc-formation__body p {
+  margin: 0 0 1rem;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.hpc-formation__body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.hpc-formation__body li {
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.hpc-formation__body li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.6em;
+  width: 0.4rem; height: 0.4rem;
+  border-radius: 50%;
+  background: var(--hp-primary);
+}
+
+/* ── Stats ── */
+.hpc-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hpc-stat {
+  flex: 1;
+  min-width: 130px;
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.hpc-stat__val {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hp-primary);
+  line-height: 1;
+}
+
+.hpc-stat__label {
+  font-size: 0.82rem;
+  color: #717171;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ── Modalités ── */
+.hpc-modalites-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hpc-modalite {
+  background: var(--hp-bg-light);
+  border-left: 4px solid var(--hp-primary);
+  border-radius: var(--hp-radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.hpc-modalite strong {
+  display: block;
+  color: var(--hp-primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Référent ── */
+.hpc-referent-card {
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  border-left: 5px solid #D0762E;
+  box-shadow: var(--hp-shadow);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hpc-referent-card__info strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--hp-primary);
+  margin-bottom: 0.2rem;
+}
+
+.hpc-referent-card__info span {
+  font-size: 0.88rem;
+  color: #717171;
+}
+
+.hpc-referent-card__contact {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hpc-referent-card__contact a {
+  color: var(--hp-primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hpc-referent-card__contact a:hover { text-decoration: underline; }
+
+.hpc-role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hpc-role-list li {
+  padding: 0.7rem 1rem 0.7rem 2.25rem;
+  background: var(--hp-white);
+  border-radius: var(--hp-radius);
+  box-shadow: var(--hp-shadow);
+  position: relative;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.hpc-role-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0.75rem;
+  color: var(--hp-primary);
+  font-weight: 700;
+}
+
+/* ── Aménagements ── */
+.hpc-amenagements {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hpc-amenagements li {
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.hpc-amenagements li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--hp-primary);
+  font-weight: 700;
+}
+
+/* ── Références ── */
+.hpc-refs {
+  background: var(--hp-bg-light);
+  border-radius: var(--hp-radius);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: #717171;
+  line-height: 1.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hpc-modalites-grid { grid-template-columns: 1fr; }
+  .hpc-referent-card { flex-direction: column; }
+  .hpc-stats { flex-direction: column; }
+}
+
 
 .hpc-accordeon { margin-top: 1.25rem; }
 
@@ -30,22 +283,4 @@
 
 .hpc-accordeon__trigger[aria-expanded="true"] .hpc-accordeon__chevron {
   transform: rotate(180deg);
-}
-
-.hpc-accordeon__panel { padding: 1rem 0.5rem 0; }
-
-.hpc-accordeon__panel ul { padding-left: 1.25rem; }
-
-.hpc-accordeon__panel li {
-  margin-bottom: 0.4rem;
-  color: var(--hp-text);
-}
-
-.hpc-accordeon__panel img {
-  max-width: 100%;
-  border-radius: var(--hp-radius);
-}
-
-@media (max-width: 599px) {
-  .hpc-accordeon__trigger { font-size: 0.85rem; }
 }

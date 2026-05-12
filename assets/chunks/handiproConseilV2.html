@@ -1,38 +1,37 @@
 <div class="ce-page">
 
-      <aside class="ce-sidebar" aria-label="Navigation de la page">
-           <div class="ce-sidebar__logo">
-      <img
-        src="[[++assets_url]]images/LogoHandiproConseil.jpg"
-        alt="Logo HandiPro Conseil"
-        width="180"
-        height="80"
-        loading="eager"
-      />
+  <!-- SIDEBAR -->
+  <aside class="ce-sidebar" aria-label="Navigation de la page">
+    <div class="ce-sidebar__logo">
+      <img src="[[++assets_url]]images/HandiProConseil.png" alt="HandiPro Conseil" width="180" height="80" loading="eager" />
     </div>
+    <nav class="ce-sidebar__nav" aria-label="Sections de la page">
+      <ul>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#conseil">Conseil en entreprise</a></li>
+        <li><a href="#handicap">Le handicap, un levier</a></li>
+        <li><a href="#hpc-referent">Référent handicap</a></li>
+        <li><a href="#hpc-formations">Nos formations</a></li>
+        <li><a href="#hpc-sur-mesure">Formation personnalisée</a></li>
+        <li><a href="#hpc-modalites">Modalités & indicateurs</a></li>
+        <li><a href="#hpc-amenagements">Aménagements</a></li>
+        <li><a href="https://www.handiproconseil.fr/" target="_blank" rel="noopener noreferrer">Accéder au site</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-        <nav class="ce-sidebar__nav" aria-label="Sections de la page">
-          <ul>
-            <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#conseil">Conseil en entreprise</a></li>
-            <li><a href="#handicap">Le handicap, un levier</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#ressources">Ressources</a></li>
-            <li><a href="#confiance">Ils nous font confiance</a></li>
-          </ul>
-        </nav>
-      </aside>
+  <!-- CONTENU -->
+  <div class="ce-content">
 
-      <div class="ce-content">
-         <section class="ce-section ce-logo-hero" aria-label="Logo CREHI">                             
+    <section class="ce-section ce-logo-hero" aria-label="Logo CREHI">                             
     <img src="[[++assets_url]]images/HandiProConseil.png"
         alt="Logo HandiPro Conseil" />                          
-  </section>  
+  </section> 
 
-        <section id="presentation" class="ce-section" aria-labelledby="titre-presentation">
+    <section id="presentation" class="ce-section" aria-labelledby="titre-presentation">
           <h2 class="ce-section-title" id="titre-presentation">Présentation</h2>
           <p><strong>HandiPro Conseil</strong> est le service de conseil aux entreprises de HandiPro31. Depuis plus de 30 ans, nous accompagnons les employeurs publics et privés dans la mise en œuvre d'une politique handicap efficace, durable et humaine.</p>
-          <p>Nous intervenons auprès des ressources humaines, des managers et des équipes pour favoriser l'inclusion professionnelle des personnes en situation de handicap — du recrutement au maintien dans l'emploi.</p>
+          <p>Nous intervenons auprès des ressources humaines, des managers et des équipes pour favoriser l'inclusion professionnelle des personnes en situation de handicap - du recrutement au maintien dans l'emploi.</p>
           <div class="hpc-accordeon">
             <button class="hpc-accordeon__trigger" aria-expanded="false" aria-controls="panel-presentation">
               <span>Notre équipe en images</span>
@@ -47,7 +46,7 @@
         <section id="conseil" class="ce-section" aria-labelledby="titre-conseil">
           <h2 class="ce-section-title" id="titre-conseil">Conseil en entreprise</h2>
           <p>Nous proposons un accompagnement sur-mesure aux entreprises souhaitant développer leur politique handicap. Notre démarche couvre l'ensemble du parcours RH : diagnostic, plan d'action, suivi et évaluation.</p>
-          <ul class-"espace">
+          <ul class="hpc-amenagements">
             <li>Audit de la situation handicap et de l'obligation d'emploi (OETH)</li>
             <li>Élaboration et suivi du plan d'action triennal</li>
             <li>Accompagnement au recrutement inclusif</li>
@@ -60,7 +59,7 @@
               <span class="hpc-accordeon__chevron" aria-hidden="true">▼</span>
             </button>
             <div class="hpc-accordeon__panel" id="panel-conseil" hidden>
-              <p>Audit OETH pour une collectivité de 200 agents — plan d'action sur 3 ans, 12 recrutements accompagnés.</p>
+              <p>Audit OETH pour une collectivité de 200 agents - plan d'action sur 3 ans, 12 recrutements accompagnés.</p>
               <p>Accompagnement d'une PME industrielle pour la mise en place d'un référent handicap interne.</p>
             </div>
           </div>
@@ -81,37 +80,186 @@
           </div>
         </section>
 
-        <section id="formation" class="ce-section" aria-labelledby="titre-formation">
-          <h2 class="ce-section-title" id="titre-formation">Formation</h2>
-          <p>Nous proposons des formations adaptées à tous les niveaux de l'entreprise, co-construites avec nos experts et les personnes en situation de handicap elles-mêmes.</p>
-          <ul>
-            <li>Sensibilisation au handicap en milieu professionnel — demi-journée</li>
-            <li>Management inclusif — 1 journée</li>
-            <li>Recrutement non discriminant — 1 journée</li>
-            <li>Référent handicap — parcours sur 2 jours</li>
-          </ul>
-        </section>
+        <!-- Référent handicap -->
+    <section id="hpc-referent" class="ce-section" aria-labelledby="hpc-titre-referent">
+      <h2 class="ce-section-title" id="hpc-titre-referent">Référent handicap</h2>
 
-        <section id="ressources" class="ce-section" aria-labelledby="titre-ressources">
-          <h2 class="ce-section-title" id="titre-ressources">Ressources</h2>
-          <p>Accédez à nos guides, fiches pratiques et outils pour vous aider dans votre démarche d'inclusion. Tous nos documents sont disponibles gratuitement sur demande auprès de nos conseillers.</p>
-          <div class="hpc-accordeon">
-            <button class="hpc-accordeon__trigger" aria-expanded="false" aria-controls="panel-ressources">
-              <span>Documents disponibles</span>
-              <span class="hpc-accordeon__chevron" aria-hidden="true">▼</span>
-            </button>
-            <div class="hpc-accordeon__panel" id="panel-ressources" hidden>
-              <ul>
-                <li>Guide pratique OETH — employeurs privés</li>
-                <li>Fiche mémo : aménagement raisonnable de poste</li>
-                <li>Kit sensibilisation handicap</li>
-                <li>Annuaire des acteurs locaux du handicap en Haute-Garonne</li>
-              </ul>
-            </div>
+      <div class="hpc-referent-card">
+        <div class="hpc-referent-card__info">
+          <strong>Virginie Varela</strong>
+          <span>Référente Handicap — HandiPro Conseil</span>
+          <div class="hpc-referent-card__contact">
+            <a href="tel:0534409191">05 34 40 91 91</a> · <a href="mailto:v.varela@handipro31.fr">v.varela@handipro31.fr</a>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <section id="confiance" class="ce-section" aria-labelledby="titre-confiance">
+      <p>En cas de difficultés particulières nécessitant une compensation pédagogique ou matérielle (vision, audition, ou autres besoins spécifiques), contactez Virginie Varela pour organiser des conditions d'accueil personnalisées.</p>
+
+      <h3 class="ce-section-title" style="font-size:1rem; margin-top:1.5rem;">Son rôle</h3>
+      <ul class="hpc-role-list">
+        <li>Tiers de confiance : informe, oriente et accompagne les situations de handicap dans le parcours de formation</li>
+        <li>Interface et facilitatrice en lien avec l'employeur, le formateur et les partenaires</li>
+        <li>Pilote d'actions et de projets liés à la formation, au cas par cas, avec un plan d'action personnalisé</li>
+        <li>Ambassadrice de l'emploi et de la formation des personnes en situation de handicap</li>
+      </ul>
+    </section>
+
+    <!-- Intro -->
+    <section class="ce-section hpc-intro" aria-label="Introduction">
+      <p class="hpc-tagline">Du sur-mesure en faveur du handicap</p>
+      <p>Nous intervenons auprès de managers, des salariés, des équipes RH afin de les former à l'ensemble des dimensions d'une politique handicap, pour une organisation inclusive et performante.</p>
+      <p>Nous animons dans le cadre du CREHI des sensibilisations ouvertes à tous, à titre gratuit, sur la question du lien Handicap et Emploi.</p>
+      <p><a href="#" class="ce-btn--orange">Télécharger le programme du CREHI</a></p>
+    </section>
+
+    <!-- Formations -->
+    <section id="hpc-formations" class="ce-section" aria-labelledby="hpc-titre-formations">
+      <h2 class="ce-section-title" id="hpc-titre-formations">Nos formations</h2>
+      <div class="hpc-formations-list">
+
+        <details class="hpc-formation">
+          <summary>Accueillir en formation des personnes en situation de handicap</summary>
+          <div class="hpc-formation__body">
+            <p>Les organismes de formation se doivent d'être inclusifs. Nous vous accompagnons pour former vos équipes à mieux accueillir en formation les personnes en situation de handicap.</p>
+            <ul>
+              <li>Comprendre les différentes situations de handicap</li>
+              <li>Comprendre le retentissement durant le processus de formation</li>
+              <li>Développer l'accessibilité pédagogique des formations</li>
+              <li>Adopter une posture d'accueil inclusif</li>
+              <li>Construire les preuves et documents du processus de formation en conformité avec la certification Qualiopi</li>
+            </ul>
+            <a href="#" class="ce-btn--orange">Télécharger le programme</a>
+          </div>
+        </details>
+
+        <details class="hpc-formation">
+          <summary>Manager les personnes en situation de handicap</summary>
+          <div class="hpc-formation__body">
+            <p>Nous donnons aux managers les clés pour mieux comprendre et détecter les potentielles situations de handicap, et construire les solutions pour un collectif apaisé et inclusif.</p>
+            <ul>
+              <li>Comprendre les différentes situations de handicap et leur retentissement professionnel</li>
+              <li>Identifier les préjugés et stéréotypes liés au handicap</li>
+              <li>Promouvoir une culture d'inclusion</li>
+              <li>Manager l'acceptation de la différence et la cohésion d'équipe</li>
+            </ul>
+            <a href="#" class="ce-btn--orange">Télécharger le programme</a>
+          </div>
+        </details>
+
+        <details class="hpc-formation">
+          <summary>Réussir la mise en place de sa politique handicap</summary>
+          <div class="hpc-formation__body">
+            <p>Les équipes RH insufflent et portent la politique Handicap. Elles doivent dynamiser les actions pour répondre aux enjeux RSE et RH, identifier les freins dans le collectif, formaliser les arguments financiers et accompagner les salariés dans la démarche de RQTH.</p>
+            <a href="#" class="ce-btn--orange">Télécharger le programme</a>
+          </div>
+        </details>
+
+        <details class="hpc-formation">
+          <summary>Développer un accueil inclusif des personnes en situation de handicap</summary>
+          <div class="hpc-formation__body">
+            <p>Pour développer la compétence de vos équipes, accompagner l'évolution des pratiques professionnelles et construire les outils de cet accueil inclusif, nous formons vos équipes.</p>
+            <p>Cette formation est un temps de prise de conscience de ses préjugés, mais aussi un temps de confrontation et de modification de sa pratique professionnelle.</p>
+            <a href="#" class="ce-btn--orange">Télécharger le programme</a>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Formation personnalisée -->
+    <section id="hpc-sur-mesure" class="ce-section" aria-labelledby="hpc-titre-mesure">
+      <h2 class="ce-section-title" id="hpc-titre-mesure">Formation personnalisée</h2>
+      <p>Nos programmes sont adaptés et individualisés en fonction de vos besoins et des attentes des stagiaires. Nous ajustons le contenu et la méthode pédagogique en fonction des participants.</p>
+      <p>Contactez-nous pour toute question : <a href="mailto:contact@handiproconseil.fr">contact@handiproconseil.fr</a></p>
+      <p style="margin-top:1rem;"><a href="tel:0534406125" class="ce-btn--orange">Nous contacter</a></p>
+    </section>
+
+    <!-- Modalités & indicateurs -->
+    <section id="hpc-modalites" class="ce-section" aria-labelledby="hpc-titre-modalites">
+      <h2 class="ce-section-title" id="hpc-titre-modalites">Modalités & indicateurs</h2>
+
+      <div class="hpc-stats">
+        <div class="hpc-stat">
+          <span class="hpc-stat__val">11</span>
+          <span class="hpc-stat__label">stagiaires accueillis en 2025</span>
+        </div>
+        <div class="hpc-stat">
+          <span class="hpc-stat__val">94,9%</span>
+          <span class="hpc-stat__label">taux de satisfaction 2025</span>
+        </div>
+        <div class="hpc-stat">
+          <span class="hpc-stat__val">72h</span>
+          <span class="hpc-stat__label">délai de réponse max (devis)</span>
+        </div>
+        <div class="hpc-stat">
+          <span class="hpc-stat__val">4 sem.</span>
+          <span class="hpc-stat__label">délai moyen d'accès après signature</span>
+        </div>
+      </div>
+
+      <div class="hpc-modalites-grid">
+        <div class="hpc-modalite">
+          <strong>Inter-entreprises</strong>
+          Dans nos locaux équipés d'une boucle magnétique, accessibles PMR.
+        </div>
+        <div class="hpc-modalite">
+          <strong>Intra-entreprises</strong>
+          Dans une salle mise à disposition par le client.
+        </div>
+        <div class="hpc-modalite">
+          <strong>Présentiel</strong>
+          Formation en salle, en face-à-face avec le formateur.
+        </div>
+        <div class="hpc-modalite">
+          <strong>Distanciel</strong>
+          Dispositif accessible pour la plupart de nos formations.
+        </div>
+      </div>
+    </section>
+
+    <!-- Référent handicap -->
+    <section id="hpc-referent" class="ce-section" aria-labelledby="hpc-titre-referent">
+      <h2 class="ce-section-title" id="hpc-titre-referent">Référent handicap</h2>
+
+      <div class="hpc-referent-card">
+        <div class="hpc-referent-card__info">
+          <strong>Virginie Varela</strong>
+          <span>Référente Handicap — HandiPro Conseil</span>
+          <div class="hpc-referent-card__contact">
+            <a href="tel:0534409191">05 34 40 91 91</a> · <a href="mailto:v.varela@handipro31.fr">v.varela@handipro31.fr</a>
+          </div>
+        </div>
+      </div>
+
+      <p>En cas de difficultés particulières nécessitant une compensation pédagogique ou matérielle (vision, audition, ou autres besoins spécifiques), contactez Virginie Varela pour organiser des conditions d'accueil personnalisées.</p>
+
+      <h3 class="ce-section-title" style="font-size:1rem; margin-top:1.5rem;">Son rôle</h3>
+      <ul class="hpc-role-list">
+        <li>Tiers de confiance : informe, oriente et accompagne les situations de handicap dans le parcours de formation</li>
+        <li>Interface et facilitatrice en lien avec l'employeur, le formateur et les partenaires</li>
+        <li>Pilote d'actions et de projets liés à la formation, au cas par cas, avec un plan d'action personnalisé</li>
+        <li>Ambassadrice de l'emploi et de la formation des personnes en situation de handicap</li>
+      </ul>
+    </section>
+
+    <!-- Aménagements -->
+    <section id="hpc-amenagements" class="ce-section" aria-labelledby="hpc-titre-amenagements">
+      <h2 class="ce-section-title" id="hpc-titre-amenagements">Modalités et aménagements</h2>
+      <p>Sur demande, la Référente Handicap recherche les aménagements à mettre en place avec l'établissement employeur. Exemples :</p>
+      <ul class="hpc-amenagements">
+        <li>Aménagement des horaires ou des conditions de réalisation</li>
+        <li>Lieu de formation accessible ou adapté aux besoins singuliers</li>
+        <li>Durée de formation adaptée conventionnée avec l'employeur</li>
+        <li>Conditions d'évaluation aménagées</li>
+        <li>Adaptation des modalités de validation</li>
+        <li>Étalement possible des épreuves sur plusieurs sessions consécutives</li>
+        <li>Tutorat spécifique si l'employeur le valide</li>
+      </ul>
+
+    </section>
+
+    <section id="confiance" class="ce-section" aria-labelledby="titre-confiance">
           <h2 class="ce-section-title" id="titre-confiance">Ils nous font confiance</h2>
           <p>De nombreuses entreprises et collectivités de la région Occitanie nous font confiance pour les accompagner dans leur politique handicap.</p>
           <div class="hpc-accordeon">
@@ -121,13 +269,13 @@
             </button>
             <div class="hpc-accordeon__panel" id="panel-confiance" hidden>
               <p>Collectivités territoriales, PME industrielles, grandes entreprises du secteur aéronautique, établissements de santé, associations… Nous intervenons dans tous les secteurs d'activité.</p>
-              <img src="[[++assets_url]]images/LogoAGEFIPH.jpg" alt="AGEFIPH" style="height:50px;margin:0.5rem 1rem 0 0;" />
-              <img src="[[++assets_url]]images/LogoFIPHFP.jpg" alt="FIPHFP" style="height:50px;margin:0.5rem 1rem 0 0;" />
-              <img src="[[++assets_url]]images/LogoFranceTravail.png" alt="France Travail" style="height:50px;margin:0.5rem 0 0;" />
+              <div class="hpc-refs" style="margin-top:1.5rem;">
+        <strong>Nos références :</strong> AAA, Airbus, Akkadis, Altran, Alten, DGAC, CEA, Tarmac, Derichebourg Aeronautics Services, INP Toulouse, Nutrition et Santé, Rectorat, Scalian, SNCF, Université Jean Jaurès, Conseil Départemental Haute-Garonne
+      </div>
             </div>
           </div>
         </section>
 
-      </div>
 
-    </div>
+  </div><!-- /ce-content -->
+</div><!-- /ce-page -->
