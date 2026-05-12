@@ -260,7 +260,7 @@
   padding: 2rem;
   width: min(420px, 90vw);
   z-index: 1000;
-  border-top: 4px solid var(--hp-primary);
+  border-top: 4px solid #E8893A;
   animation: v3-pop 0.2s ease;
 }
 
