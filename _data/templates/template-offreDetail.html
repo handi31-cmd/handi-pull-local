@@ -20,22 +20,35 @@
   <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
   [[$headerV2]]
   <main id="contenu-principal" role="main">
-    <div class="offre-page">
-      <header class="offre-detail__header">
-        <p class="offre-detail__numero">[[*numero_offre]]</p>
-        <h1 class="offre-detail__titre">[[*nom_poste]]</h1>
-        <div class="offre-detail__badges">
-          <span class="offre-detail__badge">[[*lieu]]</span>
-          <span class="offre-detail__badge offre-detail__badge--contrat">[[*type_contrat]]</span>
+    <div class="ce-page">
+
+      <aside class="ce-sidebar" aria-label="Navigation recrutement">
+        <nav class="ce-sidebar__nav" aria-label="Sections recrutement">
+          <ul>
+            <li><a href="/[[~18]]">Nos offres d'emploi</a></li>
+            <li><a href="/[[~28]]">Postuler</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="ce-content">
+        <header class="offre-detail__header">
+          <p class="offre-detail__numero">[[*numero_offre]]</p>
+          <h1 class="offre-detail__titre">[[*nom_poste]]</h1>
+          <div class="offre-detail__badges">
+            <span class="offre-detail__badge">[[*lieu]]</span>
+            <span class="offre-detail__badge offre-detail__badge--contrat">[[*type_contrat]]</span>
+          </div>
+        </header>
+        <div class="offre-detail__body">
+          [[*content]]
         </div>
-      </header>
-      <div class="offre-detail__body">
-        [[*content]]
+        <div class="offre-detail__cta">
+          <a href="/[[~18]]" class="offre-detail__retour">← Retour aux offres</a>
+          <a href="/[[~28]]" class="hp-btn hp-btn--primary">Postuler</a>
+        </div>
       </div>
-      <div class="offre-detail__cta">
-        <a href="[[++site_url]][[~18]]" class="offre-detail__retour">← Retour aux offres</a>
-        <a href="[[++site_url]][[~20]]" class="hp-btn hp-btn--primary">Postuler</a>
-      </div>
+
     </div>
   </main>
   [[$footerSite]]

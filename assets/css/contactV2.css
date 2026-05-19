@@ -254,6 +254,7 @@
 
   .ct-row .ct-field {
     flex: 1;
+    margin-top: 0;
   }
 }
 

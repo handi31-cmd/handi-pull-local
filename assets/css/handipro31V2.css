@@ -17,6 +17,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
   padding: 1.25rem 2rem;
   background: var(--hp-primary);
@@ -45,7 +46,8 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--hp-white);
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .v3-item__tagline {
@@ -85,7 +87,7 @@
 /* ── 2 colonnes ── */
 .v3-duo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -316,7 +318,7 @@
 /* ── 3 champs ── */
 .v3-champs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -350,7 +352,7 @@
 /* ── Collèges AG ── */
 .v3-colleges {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   gap: 0.85rem;
   margin-top: 0.75rem;
 }
@@ -398,7 +400,7 @@
 /* ── Composition CA ── */
 .v3-ca-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   gap: 0.85rem;
   margin-top: 0.75rem;
 }
@@ -507,7 +509,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 130px;
+  min-height: 8rem;
   width: 100%;
 }
 
@@ -686,7 +688,7 @@
 /* ── Grille valeurs ── */
 .v3-valeurs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1.25rem;
 }
 .v3-valeur-card {
@@ -732,7 +734,7 @@
 /* ── Liste principes ── */
 .v3-principes-liste {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1.25rem;
 }
 .v3-principe {

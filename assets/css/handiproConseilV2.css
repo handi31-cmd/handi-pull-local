@@ -245,6 +245,7 @@
   font-size: 0.85rem;
   color: #717171;
   line-height: 1.8;
+border-left: 5px solid #D0762E;
 }
 
 /* ── Responsive ── */
@@ -284,3 +285,4 @@
 .hpc-accordeon__trigger[aria-expanded="true"] .hpc-accordeon__chevron {
   transform: rotate(180deg);
 }
+

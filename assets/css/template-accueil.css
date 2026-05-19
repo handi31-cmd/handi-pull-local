@@ -326,8 +326,9 @@ border: 1px solid var(--hp-orange);
   padding: 1.5rem 2rem;
   display: flex;
   gap: 1.25rem;
-  width: 650px;
-  height: 100px;
+  max-width: 650px;
+  width: 100%;
+  height: auto;
 }
 
 .hp-stat-box {
@@ -347,6 +348,7 @@ border: 1px solid var(--hp-orange);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
+color: #fff;
 }
 
 .hp-stat-box__label {
@@ -387,7 +389,8 @@ border: 1px solid var(--hp-orange);
   text-decoration: none;
   color: var(--hp-text);
   transition: transform var(--hp-transition), box-shadow var(--hp-transition);
-  height: 420px;
+  height: auto;
+  min-height: 420px;
 }
 
 .hp-service-card:hover,
@@ -402,7 +405,7 @@ border: 1px solid var(--hp-orange);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 33.33%;
+  flex: 0 0 140px;
 }
 
 .hp-service-card__logo--dark {
@@ -418,7 +421,7 @@ border: 1px solid var(--hp-orange);
 .hp-service-card__body {
   background: var(--hp-bg-light);
   padding: 1.5rem;
-  flex: 0 0 66.67%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -426,6 +429,7 @@ border: 1px solid var(--hp-orange);
   text-align: center;
   box-sizing: border-box;
   min-height: 0;
+  overflow: hidden;
 }
 
 .hp-service-card__body p {
@@ -810,7 +814,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
   }
-  .hp-stat-box__main  { font-size: 0.9rem; }
+  .hp-stat-box__main  { font-size: 0.9rem; color: var(--hp-white); }
   .hp-stat-box__label { font-size: 0.65rem; }
 
   /* Autres */

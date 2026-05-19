@@ -252,7 +252,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80px;
+  min-height: 5rem;
   transition: box-shadow var(--hp-transition);
 }
 
@@ -261,9 +261,10 @@
 }
 
 .crehi-partenaire img {
-  max-width: 100%;
-  max-height: 60px;
+  max-width: 80%;
+  height: auto;
   object-fit: contain;
+  cursor: zoom-in;
   filter: grayscale(30%);
   transition: filter var(--hp-transition);
 }
